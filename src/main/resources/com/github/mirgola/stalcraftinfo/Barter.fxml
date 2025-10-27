@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="800.0" prefWidth="1000.0" stylesheets="@dracula.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.mirgola.stalcraftinfo.BarterController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Оружие">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Автоматы" />
+                  <MenuItem mnemonicParsing="false" text="Пистолеты-пулеметы" />
+                  <MenuItem mnemonicParsing="false" text="Пулеметы" />
+              <MenuItem mnemonicParsing="false" text="Снайперские винтовки" />
+                  <MenuItem mnemonicParsing="false" text="Дробовики и ружья" />
+                  <MenuItem mnemonicParsing="false" text="Пистолеты" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleMeleeWeapons" text="Ближний бой" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Другое">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Рюкзаки и сумки" />
+                  <MenuItem mnemonicParsing="false" text="Контейнеры" />
+                  <MenuItem mnemonicParsing="false" text="Устройства" />
+                  <MenuItem mnemonicParsing="false" text="Косметика" />
+                  <MenuItem mnemonicParsing="false" text="Аксессуары" />
+              <MenuItem mnemonicParsing="false" text="Прочее" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Обвесы">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Надульники и глушители" />
+                  <MenuItem mnemonicParsing="false" text="Магазины" />
+                  <MenuItem mnemonicParsing="false" text="Цевья и крепления" />
+                  <MenuItem mnemonicParsing="false" text="Прицелы" />
+                  <MenuItem mnemonicParsing="false" text="Рукоятки" />
+              <MenuItem mnemonicParsing="false" text="Прочие обвесы" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Костюмы">
+              <items>
+                  <MenuItem mnemonicParsing="false" text="Боевые" />
+                  <MenuItem mnemonicParsing="false" text="Комбинированные" />
+                <MenuItem mnemonicParsing="false" text="Научные" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <Label text="Выберите категорию бартера" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
