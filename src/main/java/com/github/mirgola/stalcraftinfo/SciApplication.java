@@ -5,7 +5,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
@@ -45,7 +44,7 @@ public class SciApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("Stage.fxml"));
         stage = (BorderPane) fxmlLoader.load();
 
-        // Отображаем сцену корневого макета
+        // Отображаем сцену заголовка
         scene = new Scene(stage);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
@@ -57,7 +56,6 @@ public class SciApplication extends Application {
 
     // Инициализация корневого макета
     public void initRootLayout() throws IOException {
-        // Загружаем корневой макет из fxml файла
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("RootLayout.fxml"));
         rootLayout = (BorderPane) fxmlLoader.load();
 
@@ -67,7 +65,6 @@ public class SciApplication extends Application {
 
     // Показываем в корневом макете сведения об персонажах
     public void showPersonInfo() throws IOException {
-        // Загружаем сведения об персонажах из fxml файла
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("PersonInfo.fxml"));
         AnchorPane personInfo = (AnchorPane) fxmlLoader.load();
 
@@ -86,7 +83,7 @@ public class SciApplication extends Application {
 
             // Создаем диалоговое окно
             Stage stage = new Stage();
-            stage.setTitle("Редактирование персонажа");
+            stage.initStyle(StageStyle.TRANSPARENT);
             stage.initModality(Modality.WINDOW_MODAL);
             stage.initOwner(primaryStage);
             Scene scene = new Scene(personEdit);
@@ -108,26 +105,37 @@ public class SciApplication extends Application {
         }
     }
 
+    // Инициализация окна бартера
     public void showBarter() throws IOException{
-        FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("Barter.fxml"));
-        BorderPane barter = (BorderPane) fxmlLoader.load();
+        FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("StageBarter.fxml"));
+        BorderPane stageBarter = (BorderPane) fxmlLoader.load();
 
         Stage stage = new Stage();
         stage.initModality(Modality.WINDOW_MODAL);
         stage.initOwner(primaryStage);
-        Scene scene = new Scene(barter);
+        stage.initStyle(StageStyle.TRANSPARENT);
+        Scene scene = new Scene(stageBarter);
         stage.setScene(scene);
+        stage.show();
 
-        BarterController controller = fxmlLoader.getController();
-        controller.setBarter(barter);
-        stage.showAndWait();
+        StageBarterController controller = fxmlLoader.getController();
+        controller.setStageBarter(stage);
+
+        //
+        FXMLLoader fxmlLoader1 = new FXMLLoader(SciApplication.class.getResource("Barter.fxml"));
+        BorderPane barter = (BorderPane) fxmlLoader1.load();
+
+        stageBarter.setCenter(barter);
+
+        BarterController controller1 = fxmlLoader1.getController();
+        controller1.setBarter(barter);
+
     }
 
     // Возвращает главную сцену.
     public Stage getPrimaryStage() {
         return primaryStage;
     }
-
 
     public Scene getScene() {
         return scene;

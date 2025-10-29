@@ -33,16 +33,18 @@ public class Person {
     private final IntegerProperty lambdaDataFragment;
     private final IntegerProperty anomalousBattery;
     private final IntegerProperty limboPlasma;
+    private final IntegerProperty cost;
     private final IntegerProperty tradeCoins;
-    private final IntegerProperty seasonBox;
     private final IntegerProperty arsenalPoints;
+    private final IntegerProperty seasonBox;
+    private final IntegerProperty combatPassLevel;
 
     public Person(Integer idUser, String nickname, String fraction, Integer greenMold, Integer swampStone, Integer stinkyRoot ,Integer crappite,
                   Integer piecesOfCopperWire, Integer sprigOfChernobylChamomile, Integer pickle, Integer remainsOfRadioTransmitter, Integer alphaDataFragment,
                   Integer northernMoss, Integer dopeStone, Integer remainsOfBatteries, Integer betaDataFragment, Integer redFern, Integer substance07270,
                   Integer remainsOfPsyTracker, Integer gammaDataFragment, Integer quantumBattery, Integer anomalousSerum, Integer bitterleaf,
-                  Integer limbo, Integer lambdaDataFragment, Integer anomalousBattery, Integer limboPlasma, Integer tradeCoins, Integer seasonBox,
-                  Integer arsenalPoints) {
+                  Integer limbo, Integer lambdaDataFragment, Integer anomalousBattery, Integer limboPlasma, Integer cost, Integer tradeCoins,
+                  Integer arsenalPoints, Integer seasonBox, Integer combatPassLevel) {
         this.idUser = new SimpleIntegerProperty(idUser);
         this.nickname = new SimpleStringProperty(nickname);
         this.fraction = new SimpleStringProperty(fraction);
@@ -70,9 +72,11 @@ public class Person {
         this.lambdaDataFragment = new SimpleIntegerProperty(lambdaDataFragment);
         this.anomalousBattery = new SimpleIntegerProperty(anomalousBattery);
         this.limboPlasma = new SimpleIntegerProperty(limboPlasma);
+        this.cost = new SimpleIntegerProperty(cost);
         this.tradeCoins = new SimpleIntegerProperty(tradeCoins);
-        this.seasonBox = new SimpleIntegerProperty(seasonBox);
         this.arsenalPoints = new SimpleIntegerProperty(arsenalPoints);
+        this.seasonBox = new SimpleIntegerProperty(seasonBox);
+        this.combatPassLevel = new SimpleIntegerProperty(combatPassLevel);
     }
 
     // ID пользователя
@@ -372,6 +376,17 @@ public class Person {
         return limboPlasma;
     }
 
+    // Стоимость (Рубль) – Cost
+    public int getCost() {
+        return cost.get();
+    }
+    public void setCost(int cost) {
+        this.cost.set(cost);
+    }
+    public IntegerProperty costProperty() {
+        return cost;
+    }
+
     // Обменные монеты - Trade Coins
     public int getTradeCoins() {
         return tradeCoins.get();
@@ -383,7 +398,18 @@ public class Person {
         return tradeCoins;
     }
 
-    // Лимбоплазма - Season box
+    // Репутация арсенала - Arsenal Points
+    public int getArsenalPoints() {
+        return arsenalPoints.get();
+    }
+    public void setArsenalPoints(int arsenalPoints) {
+        this.arsenalPoints.set(arsenalPoints);
+    }
+    public IntegerProperty arsenalPointsProperty() {
+        return arsenalPoints;
+    }
+
+    // Коробок сезона (открыто) - Season box
     public int getSeasonBox() {
         return seasonBox.get();
     }
@@ -394,14 +420,14 @@ public class Person {
         return seasonBox;
     }
 
-    // Лимбоплазма - Arsenal Points
-    public int getArsenalPoints() {
-        return arsenalPoints.get();
+    // Уровень боевого пропуска - Combat Pass Level
+    public int getCombatPassLevel() {
+        return combatPassLevel.get();
     }
-    public void setArsenalPoints(int arsenalPoints) {
-        this.arsenalPoints.set(arsenalPoints);
+    public void setCombatPassLevel(int combatPassLevel) {
+        this.combatPassLevel.set(combatPassLevel);
     }
-    public IntegerProperty arsenalPointsProperty() {
-        return arsenalPoints;
+    public IntegerProperty combatPassLevelProperty() {
+        return combatPassLevel;
     }
 }

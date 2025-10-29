@@ -49,14 +49,16 @@ public class SciDB {
             int lambdaDataFragment = resultSet.getInt("lambdaDataFragment");
             int anomalousBattery = resultSet.getInt("anomalousBattery");
             int limboPlasma = resultSet.getInt("limboPlasma");
+            int cost = resultSet.getInt("cost");
             int tradeCoins = resultSet.getInt("tradeCoins");
-            int seasonBox = resultSet.getInt("seasonBox");
             int arsenalPoints = resultSet.getInt("arsenalPoints");
+            int seasonBox = resultSet.getInt("seasonBox");
+            int combatPassLevel = resultSet.getInt("combatPassLevel");
             sciApplication.getPersonData().add(new Person(idUser, nickname, fraction, greenMold, swampStone, stinkyRoot, crappite,
                     piecesOfCopperWire, sprigOfChernobylChamomile, pickle, remainsOfRadioTransmitter, alphaDataFragment,
                     northernMoss, dopeStone, remainsOfBatteries, betaDataFragment, redFern, substance07270,
                     remainsOfPsyTracker, gammaDataFragment, quantumBattery, anomalousSerum, bitterleaf,
-                    limbo, lambdaDataFragment, anomalousBattery, limboPlasma, tradeCoins, seasonBox, arsenalPoints));
+                    limbo, lambdaDataFragment, anomalousBattery, limboPlasma, cost, tradeCoins, arsenalPoints, seasonBox, combatPassLevel));
         }
     }
 

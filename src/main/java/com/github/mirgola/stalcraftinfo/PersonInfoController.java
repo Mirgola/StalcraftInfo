@@ -143,27 +143,28 @@ public class PersonInfoController {
     private Label limboPlasmaRubLabel;
 
     @FXML
+    private Label costLabel;
+    @FXML
     private Label group_AllLabel;
     @FXML
     private Label tradeCoinsLabel;
     @FXML
+    private Label arsenalPointsLabel;
+    @FXML
     private Label seasonBoxLabel;
     @FXML
-    private Label arsenalPointsLabel;
+    private Label combatPassLevelLabel;
+
 
     private SciApplication sciApplication;
     private DecimalFormat decimalFormat = new DecimalFormat("###,###");
 
     @FXML
     private void initialize() {
+        // Запрет на изменение разделителя
         splitPane.getDividers().get(0).positionProperty().addListener((observable,oldValue,newValue) -> {
             splitPane.setDividerPositions(0.25);});
-        /*
-        for (SplitPane.Divider divider : splitPane.getDividers()) {
-            divider.positionProperty().addListener((observable, oldValue, newValue) -> {divider.setPosition(0.2);});
-        }
 
-         */
         // Инициализация таблицы адресатов с тремя столбцами.
         idUserColumn.setCellValueFactory(cellData -> cellData.getValue().idProperty().asObject());
         nicknameColumn.setCellValueFactory(cellData -> cellData.getValue().nicknameProperty());
@@ -258,9 +259,11 @@ public class PersonInfoController {
             group_All = group_1 + group_2 + group_3 + group_4 + group_5 + group_6;
             group_AllLabel.setText(decimalFormat.format(group_All));
 
+            costLabel.setText(decimalFormat.format(person.getCost()));
             tradeCoinsLabel.setText(decimalFormat.format(person.getTradeCoins()));
-            seasonBoxLabel.setText(decimalFormat.format(person.getSeasonBox()));
             arsenalPointsLabel.setText(decimalFormat.format(person.getArsenalPoints()));
+            seasonBoxLabel.setText(decimalFormat.format(person.getSeasonBox()));
+            combatPassLevelLabel.setText(decimalFormat.format(person.getCombatPassLevel()));
         } else {
 
         }
