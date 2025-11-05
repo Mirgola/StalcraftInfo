@@ -63,16 +63,21 @@ public class PersonEditController {
     private TextField limboPlasmaField;
 
     @FXML
+    private TextField costField;
+    @FXML
     private TextField tradeCoinsField;
+    @FXML
+    private TextField arsenalPointsField;
     @FXML
     private TextField seasonBoxField;
     @FXML
-    private TextField arsenalPointsField;
+    private TextField combatPassLevelField;
+
 
     private Stage stage;
     private Person person;
     private boolean okClicked = false;
-    private DecimalFormat decimalFormat = new DecimalFormat("###,###");
+    // private DecimalFormat decimalFormat = new DecimalFormat("###,###");
 
     @FXML
     private void initialize() {
@@ -116,9 +121,11 @@ public class PersonEditController {
         anomalousBatteryField.setText(Integer.toString(person.getAnomalousBattery()));
         limboPlasmaField.setText(Integer.toString(person.getLimboPlasma()));
 
+        costField.setText(Integer.toString(person.getCost()));
         tradeCoinsField.setText(Integer.toString(person.getTradeCoins()));
-        seasonBoxField.setText(Integer.toString(person.getSeasonBox()));
         arsenalPointsField.setText(Integer.toString(person.getArsenalPoints()));
+        seasonBoxField.setText(Integer.toString(person.getSeasonBox()));
+        combatPassLevelField.setText(Integer.toString(person.getCombatPassLevel()));
     }
 
     public boolean isOkClicked() {
@@ -159,9 +166,11 @@ public class PersonEditController {
             person.setAnomalousBattery(Integer.parseInt(anomalousBatteryField.getText()));
             person.setLimboPlasma(Integer.parseInt(limboPlasmaField.getText()));
 
+            person.setCost(Integer.parseInt(costField.getText()));
             person.setTradeCoins(Integer.parseInt(tradeCoinsField.getText()));
-            person.setSeasonBox(Integer.parseInt(seasonBoxField.getText()));
             person.setArsenalPoints(Integer.parseInt(arsenalPointsField.getText()));
+            person.setSeasonBox(Integer.parseInt(seasonBoxField.getText()));
+            person.setCombatPassLevel(Integer.parseInt(combatPassLevelField.getText()));
 
             okClicked = true;
             stage.close();
@@ -183,7 +192,7 @@ public class PersonEditController {
           try {
               Integer.parseInt(greenMoldField.getText());
           }  catch (NumberFormatException e) {
-              errorMessage += "Нет действительных Зеленая плесень (должно быть целое число)!\n";
+              errorMessage += "Зеленая плесень (должно быть целое число)!\n";
           }
         }
 
@@ -193,7 +202,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(swampStoneField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Болотный камень (должно быть целое число)!\n";
+                errorMessage += "Болотный камень (должно быть целое число)!\n";
             }
         }
 
@@ -203,7 +212,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(stinkyRootField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Корень-вонючка (должно быть целое число)!\n";
+                errorMessage += "Корень-вонючка (должно быть целое число)!\n";
             }
         }
 
@@ -213,7 +222,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(crappiteField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Срачник (должно быть целое число)!\n";
+                errorMessage += "Срачник (должно быть целое число)!\n";
             }
         }
 
@@ -223,7 +232,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(piecesOfCopperWireField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Остатки медной проволки (должно быть целое число)!\n";
+                errorMessage += "Остатки медной проволки (должно быть целое число)!\n";
             }
         }
 
@@ -233,7 +242,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(sprigOfChernobylChamomileField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Росток чернобыльской ромашки (должно быть целое число)!\n";
+                errorMessage += "Росток чернобыльской ромашки (должно быть целое число)!\n";
             }
         }
 
@@ -243,7 +252,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(pickleField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Рассольник (должно быть целое число)!\n";
+                errorMessage += "Рассольник (должно быть целое число)!\n";
             }
         }
 
@@ -253,7 +262,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(remainsOfRadioTransmitterField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Остатки радиопередатчика (должно быть целое число)!\n";
+                errorMessage += "Остатки радиопередатчика (должно быть целое число)!\n";
             }
         }
 
@@ -263,7 +272,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(alphaDataFragmentField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Фрагмент данных Альфа (должно быть целое число)!\n";
+                errorMessage += "Фрагмент данных Альфа (должно быть целое число)!\n";
             }
         }
 
@@ -273,7 +282,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(northernMossField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Северный мох (должно быть целое число)!\n";
+                errorMessage += "Северный мох (должно быть целое число)!\n";
             }
         }
 
@@ -283,7 +292,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(dopeStoneField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Дурман-камень (должно быть целое число)!\n";
+                errorMessage += "Дурман-камень (должно быть целое число)!\n";
             }
         }
 
@@ -293,7 +302,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(remainsOfBatteriesField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Остатки аккумуляторов (должно быть целое число)!\n";
+                errorMessage += "Остатки аккумуляторов (должно быть целое число)!\n";
             }
         }
 
@@ -303,7 +312,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(betaDataFragmentField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Фрагмент данных Бета (должно быть целое число)!\n";
+                errorMessage += "Фрагмент данных Бета (должно быть целое число)!\n";
             }
         }
 
@@ -313,7 +322,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(redFernField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Рыжий папоротник (должно быть целое число)!\n";
+                errorMessage += "НРыжий папоротник (должно быть целое число)!\n";
             }
         }
 
@@ -323,7 +332,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(substance07270Field.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Вещество 07270 (должно быть целое число)!\n";
+                errorMessage += "Вещество 07270 (должно быть целое число)!\n";
             }
         }
 
@@ -333,7 +342,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(remainsOfPsyTrackerField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Остатки пси-маячка (должно быть целое число)!\n";
+                errorMessage += "Остатки пси-маячка (должно быть целое число)!\n";
             }
         }
 
@@ -343,7 +352,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(gammaDataFragmentField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Фрагмент данных Гамма (должно быть целое число)!\n";
+                errorMessage += "Фрагмент данных Гамма (должно быть целое число)!\n";
             }
         }
 
@@ -353,7 +362,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(quantumBatteryField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Квантовая батарея (должно быть целое число)!\n";
+                errorMessage += "Квантовая батарея (должно быть целое число)!\n";
             }
         }
 
@@ -363,7 +372,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(anomalousSerumField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Аномальная сыворотка (должно быть целое число)!\n";
+                errorMessage += "Аномальная сыворотка (должно быть целое число)!\n";
             }
         }
 
@@ -373,7 +382,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(bitterleafField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Горьколистник (должно быть целое число)!\n";
+                errorMessage += "НГорьколистник (должно быть целое число)!\n";
             }
         }
 
@@ -383,7 +392,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(limboField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Лимб (должно быть целое число)!\n";
+                errorMessage += "Лимб (должно быть целое число)!\n";
             }
         }
 
@@ -393,7 +402,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(lambdaDataFragmentField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Фрагмент данных Лямбда (должно быть целое число)!\n";
+                errorMessage += "Фрагмент данных Лямбда (должно быть целое число)!\n";
             }
         }
 
@@ -403,7 +412,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(anomalousBatteryField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Аномальная батарея (должно быть целое число)!\n";
+                errorMessage += "Аномальная батарея (должно быть целое число)!\n";
             }
         }
 
@@ -413,7 +422,17 @@ public class PersonEditController {
             try {
                 Integer.parseInt(limboPlasmaField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Лимбоплазма (должно быть целое число)!\n";
+                errorMessage += "Лимбоплазма (должно быть целое число)!\n";
+            }
+        }
+
+        if (costField.getText() == null || costField.getText().length() == 0) {
+            errorMessage += "Нет действительных Стоимость (Рубль)!\n";
+        } else {
+            try {
+                Integer.parseInt(costField.getText());
+            }  catch (NumberFormatException e) {
+                errorMessage += "Стоимость (Рубль) (должно быть целое число)!\n";
             }
         }
 
@@ -423,17 +442,7 @@ public class PersonEditController {
             try {
                 Integer.parseInt(tradeCoinsField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Обменные монеты (должно быть целое число)!\n";
-            }
-        }
-
-        if (seasonBoxField.getText() == null || seasonBoxField.getText().length() == 0) {
-            errorMessage += "Нет действительных Коробки сезона открыто!\n";
-        } else {
-            try {
-                Integer.parseInt(seasonBoxField.getText());
-            }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Коробки сезона открыто (должно быть целое число)!\n";
+                errorMessage += "Обменные монеты (должно быть целое число)!\n";
             }
         }
 
@@ -443,7 +452,27 @@ public class PersonEditController {
             try {
                 Integer.parseInt(arsenalPointsField.getText());
             }  catch (NumberFormatException e) {
-                errorMessage += "Нет действительных Арсенал (должно быть целое число)!\n";
+                errorMessage += "НАрсенал (должно быть целое число)!\n";
+            }
+        }
+
+        if (seasonBoxField.getText() == null || seasonBoxField.getText().length() == 0) {
+            errorMessage += "Нет действительных Коробки сезона открыто!\n";
+        } else {
+            try {
+                Integer.parseInt(seasonBoxField.getText());
+            }  catch (NumberFormatException e) {
+                errorMessage += "Коробки сезона открыто (должно быть целое число)!\n";
+            }
+        }
+
+        if (combatPassLevelField.getText() == null || combatPassLevelField.getText().length() == 0) {
+            errorMessage += "Нет действительных Уровень боевого пропуска!\n";
+        } else {
+            try {
+                Integer.parseInt(combatPassLevelField.getText());
+            }  catch (NumberFormatException e) {
+                errorMessage += "Уровень боевого пропуска (должно быть целое число)!\n";
             }
         }
 
@@ -453,8 +482,8 @@ public class PersonEditController {
             // Показываем сообщение об ошибке.
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.initOwner(stage);
-            alert.setTitle("Invalid Fields");
-            alert.setHeaderText("Please correct invalid fields");
+            alert.setTitle("Ошибка");
+            alert.setHeaderText("Пожалуйста, исправьте неверные поля");
             alert.setContentText(errorMessage);
 
             alert.showAndWait();

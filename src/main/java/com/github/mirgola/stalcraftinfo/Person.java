@@ -39,6 +39,13 @@ public class Person {
     private final IntegerProperty seasonBox;
     private final IntegerProperty combatPassLevel;
 
+    public Person(Integer idUser, String nickname, String fraction) {
+        this(idUser, nickname, fraction, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0,0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0);
+    }
+
     public Person(Integer idUser, String nickname, String fraction, Integer greenMold, Integer swampStone, Integer stinkyRoot ,Integer crappite,
                   Integer piecesOfCopperWire, Integer sprigOfChernobylChamomile, Integer pickle, Integer remainsOfRadioTransmitter, Integer alphaDataFragment,
                   Integer northernMoss, Integer dopeStone, Integer remainsOfBatteries, Integer betaDataFragment, Integer redFern, Integer substance07270,

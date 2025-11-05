@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="921.0" prefWidth="1000.0" stylesheets="@dracula.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.mirgola.stalcraftinfo.StageController">
+<BorderPane prefHeight="923.0" prefWidth="1002.0" style="-fx-border-width: 1; -fx-border-color: #6659AE;" stylesheets="@dracula.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.mirgola.stalcraftinfo.StageController">
    <top>
       <AnchorPane onMouseDragged="#getOnMouseDragged" onMousePressed="#getOnMousePressed" prefHeight="39.0" BorderPane.alignment="CENTER">
          <children>

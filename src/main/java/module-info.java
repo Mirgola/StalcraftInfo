@@ -9,4 +9,6 @@ module com.github.mirgola.stalcraftinfo {
 
     opens com.github.mirgola.stalcraftinfo to javafx.fxml;
     exports com.github.mirgola.stalcraftinfo;
+    exports com.github.mirgola.stalcraftinfo.barter;
+    opens com.github.mirgola.stalcraftinfo.barter to javafx.fxml;
 }

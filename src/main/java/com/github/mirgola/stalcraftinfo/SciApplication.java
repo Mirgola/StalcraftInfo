@@ -1,10 +1,12 @@
 package com.github.mirgola.stalcraftinfo;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterMeleeWeapons;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
@@ -19,14 +21,21 @@ public class SciApplication extends Application {
     private Scene scene;
     private BorderPane stage;
     private BorderPane rootLayout;
+    private TableView<Person> personTable;
     private ObservableList<Person> personData = FXCollections.observableArrayList();
+    private ObservableList<BarterMeleeWeapons> barterMeleeWeaponsData = FXCollections.observableArrayList();
 
     public SciApplication() throws SQLException {
         SciDB.readUsers(this);
+        SciDB.readMeleeWeaponsCount(this);
     }
 
     public ObservableList<Person> getPersonData() {
         return personData;
+    }
+
+    public ObservableList<BarterMeleeWeapons> getBarterMeleeWeaponsData() {
+        return barterMeleeWeaponsData;
     }
 
     @Override
@@ -36,7 +45,6 @@ public class SciApplication extends Application {
 
         initStage();
         initRootLayout();
-        showPersonInfo();
     }
 
     // Инициализация заголовка
@@ -61,6 +69,11 @@ public class SciApplication extends Application {
 
         // Помещаем корневой макет в центр заголовка
         stage.setCenter(rootLayout);
+        showPersonInfo();
+
+        RootLayoutController controller = fxmlLoader.getController();
+        controller.setSciApplication(this);
+        controller.setPersonTable(personTable);
     }
 
     // Показываем в корневом макете сведения об персонажах
@@ -74,6 +87,43 @@ public class SciApplication extends Application {
         // Даём контроллеру доступ к главному приложению.
         PersonInfoController controller = fxmlLoader.getController();
         controller.setSciApplication(this);
+        personTable = controller.getPersonTable();
+    }
+
+    public boolean showUserEdit(String stageLabel, StringBuilder nickname, StringBuilder fraction) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("UserEdit.fxml"));
+            AnchorPane userEdit = (AnchorPane) fxmlLoader.load();
+
+            Stage stage = new Stage();
+            stage.initStyle(StageStyle.TRANSPARENT);
+            stage.initModality(Modality.WINDOW_MODAL);
+            stage.initOwner(primaryStage);
+            Scene scene = new Scene(userEdit);
+            stage.setScene(scene);
+
+            UserEditController controller = fxmlLoader.getController();
+            controller.setStage(stage);
+            controller.setStageLabel(stageLabel);
+            controller.setUser(nickname.toString(), fraction.toString());
+
+            if(!nickname.isEmpty()){
+                nickname.delete(0, nickname.length());
+            }
+            if(!fraction.isEmpty()){
+                fraction.delete(0, fraction.length());
+            }
+
+            stage.showAndWait();
+
+            nickname.append(controller.getNickname());
+            fraction.append(controller.getFraction());
+
+            return controller.isOkClicked();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     public boolean showPersonEdin(Person person) {
@@ -129,7 +179,8 @@ public class SciApplication extends Application {
 
         BarterController controller1 = fxmlLoader1.getController();
         controller1.setBarter(barter);
-
+        controller1.setPerson(personTable.getSelectionModel().getSelectedItem());
+        controller1.setSciApplication(this);
     }
 
     // Возвращает главную сцену.

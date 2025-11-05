@@ -103,199 +103,199 @@
                            </GridPane.margin>
                         </Label>
                         <Label fx:id="greenMoldLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label fx:id="greenMoldRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="1" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <Label fx:id="greenMoldTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="1" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="6" GridPane.columnIndex="5" GridPane.rowIndex="1" />
                         <Label fx:id="greenMoldRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="1" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Болотный камень" GridPane.rowIndex="2" />
                         <Label fx:id="swampStoneLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label fx:id="swampStoneRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="2" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="2" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <Label fx:id="swampStoneTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="2" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="12" GridPane.columnIndex="5" GridPane.rowIndex="2" />
                         <Label fx:id="swampStoneRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <Label fx:id="group_1TradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="3" />
                         <Label fx:id="group_1Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: #000000; -fx-background-color: #A9D08E;" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="3">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Корень-вонючка" GridPane.rowIndex="4" />
                         <Label fx:id="stinkyRootLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        <Label fx:id="stinkyRootRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="3" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                        <Label fx:id="stinkyRootTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="4" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="16" GridPane.columnIndex="5" GridPane.rowIndex="4" />
                         <Label fx:id="stinkyRootRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="4" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Срачник" GridPane.rowIndex="5" />
                         <Label fx:id="crappiteLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                        <Label fx:id="crappiteRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="5" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="4" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                        <Label fx:id="crappiteTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="5" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="24" GridPane.columnIndex="5" GridPane.rowIndex="5" />
                         <Label fx:id="crappiteRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="5" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Остатки медной проволки" GridPane.rowIndex="6" />
                         <Label fx:id="piecesOfCopperWireLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <Label fx:id="piecesOfCopperWireRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="6" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="4" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+                        <Label fx:id="piecesOfCopperWireTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="6" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="20" GridPane.columnIndex="5" GridPane.rowIndex="6" />
                         <Label fx:id="piecesOfCopperWireRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+                        <Label fx:id="group_2TradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="7" />
                         <Label fx:id="group_2Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: #000000; -fx-background-color: #A9D08E;" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="7">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Росток чернобыльской ромашки" GridPane.rowIndex="8" />
                         <Label fx:id="sprigOfChernobylChamomileLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                        <Label fx:id="sprigOfChernobylChamomileRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="8" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="4" GridPane.columnIndex="3" GridPane.rowIndex="8" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+                        <Label fx:id="sprigOfChernobylChamomileTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="8" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="22" GridPane.columnIndex="5" GridPane.rowIndex="8" />
                         <Label fx:id="sprigOfChernobylChamomileRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="8" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Рассольник" GridPane.rowIndex="9" />
                         <Label fx:id="pickleLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                        <Label fx:id="pickleRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="9" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="6" GridPane.columnIndex="3" GridPane.rowIndex="9" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="9" />
+                        <Label fx:id="pickleTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="9" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="32" GridPane.columnIndex="5" GridPane.rowIndex="9" />
                         <Label fx:id="pickleRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="9" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Остатки радиопередатчика" GridPane.rowIndex="10" />
                         <Label fx:id="remainsOfRadioTransmitterLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                        <Label fx:id="remainsOfRadioTransmitterRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="10" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="4" GridPane.columnIndex="3" GridPane.rowIndex="10" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="10" />
+                        <Label fx:id="remainsOfRadioTransmitterTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="10" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="25" GridPane.columnIndex="5" GridPane.rowIndex="10" />
                         <Label fx:id="remainsOfRadioTransmitterRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="10" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Фрагмент данных &quot;Альфа&quot;" GridPane.rowIndex="11" />
                         <Label fx:id="alphaDataFragmentLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                        <Label fx:id="alphaDataFragmentRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="11" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="21" GridPane.columnIndex="3" GridPane.rowIndex="11" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="11" />
+                        <Label fx:id="alphaDataFragmentTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="11" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="290" GridPane.columnIndex="5" GridPane.rowIndex="11" />
                         <Label fx:id="alphaDataFragmentRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="11" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="12" />
+                        <Label fx:id="group_3TradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="12" />
                         <Label fx:id="group_3Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: #000000; -fx-background-color: #A9D08E;" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="12">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Северный мох" GridPane.rowIndex="13" />
                         <Label fx:id="northernMossLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="13" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                        <Label fx:id="northernMossRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="13" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="5" GridPane.columnIndex="3" GridPane.rowIndex="13" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="13" />
+                        <Label fx:id="northernMossTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="13" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="32" GridPane.columnIndex="5" GridPane.rowIndex="13" />
                         <Label fx:id="northernMossRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="13" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Дурман-камень" GridPane.rowIndex="14" />
                         <Label fx:id="dopeStoneLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="14" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                        <Label fx:id="dopeStoneRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="14" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="8" GridPane.columnIndex="3" GridPane.rowIndex="14" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="14" />
+                        <Label fx:id="dopeStoneTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="14" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="40" GridPane.columnIndex="5" GridPane.rowIndex="14" />
                         <Label fx:id="dopeStoneRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="14" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Остатки аккумуляторов" GridPane.rowIndex="15" />
                         <Label fx:id="remainsOfBatteriesLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="15" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+                        <Label fx:id="remainsOfBatteriesRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="15" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="7" GridPane.columnIndex="3" GridPane.rowIndex="15" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="15" />
+                        <Label fx:id="remainsOfBatteriesTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="15" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="36" GridPane.columnIndex="5" GridPane.rowIndex="15" />
                         <Label fx:id="remainsOfBatteriesRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="15" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Фрагмент данных &quot;Бета&quot;" GridPane.rowIndex="16" />
                         <Label fx:id="betaDataFragmentLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="16" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+                        <Label fx:id="betaDataFragmentRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="16" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="40" GridPane.columnIndex="3" GridPane.rowIndex="16" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="16" />
+                        <Label fx:id="betaDataFragmentTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="16" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="600" GridPane.columnIndex="5" GridPane.rowIndex="16" />
                         <Label fx:id="betaDataFragmentRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="16" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="17" />
+                        <Label fx:id="group_4TradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="17" />
                         <Label fx:id="group_4Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: #000000; -fx-background-color: #A9D08E;" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="17">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Рыжий папоротник" GridPane.rowIndex="18" />
                         <Label fx:id="redFernLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="18" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="18" />
+                        <Label fx:id="redFernRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="18" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="10" GridPane.columnIndex="3" GridPane.rowIndex="18" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="18" />
+                        <Label fx:id="redFernTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="18" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="60" GridPane.columnIndex="5" GridPane.rowIndex="18" />
                         <Label fx:id="redFernRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="18" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Вещество 07270" GridPane.rowIndex="19" />
                         <Label fx:id="substance07270Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="19" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="19" />
+                        <Label fx:id="substance07270RemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="19" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="8" GridPane.columnIndex="3" GridPane.rowIndex="19" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="19" />
+                        <Label fx:id="substance07270TradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="19" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="48" GridPane.columnIndex="5" GridPane.rowIndex="19" />
                         <Label fx:id="substance07270RubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="19" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Остатки пси-маячка" GridPane.rowIndex="20" />
                         <Label fx:id="remainsOfPsyTrackerLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="20" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="20" />
+                        <Label fx:id="remainsOfPsyTrackerRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="20" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="7" GridPane.columnIndex="3" GridPane.rowIndex="20" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="20" />
+                        <Label fx:id="remainsOfPsyTrackerTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="20" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="42" GridPane.columnIndex="5" GridPane.rowIndex="20" />
                         <Label fx:id="remainsOfPsyTrackerRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="20" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Фрагмент данных &quot;Гамма&quot;" GridPane.rowIndex="21" />
                         <Label fx:id="gammaDataFragmentLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="21" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="21" />
+                        <Label fx:id="gammaDataFragmentRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="21" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="66" GridPane.columnIndex="3" GridPane.rowIndex="21" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="21" />
+                        <Label fx:id="gammaDataFragmentTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="21" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="900" GridPane.columnIndex="5" GridPane.rowIndex="21" />
                         <Label fx:id="gammaDataFragmentRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="21" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Квантовая батарея" GridPane.rowIndex="22" />
                         <Label fx:id="quantumBatteryLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="22" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="22" />
+                        <Label fx:id="quantumBatteryRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="22" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="42" GridPane.columnIndex="3" GridPane.rowIndex="22" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="22" />
+                        <Label fx:id="quantumBatteryTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="22" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="450" GridPane.columnIndex="5" GridPane.rowIndex="22" />
                         <Label fx:id="quantumBatteryRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="22" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Аномальная сыворотка" GridPane.rowIndex="23" />
                         <Label fx:id="anomalousSerumLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="23" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="23" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="24" />
+                        <Label fx:id="anomalousSerumRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="23" />
+                        <Label fx:id="group_5TradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="24" />
                         <Label fx:id="group_5Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: #000000; -fx-background-color: #A9D08E;" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="24">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Горьколистник" GridPane.rowIndex="25" />
                         <Label fx:id="bitterleafLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="25" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="25" />
+                        <Label fx:id="bitterleafRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="25" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="16" GridPane.columnIndex="3" GridPane.rowIndex="25" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="25" />
+                        <Label fx:id="bitterleafTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="25" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="50" GridPane.columnIndex="5" GridPane.rowIndex="25" />
                         <Label fx:id="bitterleafRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="25" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Лимб" GridPane.rowIndex="26" />
                         <Label fx:id="limboLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="26" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="26" />
+                        <Label fx:id="limboRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="26" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="20" GridPane.columnIndex="3" GridPane.rowIndex="26" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="26" />
+                        <Label fx:id="limboTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="26" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="50" GridPane.columnIndex="5" GridPane.rowIndex="26" />
                         <Label fx:id="limboRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="26" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Фрагмент данных &quot;Лямбда&quot;" GridPane.rowIndex="27" />
                         <Label fx:id="lambdaDataFragmentLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="27" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="27" />
+                        <Label fx:id="lambdaDataFragmentRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="27" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="100" GridPane.columnIndex="3" GridPane.rowIndex="27" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="27" />
+                        <Label fx:id="lambdaDataFragmentTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="27" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="900" GridPane.columnIndex="5" GridPane.rowIndex="27" />
                         <Label fx:id="lambdaDataFragmentRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="27" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Аномальная батарея" GridPane.rowIndex="28" />
                         <Label fx:id="anomalousBatteryLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="28" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="28" />
+                        <Label fx:id="anomalousBatteryRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="28" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="500" GridPane.columnIndex="3" GridPane.rowIndex="28" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="28" />
+                        <Label fx:id="anomalousBatteryTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="28" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="2000" GridPane.columnIndex="5" GridPane.rowIndex="28" />
                         <Label fx:id="anomalousBatteryRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="28" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Лимбоплазма" GridPane.rowIndex="29" />
                         <Label fx:id="limboPlasmaLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="29" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="29" />
+                        <Label fx:id="limboPlasmaRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="29" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="800" GridPane.columnIndex="3" GridPane.rowIndex="29" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="29" />
+                        <Label fx:id="limboPlasmaTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="29" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="3000" GridPane.columnIndex="5" GridPane.rowIndex="29" />
                         <Label fx:id="limboPlasmaRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="29" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="30" />
+                        <Label fx:id="group_6TradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="30" />
                         <Label fx:id="group_6Label" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: #000000; -fx-background-color: #A9D08E;" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="30">
                            <font>
                               <Font name="System Bold" size="13.0" />
                            </font></Label>
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="33" />
+                        <Label fx:id="group_AllTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="33" />
                         <Label fx:id="group_AllLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: #000000; -fx-background-color: #A9D08E;" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="33">
                            <font>
                               <Font name="System Bold" size="13.0" />
@@ -303,7 +303,7 @@
                         <Label text="Итого:" GridPane.rowIndex="33" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Обменные монеты" GridPane.rowIndex="34" />
                         <Label fx:id="tradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="34" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="34" />
+                        <Label fx:id="tradeCoinsRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="34" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Репутация арсенала" GridPane.rowIndex="35" />
                         <Label fx:id="arsenalPointsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="35" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Коробок сезона (открыто)" GridPane.rowIndex="36" />
@@ -312,7 +312,7 @@
                         <Label fx:id="combatPassLevelLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="37" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Стоимость (Рубль)" GridPane.rowIndex="31" />
                         <Label fx:id="costLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="31" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="31" />
+                        <Label fx:id="costRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="31" />
                      </children>
                   </GridPane>
                   <Label fx:id="nicknameFractionLabel" alignment="CENTER" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
