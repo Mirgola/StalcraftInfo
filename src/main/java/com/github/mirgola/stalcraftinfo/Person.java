@@ -39,11 +39,42 @@ public class Person {
     private final IntegerProperty seasonBox;
     private final IntegerProperty combatPassLevel;
 
-    public Person(Integer idUser, String nickname, String fraction) {
-        this(idUser, nickname, fraction, 0, 0, 0, 0, 0, 0, 0,
+    private final IntegerProperty greenMoldRemains;
+    private final IntegerProperty swampStoneRemains;
+    private final IntegerProperty stinkyRootRemains;
+    private final IntegerProperty crappiteRemains;
+    private final IntegerProperty piecesOfCopperWireRemains;
+    private final IntegerProperty sprigOfChernobylChamomileRemains;
+    private final IntegerProperty pickleRemains;
+    private final IntegerProperty remainsOfRadioTransmitterRemains;
+    private final IntegerProperty alphaDataFragmentRemains;
+    private final IntegerProperty northernMossRemains;
+    private final IntegerProperty dopeStoneRemains;
+    private final IntegerProperty remainsOfBatteriesRemains;
+    private final IntegerProperty betaDataFragmentRemains;
+    private final IntegerProperty redFernRemains;
+    private final IntegerProperty substance07270Remains;
+    private final IntegerProperty remainsOfPsyTrackerRemains;
+    private final IntegerProperty gammaDataFragmentRemains;
+    private final IntegerProperty quantumBatteryRemains;
+    private final IntegerProperty anomalousSerumRemains;
+    private final IntegerProperty bitterleafRemains;
+    private final IntegerProperty limboRemains;
+    private final IntegerProperty lambdaDataFragmentRemains;
+    private final IntegerProperty anomalousBatteryRemains;
+    private final IntegerProperty limboPlasmaRemains;
+    private final IntegerProperty costRemains;
+
+    public Person(String nickname, String fraction) {
+        this(0, nickname, fraction, 0, 0, 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0, 0, 0,
                 0, 0, 0,0, 0, 0, 0,
-                0, 0, 0, 0, 0, 0, 0, 0);
+                0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0,
+                0, 0);
     }
 
     public Person(Integer idUser, String nickname, String fraction, Integer greenMold, Integer swampStone, Integer stinkyRoot ,Integer crappite,
@@ -51,7 +82,13 @@ public class Person {
                   Integer northernMoss, Integer dopeStone, Integer remainsOfBatteries, Integer betaDataFragment, Integer redFern, Integer substance07270,
                   Integer remainsOfPsyTracker, Integer gammaDataFragment, Integer quantumBattery, Integer anomalousSerum, Integer bitterleaf,
                   Integer limbo, Integer lambdaDataFragment, Integer anomalousBattery, Integer limboPlasma, Integer cost, Integer tradeCoins,
-                  Integer arsenalPoints, Integer seasonBox, Integer combatPassLevel) {
+                  Integer arsenalPoints, Integer seasonBox, Integer combatPassLevel,
+                  Integer greenMoldRemains, Integer swampStoneRemains, Integer stinkyRootRemains, Integer crappiteRemains, Integer piecesOfCopperWireRemains,
+                  Integer sprigOfChernobylChamomileRemains, Integer pickleRemains, Integer remainsOfRadioTransmitterRemains, Integer alphaDataFragmentRemains,
+                  Integer northernMossRemains, Integer dopeStoneRemains, Integer remainsOfBatteriesRemains, Integer betaDataFragmentRemains,
+                  Integer redFernRemains, Integer substance07270Remains, Integer remainsOfPsyTrackerRemains, Integer gammaDataFragmentRemains,
+                  Integer quantumBatteryRemains, Integer anomalousSerumRemains, Integer bitterleafRemains, Integer limboRemains,
+                  Integer lambdaDataFragmentRemains, Integer anomalousBatteryRemains, Integer limboPlasmaRemains, Integer costRemains) {
         this.idUser = new SimpleIntegerProperty(idUser);
         this.nickname = new SimpleStringProperty(nickname);
         this.fraction = new SimpleStringProperty(fraction);
@@ -84,6 +121,32 @@ public class Person {
         this.arsenalPoints = new SimpleIntegerProperty(arsenalPoints);
         this.seasonBox = new SimpleIntegerProperty(seasonBox);
         this.combatPassLevel = new SimpleIntegerProperty(combatPassLevel);
+
+        this.greenMoldRemains = new SimpleIntegerProperty(greenMoldRemains);
+        this.swampStoneRemains = new SimpleIntegerProperty(swampStoneRemains);
+        this.stinkyRootRemains = new SimpleIntegerProperty(stinkyRootRemains);
+        this.crappiteRemains = new SimpleIntegerProperty(crappiteRemains);
+        this.piecesOfCopperWireRemains = new SimpleIntegerProperty(piecesOfCopperWireRemains);
+        this.sprigOfChernobylChamomileRemains = new SimpleIntegerProperty(sprigOfChernobylChamomileRemains);
+        this.pickleRemains = new SimpleIntegerProperty(pickleRemains);
+        this.remainsOfRadioTransmitterRemains = new SimpleIntegerProperty(remainsOfRadioTransmitterRemains);
+        this.alphaDataFragmentRemains = new SimpleIntegerProperty(alphaDataFragmentRemains);
+        this.northernMossRemains = new SimpleIntegerProperty(northernMossRemains);
+        this.dopeStoneRemains = new SimpleIntegerProperty(dopeStoneRemains);
+        this.remainsOfBatteriesRemains = new SimpleIntegerProperty(remainsOfBatteriesRemains);
+        this.betaDataFragmentRemains = new SimpleIntegerProperty(betaDataFragmentRemains);
+        this.redFernRemains = new SimpleIntegerProperty(redFernRemains);
+        this.substance07270Remains = new SimpleIntegerProperty(substance07270Remains);
+        this.remainsOfPsyTrackerRemains = new SimpleIntegerProperty(remainsOfPsyTrackerRemains);
+        this.gammaDataFragmentRemains = new SimpleIntegerProperty(gammaDataFragmentRemains);
+        this.quantumBatteryRemains = new SimpleIntegerProperty(quantumBatteryRemains);
+        this.anomalousSerumRemains = new SimpleIntegerProperty(anomalousSerumRemains);
+        this.bitterleafRemains = new SimpleIntegerProperty(bitterleafRemains);
+        this.limboRemains = new SimpleIntegerProperty(limboRemains);
+        this.lambdaDataFragmentRemains = new SimpleIntegerProperty(lambdaDataFragmentRemains);
+        this.anomalousBatteryRemains = new SimpleIntegerProperty(anomalousBatteryRemains);
+        this.limboPlasmaRemains = new SimpleIntegerProperty(limboPlasmaRemains);
+        this.costRemains = new SimpleIntegerProperty(costRemains);
     }
 
     // ID пользователя
@@ -436,5 +499,206 @@ public class Person {
     }
     public IntegerProperty combatPassLevelProperty() {
         return combatPassLevel;
+    }
+
+    // Остатки
+    // Зеленая плесень - Green Mold Remains
+    public int getGreenMoldRemains() {
+        return greenMoldRemains.get();
+    }
+    public void setGreenMoldRemains(int greenMoldRemains) {
+        this.greenMoldRemains.set(greenMoldRemains);
+    }
+
+    // Болотный камень - Swamp Stone Remains
+    public int getSwampStoneRemains() {
+        return swampStoneRemains.get();
+    }
+    public void setSwampStoneRemains(int swampStoneRemains) {
+        this.swampStoneRemains.set(swampStoneRemains);
+    }
+
+    // Корень-вонючка - Stinky Root Remains
+    public int getStinkyRootRemains() {
+        return stinkyRootRemains.get();
+    }
+    public void setStinkyRootRemains(int stinkyRootRemains) {
+        this.stinkyRootRemains.set(stinkyRootRemains);
+    }
+
+    // Срачник - Crap pite Remains
+    public int getCrappiteRemains() {
+        return crappiteRemains.get();
+    }
+    public void setCrappiteRemains(int crappiteRemains) {
+        this.crappiteRemains.set(crappiteRemains);
+    }
+
+    //Остатки медной проволки - Pieces of Copper Wire Remains
+    public int getPiecesOfCopperWireRemains() {
+        return piecesOfCopperWireRemains.get();
+    }
+    public void setPiecesOfCopperWireRemains(int piecesOfCopperWireRemains) {
+        this.piecesOfCopperWireRemains.set(piecesOfCopperWireRemains);
+    }
+
+    // Росток чернобыльской ромашки - Sprig of Chernobyl Chamomile Remains
+    public int getSprigOfChernobylChamomileRemains() {
+        return sprigOfChernobylChamomileRemains.get();
+    }
+    public void setSprigOfChernobylChamomileRemains(int sprigOfChernobylChamomileRemains) {
+        this.sprigOfChernobylChamomileRemains.set(sprigOfChernobylChamomileRemains);
+    }
+
+    // Рассольник - Pickle Remains
+    public int getPickleRemains() {
+        return pickleRemains.get();
+    }
+    public void setPickleRemains(int pickleRemains) {
+        this.pickleRemains.set(pickleRemains);
+    }
+
+    // Остатки радиопередатчика - Remains of a Radio Transmitter Remains
+    public int getRemainsOfRadioTransmitterRemains() {
+        return remainsOfRadioTransmitterRemains.get();
+    }
+    public void setRemainsOfRadioTransmitterRemains(int remainsOfRadioTransmitterRemains) {
+        this.remainsOfRadioTransmitterRemains.set(remainsOfRadioTransmitterRemains);
+    }
+
+    // Фрагмент данных "Альфа" - Alpha Data Fragment Remains
+    public int getAlphaDataFragmentRemains() {
+        return alphaDataFragmentRemains.get();
+    }
+    public void setAlphaDataFragmentRemains(int alphaDataFragmentRemains) {
+        this.alphaDataFragmentRemains.set(alphaDataFragmentRemains);
+    }
+
+    // Северный мох - Northern Moss Remains
+    public int getNorthernMossRemains() {
+        return northernMossRemains.get();
+    }
+    public void setNorthernMossRemains(int northernMossRemains) {
+        this.northernMossRemains.set(northernMossRemains);
+    }
+
+    // Дурман-камень - Dopestone Remains
+    public int getDopeStoneRemains() {
+        return dopeStoneRemains.get();
+    }
+    public void setDopeStoneRemains(int dopeStoneRemains) {
+        this.dopeStoneRemains.set(dopeStoneRemains);
+    }
+
+    // Остатки аккумуляторов - Remains of Batteries Remains
+    public int getRemainsOfBatteriesRemains() {
+        return remainsOfBatteriesRemains.get();
+    }
+    public void setRemainsOfBatteriesRemains(int remainsOfBatteriesRemains) {
+        this.remainsOfBatteriesRemains.set(remainsOfBatteriesRemains);
+    }
+
+    // Фрагмент данных "Бета" - Beta Data Fragment Remains
+    public int getBetaDataFragmentRemains() {
+        return betaDataFragmentRemains.get();
+    }
+    public void setBetaDataFragmentRemains(int betaDataFragmentRemains) {
+        this.betaDataFragmentRemains.set(betaDataFragmentRemains);
+    }
+
+    // Рыжий папоротник - Red Fern Remains
+    public int getRedFernRemains() {
+        return redFernRemains.get();
+    }
+    public void setRedFernRemains(int redFernRemains) {
+        this.redFernRemains.set(redFernRemains);
+    }
+
+    // Вещество 07270 - Substance 07270 Remains
+    public int getSubstance07270Remains() {
+        return substance07270Remains.get();
+    }
+    public void setSubstance07270Remains(int substance07270Remains) {
+        this.substance07270Remains.set(substance07270Remains);
+    }
+
+    // Остатки пси-маячка - Remains of a Psy-Tracker Remains
+    public int getRemainsOfPsyTrackerRemains() {
+        return remainsOfPsyTrackerRemains.get();
+    }
+    public void setRemainsOfPsyTrackerRemains(int remainsOfPsyTrackerRemains) {
+        this.remainsOfPsyTrackerRemains.set(remainsOfPsyTrackerRemains);
+    }
+
+    // Фрагмент данных "Гамма" - Gamma Data Fragment Remains
+    public int getGammaDataFragmentRemains() {
+        return gammaDataFragmentRemains.get();
+    }
+    public void setGammaDataFragmentRemains(int gammaDataFragmentRemains) {
+        this.gammaDataFragmentRemains.set(gammaDataFragmentRemains);
+    }
+
+    // Квантовая батарея - Quantum Battery Remains
+    public int getQuantumBatteryRemains() {
+        return quantumBatteryRemains.get();
+    }
+    public void setQuantumBatteryRemains(int quantumBatteryRemains) {
+        this.quantumBatteryRemains.set(quantumBatteryRemains);
+    }
+
+    // Аномальная сыворотка - Anomalous Serum Remains
+    public int getAnomalousSerumRemains() {
+        return anomalousSerumRemains.get();
+    }
+    public void setAnomalousSerumRemains(int anomalousSerumRemains) {
+        this.anomalousSerumRemains.set(anomalousSerumRemains);
+    }
+
+    // Горьколистник - Bitterleaf Remains
+    public int getBitterleafRemains() {
+        return bitterleafRemains.get();
+    }
+    public void setBitterleafRemains(int bitterleafRemains) {
+        this.bitterleafRemains.set(bitterleafRemains);
+    }
+
+    // Лимб - Limbo Remains
+    public int getLimboRemains() {
+        return limboRemains.get();
+    }
+    public void setLimboRemains(int limboRemains) {
+        this.limboRemains.set(limboRemains);
+    }
+
+    // Фрагмент данных "Лямбда" - Lambda Data Fragment Remains
+    public int getLambdaDataFragmentRemains() {
+        return lambdaDataFragmentRemains.get();
+    }
+    public void setLambdaDataFragmentRemains(int lambdaDataFragmentRemains) {
+        this.lambdaDataFragmentRemains.set(lambdaDataFragmentRemains);
+    }
+
+    // Аномальная батарея - Anomalous Battery Remains
+    public int getAnomalousBatteryRemains() {
+        return anomalousBatteryRemains.get();
+    }
+    public void setAnomalousBatteryRemains(int anomalousBatteryRemains) {
+        this.anomalousBatteryRemains.set(anomalousBatteryRemains);
+    }
+
+    // Лимбоплазма - Limbo plasma Remains
+    public int getLimboPlasmaRemains() {
+        return limboPlasmaRemains.get();
+    }
+    public void setLimboPlasmaRemains(int limboPlasmaRemains) {
+        this.limboPlasmaRemains.set(limboPlasmaRemains);
+    }
+
+    // Стоимость (Рубль) – Cost Remains
+    public int getCostRemains() {
+        return costRemains.get();
+    }
+    public void setCostRemains(int costRemains) {
+        this.costRemains.set(costRemains);
     }
 }

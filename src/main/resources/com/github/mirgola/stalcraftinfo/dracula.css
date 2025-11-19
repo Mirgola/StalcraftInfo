@@ -4717,10 +4717,10 @@ Text {
   -fx-padding: 0;
 }
 .scroll-bar:horizontal {
-  -fx-pref-height: 8px;
+  -fx-pref-height: 12px;
 }
 .scroll-bar:vertical {
-  -fx-pref-width: 8px;
+  -fx-pref-width: 12px;
 }
 .scroll-bar:hover, .scroll-bar:pressed, .scroll-bar:focused {
   -fx-opacity: 1;

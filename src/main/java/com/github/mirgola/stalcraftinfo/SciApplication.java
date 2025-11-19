@@ -1,6 +1,6 @@
 package com.github.mirgola.stalcraftinfo;
 
-import com.github.mirgola.stalcraftinfo.barter.BarterMeleeWeapons;
+import com.github.mirgola.stalcraftinfo.barter.weapons.MeleeWeaponsCount;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -23,10 +23,12 @@ public class SciApplication extends Application {
     private BorderPane rootLayout;
     private TableView<Person> personTable;
     private ObservableList<Person> personData = FXCollections.observableArrayList();
-    private ObservableList<BarterMeleeWeapons> barterMeleeWeaponsData = FXCollections.observableArrayList();
+    private ObservableList<Barter> bartersData = FXCollections.observableArrayList();
+    private ObservableList<MeleeWeaponsCount> meleeWeaponsCountData = FXCollections.observableArrayList();
 
     public SciApplication() throws SQLException {
         SciDB.readUsers(this);
+        SciDB.readBarter(this);
         SciDB.readMeleeWeaponsCount(this);
     }
 
@@ -34,8 +36,12 @@ public class SciApplication extends Application {
         return personData;
     }
 
-    public ObservableList<BarterMeleeWeapons> getBarterMeleeWeaponsData() {
-        return barterMeleeWeaponsData;
+    public ObservableList<Barter> getBartersData() {
+        return bartersData;
+    }
+
+    public ObservableList<MeleeWeaponsCount> getBarterMeleeWeaponsData() {
+        return meleeWeaponsCountData;
     }
 
     @Override
@@ -105,6 +111,7 @@ public class SciApplication extends Application {
             UserEditController controller = fxmlLoader.getController();
             controller.setStage(stage);
             controller.setStageLabel(stageLabel);
+            controller.setComboBox();
             controller.setUser(nickname.toString(), fraction.toString());
 
             if(!nickname.isEmpty()){
@@ -156,7 +163,7 @@ public class SciApplication extends Application {
     }
 
     // Инициализация окна бартера
-    public void showBarter() throws IOException{
+    public void showBarter(PersonInfoController personInfoController) throws IOException{
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("StageBarter.fxml"));
         BorderPane stageBarter = (BorderPane) fxmlLoader.load();
 
@@ -181,6 +188,9 @@ public class SciApplication extends Application {
         controller1.setBarter(barter);
         controller1.setPerson(personTable.getSelectionModel().getSelectedItem());
         controller1.setSciApplication(this);
+
+        controller.setPersonInfoController(personInfoController);
+        controller.setPerson(personTable.getSelectionModel().getSelectedItem());
     }
 
     // Возвращает главную сцену.

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
+
+<ScrollPane stylesheets="@../../dracula.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.mirgola.stalcraftinfo.barter.other.ContainersController">
+   <content>
+      <AnchorPane prefHeight="630.0" prefWidth="1850.0">
+         <children>
+            <Label layoutX="56.0" layoutY="6.0" prefHeight="20.0" text="Выбранная категория: Другое &gt; Контейнеры" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+            <Label fx:id="l1label" alignment="CENTER" layoutX="5.0" layoutY="25.0" prefHeight="20.0" prefWidth="265.0" text="Label1" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l2label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label2" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l3label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label3" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l4label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label4" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l5label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label5" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l6label" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="265.0" text="Label6" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="30.0" />
+            <Pane layoutX="14.0" layoutY="50.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/yqq0.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" text="Контейнер «КЗС-1у»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="332.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/9y4q.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Контейнер «Кокон»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="323.0" layoutY="291.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/j33l.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Контейнер «КЗС-2»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="333.0" layoutY="301.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/o335.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Контейнер «КЗС-2У»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="343.0" layoutY="311.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/yqk0.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Контейнер «Кокон-У»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="353.0" layoutY="321.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/k3oj.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Контейнер «Сота»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1293.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/2vvv.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Контейнер «КЗС-М»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1603.0" layoutY="120.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/o3d5.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Контейнер «Сота-У»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1613.0" layoutY="130.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/1p2r.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Контейнер «КЗС-МУ»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1623.0" layoutY="140.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/q194.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Контейнер «Добытчик»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1633.0" layoutY="150.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/j3ml.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Контейнер «КСМ»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/p92d.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Контейнер «Улей»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="430.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/g35n.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Контейнер «Берлога-6»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="635.0" layoutY="515.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="132.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="645.0" layoutY="525.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1215.0" AnchorPane.topAnchor="132.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="655.0" layoutY="535.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="132.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="665.0" layoutY="545.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="132.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="655.0" layoutY="535.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1530.0" AnchorPane.topAnchor="132.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="685.0" layoutY="565.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="242.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="695.0" layoutY="575.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="242.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="705.0" layoutY="585.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1215.0" AnchorPane.topAnchor="242.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="715.0" layoutY="595.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1530.0" AnchorPane.topAnchor="242.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="715.0" layoutY="595.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1215.0" AnchorPane.topAnchor="462.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="725.0" layoutY="605.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1530.0" AnchorPane.topAnchor="462.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="1633.0" layoutY="150.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="430.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/d3kg.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Контейнер «Берлога-5»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="430.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/l3n2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Контейнер «Берлога-4у»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="314.0" layoutY="320.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="430.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/w4wz.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Контейнер «Берлога-4»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="725.0" layoutY="605.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="462.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="735.0" layoutY="615.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="462.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="1633.0" layoutY="150.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="430.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/9ygq.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Контейнер «Берлога-5У»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="324.0" layoutY="330.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/v6y7.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Контейнер «Бидон»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/6g5n.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Контейнер «Бидон-У»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/zj1k.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Контейнер «Кега»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/k3kj.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Контейнер «Кега-УЭ»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/other/containers/rgoz.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Контейнер «Бочонок»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="745.0" layoutY="625.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="572.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="735.0" layoutY="615.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="572.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="725.0" layoutY="605.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1215.0" AnchorPane.topAnchor="572.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="735.0" layoutY="615.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1530.0" AnchorPane.topAnchor="572.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="735.0" layoutY="615.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="1530.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+               </children>
+            </Pane>
+            <Line endX="-89.0" endY="131.0" layoutX="1644.0" layoutY="341.0" startX="-89.0" startY="-89.0" stroke="WHITE" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

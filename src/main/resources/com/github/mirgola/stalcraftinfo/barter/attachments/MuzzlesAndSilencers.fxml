@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
+
+<ScrollPane stylesheets="@../../dracula.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.mirgola.stalcraftinfo.barter.attachments.MuzzlesAndSilencersController">
+   <content>
+      <AnchorPane prefHeight="1950.0" prefWidth="1850.0">
+         <children>
+            <Label layoutX="56.0" layoutY="6.0" prefHeight="20.0" text="Выбранная категория: Обвесы &gt; Надульники и глушители" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+            <Label fx:id="l1label" alignment="CENTER" layoutX="5.0" layoutY="25.0" prefHeight="20.0" prefWidth="265.0" text="Label1" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l2label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label2" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l3label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label3" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l4label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label4" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l5label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label5" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l6label" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="265.0" text="Label6" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="30.0" />
+            <Pane layoutX="14.0" layoutY="50.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/96p6w.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Пламегаситель Noveske KX3" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="332.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/0rp0r.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Precision Armament M11 Severe Duty 7.62x51" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="313.0" layoutY="281.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/g424g.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Resistance Armament Compensator" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="323.0" layoutY="291.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/vjlng.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="CMMG SV Brake 7.62x51" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="333.0" layoutY="301.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/5lpy4.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Глушитель SCAR-SD" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="343.0" layoutY="311.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/dm2r9.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Keeno Arms SHREWD 7.62x51" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="353.0" layoutY="321.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/4qpql.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="VG6 EPSILON 762 Muzzle Brake" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1293.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/j52n4.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="SIG Sauer SRD762Ti" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1613.0" layoutY="130.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/ok5z4.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Удлиненный ствол D-Eagle VII" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1633.0" layoutY="150.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/6wpo6.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Удлиненный ствол D-Eagle XIX" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/j5254.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Пламегаситель Lantac BMD" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" visible="false" />
+               </children>
+            </Pane>
+            <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/qjwj9.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Пламегаситель Lantac Dragon 7.62" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" visible="false" />
+               </children>
+            </Pane>
+            <Pane layoutX="635.0" layoutY="515.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="132.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="655.0" layoutY="535.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="132.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="665.0" layoutY="545.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="132.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="655.0" layoutY="535.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1530.0" AnchorPane.topAnchor="132.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="675.0" layoutY="555.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="572.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="685.0" layoutY="565.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="610.0" AnchorPane.topAnchor="242.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="695.0" layoutY="575.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="242.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="705.0" layoutY="585.0" prefHeight="20.0" prefWidth="365.0" AnchorPane.leftAnchor="1215.0" AnchorPane.topAnchor="1122.0">
+               <children>
+                  <Line layoutY="10.0" startX="365.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="451.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="715.0" layoutY="595.0" prefHeight="20.0" prefWidth="365.0" AnchorPane.leftAnchor="1215.0" AnchorPane.topAnchor="1892.0">
+               <children>
+                  <Line layoutY="10.0" startX="365.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="451.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="1633.0" layoutY="150.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/4qpol.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Глушитель KAC Style QD" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/ly1kq.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Глушитель SureFire SOCOM556-RC2" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/1r3rq.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Diamondhead Compensator" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="725.0" layoutY="605.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="735.0" layoutY="615.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="695.0" layoutY="575.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="295.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="430.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/p6yj5.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="HK BLITZ 5.56" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="430.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/wjrjd.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="VG6 EPSILON 556 Muzzle Brake" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="735.0" layoutY="615.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="462.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="695.0" layoutY="575.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="610.0" AnchorPane.topAnchor="462.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Line endX="88.0" endY="56.0" layoutX="207.0" layoutY="306.0" startX="88.0" startY="-164.0" stroke="WHITE" />
+            <Line endX="88.0" endY="83.0" layoutX="522.0" layoutY="169.0" startX="88.0" startY="-27.0" stroke="WHITE" />
+            <Line endX="88.0" endY="82.0" layoutX="522.0" layoutY="390.0" startX="88.0" startY="-28.0" stroke="WHITE" />
+            <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/m0grr.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="SureFire Pro Comp 7.62x51" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/ok5l4.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Odin Works ATLAS 7.62x51" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="342.0" layoutY="110.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="650.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/zz9z9.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Hera Arms CC Compensator" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1673.0" layoutY="190.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="650.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/ly1yq.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="AlienTech 5.56" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="650.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/rw4jl.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Bulletec ST-6012" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="295.0" layoutY="683.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="295.0" AnchorPane.topAnchor="682.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Line endX="88.0" endY="81.0" layoutX="207.0" layoutY="611.0" startX="88.0" startY="-28.5" stroke="WHITE" />
+            <Pane layoutX="585.0" layoutY="573.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="572.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="586.0" layoutY="682.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="682.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="900.0" layoutY="572.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="572.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="900.0" layoutY="682.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="682.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="323.0" layoutY="291.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="760.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/2o7rm.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="MICRO BADGER" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="352.0" layoutY="120.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="760.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/5lpl4.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Пламегаситель LoneWolf" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1683.0" layoutY="200.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="760.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/g42kg.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Глушитель SUPRA K-8 С.К.О.С." />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1673.0" layoutY="190.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="760.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/zz9k9.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Глушитель Osprey" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1693.0" layoutY="210.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="870.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/3gpok.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Custom Guns Doncaster" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1683.0" layoutY="200.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="870.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/wjr3d.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Удлиненный ствол 9 мм" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="270.0" layoutY="793.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="792.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="586.0" layoutY="792.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="792.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="900.0" layoutY="792.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="792.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="610.0" layoutY="903.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="610.0" AnchorPane.topAnchor="902.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="900.0" layoutY="902.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="902.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Line endX="89.0" endY="80.0" layoutX="521.0" layoutY="832.0" startX="89.0" startY="-29.5" stroke="WHITE" />
+            <Pane layoutX="333.0" layoutY="301.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="980.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/2o71m.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="VR-09" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="362.0" layoutY="130.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="980.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/y3m3w.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="3 Port Mini Compensator" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1703.0" layoutY="220.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="980.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/3gp4k.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Hi-Point Razor" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1693.0" layoutY="210.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="980.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/7lp7r.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="GE-OCTO Gunethics" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="271.0" layoutY="1013.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="1012.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="586.0" layoutY="1012.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="1012.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="900.0" layoutY="1012.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="1012.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="343.0" layoutY="311.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="1090.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/1r39q.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Пламегаситель AKademia Тьма" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="372.0" layoutY="140.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="1090.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/n4zjw.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Spikes Tactical Dynacomp" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1713.0" layoutY="230.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1090.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/p6yv5.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="SPVV 7.62" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1703.0" layoutY="220.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1090.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/y3po3.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Рукоятка для ОЦ-14 «Гроза»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="1090.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/4qpkl.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="ДТК АШ-12" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1713.0" layoutY="230.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1200.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/vjlog.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Venom Tactical Antidote" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="382.0" layoutY="150.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="1310.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/zz939.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="ДТК «Вихрь»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1723.0" layoutY="240.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1310.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/5lpo4.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="ПБС-4" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1723.0" layoutY="240.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1310.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/4qp7l.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Имкас ПСУЗВ–11ТМ.12" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1733.0" layoutY="250.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1420.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/m0g4r.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="SRVV MBR Jet" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1733.0" layoutY="250.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1420.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/y3m4w.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="ДТК Цитадель 5.45" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="271.0" layoutY="1123.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="1122.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="585.0" layoutY="1122.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="1122.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="900.0" layoutY="1123.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="1122.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="925.0" layoutY="1233.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="925.0" AnchorPane.topAnchor="1232.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="295.0" layoutY="1333.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="295.0" AnchorPane.topAnchor="1342.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="586.0" layoutY="1342.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="1342.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="900.0" layoutY="1342.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="1342.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="610.0" layoutY="1453.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="610.0" AnchorPane.topAnchor="1452.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="900.0" layoutY="1452.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="1452.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Line endX="88.0" endY="80.0" layoutX="837.0" layoutY="1162.0" startX="88.0" startY="-29.5" stroke="WHITE" />
+            <Line endX="89.0" endY="79.0" layoutX="521.0" layoutY="1383.0" startX="89.0" startY="-30.5" stroke="WHITE" />
+            <Line endX="88.5" endY="77.5" layoutX="206.0" layoutY="1274.0" startX="89.0" startY="-141.5" stroke="WHITE" />
+            <Pane layoutX="353.0" layoutY="321.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="1530.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/kn9r3.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="ДТК-2" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="392.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="1530.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/ly10q.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="АКМЛ" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1743.0" layoutY="260.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1530.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/g42ng.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="ДТК «Косой»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1743.0" layoutY="260.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1530.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/rw4ml.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Jmac Customs RDC 4C 7.62" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="402.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="1640.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/5lp54.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="ДТК-1" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1753.0" layoutY="270.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1640.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/qjw09.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="PWS CQB 74" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1753.0" layoutY="270.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1640.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/j5204.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Jmac Customs RDC 4C 5.45" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1763.0" layoutY="280.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1750.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/0rp9r.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="ПБС-1" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1763.0" layoutY="280.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1750.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/y3mnw.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Глушитель АТГ" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1773.0" layoutY="290.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1860.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/wjrld.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Глушитель для ОЦ-14 «Гроза»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1673.0" layoutY="190.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="1860.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/muzzlesAndSilencers/qjwq9.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Глушитель АШ-12/МЦ-558" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="271.0" layoutY="1563.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="1562.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="586.0" layoutY="1563.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="1562.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="900.0" layoutY="1562.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="1562.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="295.0" layoutY="1673.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="295.0" AnchorPane.topAnchor="1672.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="586.0" layoutY="1673.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="1672.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="900.0" layoutY="1672.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="1672.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="900.0" layoutY="1783.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="1782.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="925.0" layoutY="1892.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="925.0" AnchorPane.topAnchor="1892.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Line endX="91.0" endY="78.0" layoutX="204.0" layoutY="1604.0" startX="91.0" startY="-32.0" stroke="WHITE" />
+            <Line endX="91.0" endY="77.0" layoutX="834.0" layoutY="1825.0" startX="91.0" startY="-32.0" stroke="WHITE" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

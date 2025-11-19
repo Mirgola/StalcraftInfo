@@ -1,17 +1,11 @@
 package com.github.mirgola.stalcraftinfo;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.MenuItem;
 import javafx.scene.control.TableView;
-import javafx.scene.input.MouseButton;
-import javafx.scene.input.MouseEvent;
 
 import java.sql.SQLException;
 
 public class RootLayoutController {
-    @FXML
-    private MenuItem editUserMenu;
-
     private TableView<Person> personTable;
     private SciApplication sciApplication;
 
@@ -29,9 +23,10 @@ public class RootLayoutController {
         StringBuilder fraction = new StringBuilder();
         boolean okClicked = sciApplication.showUserEdit("Добавить нового персонажа", nickname, fraction);
         if(okClicked) {
-            Person person = new Person(sciApplication.getPersonData().size() + 1, nickname.toString(), fraction.toString());
+            Person person = new Person(nickname.toString(), fraction.toString());
             sciApplication.getPersonData().add(person);
             SciDB.newUser(person);
+            SciDB.newUserOther(person);
         }
     }
 

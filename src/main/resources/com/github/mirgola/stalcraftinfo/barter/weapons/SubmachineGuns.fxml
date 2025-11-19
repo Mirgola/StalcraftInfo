@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
+
+<ScrollPane stylesheets="@../../dracula.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.mirgola.stalcraftinfo.barter.weapons.SubmachineGunsController">
+   <content>
+      <AnchorPane prefHeight="740.0" prefWidth="2480.0">
+         <children>
+            <Label layoutX="56.0" layoutY="6.0" prefHeight="20.0" text="Выбранная категория: Оружие &gt; Пистолеты-пулеметы" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+            <Label fx:id="l1label" alignment="CENTER" layoutX="5.0" layoutY="25.0" prefHeight="20.0" prefWidth="265.0" text="Label1" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l2label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label2" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l3label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label3" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l4label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label4" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l5label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label5" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l6label" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="265.0" text="Label6" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="30.0" />
+            <Pane layoutX="14.0" layoutY="50.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/y37wz.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" text="Walther MPK" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="332.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/96mj0.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="ПП-91 «Кедр»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="323.0" layoutY="291.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/m02dj.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Vz.68 Scorpion" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="353.0" layoutY="321.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/4q0lp.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="ПП-2000" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1293.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/qjvo6.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Spectre M4" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1603.0" layoutY="120.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/knlq0.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="СР-2М «Вереск»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1623.0" layoutY="140.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/y37dz.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="ПП-19-01 «Витязь»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/3grdz.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="СР-3 «Вихрь»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/p6r76.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="«Витязь-СН»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="655.0" layoutY="535.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="295.0" AnchorPane.topAnchor="582.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="675.0" layoutY="555.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="295.0" AnchorPane.topAnchor="242.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="705.0" layoutY="585.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1215.0" AnchorPane.topAnchor="242.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="715.0" layoutY="595.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1530.0" AnchorPane.topAnchor="242.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="715.0" layoutY="595.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="462.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="725.0" layoutY="605.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1530.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Label fx:id="l7label" alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="20.0" prefWidth="265.0" text="Label7" AnchorPane.leftAnchor="1895.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l8label" alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="20.0" prefWidth="265.0" text="Label8" AnchorPane.leftAnchor="2210.0" AnchorPane.topAnchor="30.0" />
+            <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1895.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/vjryn.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="СР-3М" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="2210.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/2od90.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Scorpion EVO III" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" visible="false" />
+               </children>
+            </Pane>
+            <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1895.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/dmq75.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="ППК-20" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/vjr7n.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Beretta Mx4 Storm" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1673.0" layoutY="190.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1895.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/y37qz.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="TDI KRISS Vector" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="725.0" layoutY="605.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1845.0" AnchorPane.topAnchor="242.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="735.0" layoutY="615.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1845.0" AnchorPane.topAnchor="572.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="735.0" layoutY="615.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1845.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="755.0" layoutY="635.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="1845.0" AnchorPane.topAnchor="682.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+               </children>
+            </Pane>
+            <Line endX="82.0" endY="16.0" layoutX="1788.0" layoutY="676.0" startX="82.0" startY="-204.0" stroke="WHITE" />
+            <Line endX="28.0" endY="110.0" layoutX="267.0" layoutY="482.0" startX="28.0" startY="-230.0" stroke="WHITE" />
+            <Pane layoutX="271.0" layoutY="352.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="270.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+               </children>
+            </Pane>
+            <Pane layoutX="342.0" layoutY="110.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/okv2o.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="«Гепард»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="333.0" layoutY="301.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/g40d0.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="IMI Uzi" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="363.0" layoutY="331.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/zz742.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="АЕК-919К «Каштан»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="585.0" layoutY="243.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="242.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="595.0" layoutY="253.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="572.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="595.0" layoutY="253.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="242.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="605.0" layoutY="263.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="572.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="913.0" layoutY="352.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="925.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Line endX="101.0" endY="22.0" layoutX="824.0" layoutY="340.0" startX="101.0" startY="-88.0" stroke="WHITE" />
+            <Pane layoutX="1633.0" layoutY="150.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="430.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/zz7d2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="ПП-19 «Бизон-2-01»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="540.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/n4p76.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="HK UMP45" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="735.0" layoutY="615.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1215.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Line endX="101.0" endY="22.0" layoutX="1139.0" layoutY="450.0" startX="101.0" startY="-88.0" stroke="WHITE" />
+            <Pane layoutX="715.0" layoutY="595.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1215.0" AnchorPane.topAnchor="572.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="430.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/5ldrg.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="FN P90" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1673.0" layoutY="190.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="650.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/submachineGuns/1rdg6.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="HK MP5" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="765.0" layoutY="645.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="1845.0" AnchorPane.topAnchor="462.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+               </children>
+            </Pane>
+            <Pane layoutX="735.0" layoutY="615.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1530.0" AnchorPane.topAnchor="462.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="745.0" layoutY="625.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1530.0" AnchorPane.topAnchor="572.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="755.0" layoutY="635.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="1555.0" AnchorPane.topAnchor="682.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Line endX="82.0" endY="16.0" layoutX="1473.0" layoutY="676.0" startX="82.0" startY="-204.0" stroke="WHITE" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

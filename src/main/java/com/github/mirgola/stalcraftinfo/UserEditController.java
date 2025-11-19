@@ -2,6 +2,7 @@ package com.github.mirgola.stalcraftinfo;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -17,7 +18,16 @@ public class UserEditController {
     @FXML
     private TextField nicknameField;
     @FXML
-    private TextField fractionField;
+    private ComboBox comboBox;
+
+    @FXML
+    private void initialize() {
+
+    }
+
+    public void setComboBox() {
+        comboBox.getItems().addAll("Рубеж", "Заря", "Наемники", "Завет", "Сталкеры", "Бандиты");
+    }
 
     public boolean isOkClicked() {
         return okClicked;
@@ -41,7 +51,7 @@ public class UserEditController {
 
     public void setUser(String nickname, String fraction) {
         nicknameField.setText(nickname);
-        fractionField.setText(fraction);
+        comboBox.setValue(fraction);
     }
 
     // Вызывается, когда пользователь кликнул по кнопке Отмена
@@ -54,7 +64,7 @@ public class UserEditController {
     private void handleOk() {
         if(isInputValid()) {
             nickname = nicknameField.getText();
-            fraction = fractionField.getText();
+            fraction = comboBox.getValue().toString();
 
             okClicked = true;
             stage.close();
@@ -68,7 +78,7 @@ public class UserEditController {
             errorMessage += "Поле 'Имя' не может быть пустым!\n";
         }
 
-        if (fractionField.getText() == null || fractionField.getText().length() == 0 || fractionField.getText().equalsIgnoreCase("null")) {
+        if (comboBox.getValue().toString().length() == 0) {
             errorMessage += "Поле 'Фракция' не может быть пустым!!\n";
         }
 

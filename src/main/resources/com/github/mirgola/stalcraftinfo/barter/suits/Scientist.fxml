@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
+
+<ScrollPane stylesheets="@../../dracula.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.mirgola.stalcraftinfo.barter.suits.ScientistController">
+   <content>
+      <AnchorPane prefHeight="410.0" prefWidth="2165.0">
+         <children>
+            <Label layoutX="56.0" layoutY="6.0" prefHeight="20.0" text="Выбранная категория: Костюмы &gt; Научные" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
+            <Label fx:id="l1label" alignment="CENTER" layoutX="5.0" layoutY="25.0" prefHeight="20.0" prefWidth="265.0" text="Label1" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l2label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label2" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l3label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label3" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l4label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label4" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l5label" alignment="CENTER" prefHeight="20.0" prefWidth="265.0" text="Label5" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l6label" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="265.0" text="Label6" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="30.0" />
+            <Label fx:id="l7label" alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="20.0" prefWidth="265.0" text="Label7" AnchorPane.leftAnchor="1895.0" AnchorPane.topAnchor="30.0" />
+            <Pane layoutX="332.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/suits/scientist/wjgo2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" text="ИП-4м" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="313.0" layoutY="281.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/suits/scientist/wjgm2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" text="Дождевик" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="343.0" layoutY="311.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fx:id="s4303_s4304ImageView" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="s4303_s4304Label" layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="s4303_s4304" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="353.0" layoutY="321.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/suits/scientist/wjg72.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="КИМ-99 «Янтарь»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1593.0" layoutY="110.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/suits/combined/j5kv0.png" />
+                           </image></ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="АО-2 «Странник»" />
+                  <Button layoutX="90.0" layoutY="45.0" mnemonicParsing="false" onAction="#handleCombined" prefWidth="165.0" text="Перейти в категорию" />
+               </children>
+            </Pane>
+            <Pane layoutX="1603.0" layoutY="120.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/suits/scientist/4qlnr.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="КИМ-99М «Малахит»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fx:id="s4307_s4308ImageView" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="s4307_s4308Label" layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="s4307_s4308" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="s4310_s4311_s4312_s4313Pane" layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1895.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fx:id="s4310_s4311_s4312_s4313ImageView" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </Pane>
+                  <Label fx:id="s4310_s4311_s4312_s4313Label" layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="s4310_s4311_s4312_s4313" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="645.0" layoutY="525.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="610.0" AnchorPane.topAnchor="132.0">
+               <children>
+                  <Line layoutY="10.0" startX="25.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="111.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="1683.0" layoutY="200.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1895.0" AnchorPane.topAnchor="320.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/suits/scientist/2ovr0.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Комбинезон «Сатурн»" />
+                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="675.0" layoutY="555.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="685.0" layoutY="565.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="695.0" layoutY="575.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="705.0" layoutY="585.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1215.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="715.0" layoutY="595.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1530.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Pane layoutX="725.0" layoutY="605.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1845.0" AnchorPane.topAnchor="352.0">
+               <children>
+                  <Line layoutY="10.0" startX="50.0" stroke="WHITE" />
+                  <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
+               </children>
+            </Pane>
+            <Line endX="92.0" endY="147.5" layoutX="518.0" layoutY="214.0" startX="92.0" startY="-72.0" stroke="WHITE" />
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
