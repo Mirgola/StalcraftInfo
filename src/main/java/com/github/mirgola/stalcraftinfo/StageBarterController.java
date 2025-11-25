@@ -1,7 +1,6 @@
 package com.github.mirgola.stalcraftinfo;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 public class StageBarterController {
@@ -27,6 +26,4 @@ public class StageBarterController {
         stage.close();
         //personInfoController.showPersonDetails(person);
     }
-
-
 }

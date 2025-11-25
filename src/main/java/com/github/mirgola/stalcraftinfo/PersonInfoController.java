@@ -590,13 +590,13 @@ public class PersonInfoController {
     }
 
     @FXML
-    private void handlePersonEdin() throws SQLException {
-        Person personEdit = personTable.getSelectionModel().getSelectedItem();
-        if (personEdit != null) {
-            boolean okCliked = sciApplication.showPersonEdin(personEdit);
+    private void handlePersonInfoEdin() throws SQLException {
+        Person person = personTable.getSelectionModel().getSelectedItem();
+        if (person != null) {
+            boolean okCliked = sciApplication.showPersonInfoEdin(person);
             if (okCliked) {
-                showPersonDetails(personEdit);
-                SciDB.updateUsers(personEdit);
+                showPersonDetails(person);
+                SciDB.updatePersonInfo(person);
             }
         }
     }

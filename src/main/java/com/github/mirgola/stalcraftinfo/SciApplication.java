@@ -1,6 +1,6 @@
 package com.github.mirgola.stalcraftinfo;
 
-import com.github.mirgola.stalcraftinfo.barter.weapons.MeleeWeaponsCount;
+import com.github.mirgola.stalcraftinfo.barter.weapons.*;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -20,29 +20,43 @@ public class SciApplication extends Application {
     private Stage primaryStage;
     private Scene scene;
     private BorderPane stage;
-    private BorderPane rootLayout;
+    private BorderPane menuBar;
     private TableView<Person> personTable;
+
     private ObservableList<Person> personData = FXCollections.observableArrayList();
     private ObservableList<Barter> bartersData = FXCollections.observableArrayList();
+
+    private ObservableList<AssaultRiflesCount> assaultRiflesCountData = FXCollections.observableArrayList();
+    private ObservableList<SubmachineGunsCount> submachineGunsCountData = FXCollections.observableArrayList();
+    private ObservableList<MachineGunsCount> machineGunsCountData = FXCollections.observableArrayList();
+    private ObservableList<SniperRiflesCount> sniperRiflesCountData = FXCollections.observableArrayList();
+    private ObservableList<ShotgunsAndRiflesCount> shotgunsAndRiflesCountData = FXCollections.observableArrayList();
+    private ObservableList<PistolsCount> pistolsCountData = FXCollections.observableArrayList();
     private ObservableList<MeleeWeaponsCount> meleeWeaponsCountData = FXCollections.observableArrayList();
 
     public SciApplication() throws SQLException {
         SciDB.readUsers(this);
         SciDB.readBarter(this);
+
+        SciDB.readAssaultRiflesCount(this);
+        SciDB.readSubmachineGunsCount(this);
+        SciDB.readMachineGunsCount(this);
+        SciDB.readSniperRiflesCount(this);
+        SciDB.readShotgunsAndRiflesCount(this);
+        SciDB.readPistolsCount(this);
         SciDB.readMeleeWeaponsCount(this);
     }
 
-    public ObservableList<Person> getPersonData() {
-        return personData;
-    }
+    public ObservableList<Person> getPersonData() {return personData;}
+    public ObservableList<Barter> getBartersData() {return bartersData;}
 
-    public ObservableList<Barter> getBartersData() {
-        return bartersData;
-    }
-
-    public ObservableList<MeleeWeaponsCount> getBarterMeleeWeaponsData() {
-        return meleeWeaponsCountData;
-    }
+    public ObservableList<AssaultRiflesCount> getAssaultRiflesCountData() {return assaultRiflesCountData;}
+    public ObservableList<SubmachineGunsCount> getSubmachineGunsCountData() {return submachineGunsCountData;}
+    public ObservableList<MachineGunsCount> getMachineGunsCountData() {return machineGunsCountData;}
+    public ObservableList<SniperRiflesCount> getSniperRiflesCountData() {return sniperRiflesCountData;}
+    public ObservableList<ShotgunsAndRiflesCount> getShotgunsAndRiflesCountData() {return shotgunsAndRiflesCountData;}
+    public ObservableList<PistolsCount> getPistolsCountData() {return pistolsCountData;}
+    public ObservableList<MeleeWeaponsCount> getMeleeWeaponsCountData() {return meleeWeaponsCountData;}
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -50,7 +64,7 @@ public class SciApplication extends Application {
         this.primaryStage.initStyle(StageStyle.TRANSPARENT);
 
         initStage();
-        initRootLayout();
+        showMenuBar();
     }
 
     // Инициализация заголовка
@@ -58,7 +72,6 @@ public class SciApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("Stage.fxml"));
         stage = (BorderPane) fxmlLoader.load();
 
-        // Отображаем сцену заголовка
         scene = new Scene(stage);
         primaryStage.setScene(scene);
         primaryStage.setResizable(false);
@@ -69,15 +82,14 @@ public class SciApplication extends Application {
     }
 
     // Инициализация корневого макета
-    public void initRootLayout() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("RootLayout.fxml"));
-        rootLayout = (BorderPane) fxmlLoader.load();
+    public void showMenuBar() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("MenuBar.fxml"));
+        menuBar = (BorderPane) fxmlLoader.load();
 
-        // Помещаем корневой макет в центр заголовка
-        stage.setCenter(rootLayout);
+        stage.setCenter(menuBar);
         showPersonInfo();
 
-        RootLayoutController controller = fxmlLoader.getController();
+        MenuBarController controller = fxmlLoader.getController();
         controller.setSciApplication(this);
         controller.setPersonTable(personTable);
     }
@@ -87,18 +99,17 @@ public class SciApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("PersonInfo.fxml"));
         AnchorPane personInfo = (AnchorPane) fxmlLoader.load();
 
-        // Помещаем сведения об персонажах в центр корневого макета
-        rootLayout.setCenter(personInfo);
+        menuBar.setCenter(personInfo);
 
-        // Даём контроллеру доступ к главному приложению.
         PersonInfoController controller = fxmlLoader.getController();
         controller.setSciApplication(this);
         personTable = controller.getPersonTable();
     }
 
+    // инициализация окна Редактирование персонажа
     public boolean showUserEdit(String stageLabel, StringBuilder nickname, StringBuilder fraction) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("UserEdit.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("PersonEdit.fxml"));
             AnchorPane userEdit = (AnchorPane) fxmlLoader.load();
 
             Stage stage = new Stage();
@@ -108,7 +119,7 @@ public class SciApplication extends Application {
             Scene scene = new Scene(userEdit);
             stage.setScene(scene);
 
-            UserEditController controller = fxmlLoader.getController();
+            PersonEditController controller = fxmlLoader.getController();
             controller.setStage(stage);
             controller.setStageLabel(stageLabel);
             controller.setComboBox();
@@ -133,22 +144,23 @@ public class SciApplication extends Application {
         }
     }
 
-    public boolean showPersonEdin(Person person) {
+    // Инициализация окна Редактирование информации персонажа
+    public boolean showPersonInfoEdin(Person person) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("PersonEdit.fxml"));
-            AnchorPane personEdit = (AnchorPane) fxmlLoader.load();
+            FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("PersonInfoEdit.fxml"));
+            AnchorPane personInfoEdit = (AnchorPane) fxmlLoader.load();
 
             // Создаем диалоговое окно
             Stage stage = new Stage();
             stage.initStyle(StageStyle.TRANSPARENT);
             stage.initModality(Modality.WINDOW_MODAL);
             stage.initOwner(primaryStage);
-            Scene scene = new Scene(personEdit);
+            Scene scene = new Scene(personInfoEdit);
             stage.setScene(scene);
 
 
             // Передаём адресата в контроллер
-            PersonEditController controller = fxmlLoader.getController();
+            PersonInfoEditController controller = fxmlLoader.getController();
             controller.setStage(stage);
             controller.setPerson(person);
 
@@ -178,14 +190,14 @@ public class SciApplication extends Application {
         StageBarterController controller = fxmlLoader.getController();
         controller.setStageBarter(stage);
 
-        //
-        FXMLLoader fxmlLoader1 = new FXMLLoader(SciApplication.class.getResource("Barter.fxml"));
-        BorderPane barter = (BorderPane) fxmlLoader1.load();
+        // Инициализация меню бартера
+        FXMLLoader fxmlLoader1 = new FXMLLoader(SciApplication.class.getResource("MenuBarBarter.fxml"));
+        BorderPane menuBarBarter = (BorderPane) fxmlLoader1.load();
 
-        stageBarter.setCenter(barter);
+        stageBarter.setCenter(menuBarBarter);
 
-        BarterController controller1 = fxmlLoader1.getController();
-        controller1.setBarter(barter);
+        MenuBarBarterController controller1 = fxmlLoader1.getController();
+        controller1.setBarter(menuBarBarter);
         controller1.setPerson(personTable.getSelectionModel().getSelectedItem());
         controller1.setSciApplication(this);
 

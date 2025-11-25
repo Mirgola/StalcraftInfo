@@ -2,9 +2,7 @@ package com.github.mirgola.stalcraftinfo;
 
 import com.github.mirgola.stalcraftinfo.barter.attachments.*;
 import com.github.mirgola.stalcraftinfo.barter.other.*;
-import com.github.mirgola.stalcraftinfo.barter.suits.CombatController;
-import com.github.mirgola.stalcraftinfo.barter.suits.CombinedController;
-import com.github.mirgola.stalcraftinfo.barter.suits.ScientistController;
+import com.github.mirgola.stalcraftinfo.barter.suits.*;
 import com.github.mirgola.stalcraftinfo.barter.weapons.*;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,7 +11,7 @@ import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
 
-public class BarterController {
+public class MenuBarBarterController {
     private BorderPane barter;
     private Person person;
     private SciApplication sciApplication;
@@ -30,90 +28,172 @@ public class BarterController {
         this.sciApplication = sciApplication;
     }
 
-    // Вызов окна Автоматы
+    // 1.1 Вызов окна Автоматы
     public void handleAssaultRifles() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/weapons/AssaultRifles.fxml"));
-        ScrollPane assaultRifles = (ScrollPane) fxmlLoader.load();
+        ScrollPane assaultRifles = fxmlLoader.load();
         barter.setCenter(assaultRifles);
 
         AssaultRiflesController controller = fxmlLoader.getController();
         controller.setBarterController(this);
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getAssaultRiflesCount());
     }
 
-    // Вызов окна Пистолеты-пулеметы
+    private AssaultRiflesCount getAssaultRiflesCount() {
+        AssaultRiflesCount assaultRiflesCount = null;
+        for (AssaultRiflesCount thisCount : sciApplication.getAssaultRiflesCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                assaultRiflesCount = thisCount;
+            }
+        }
+        return assaultRiflesCount;
+    }
+
+    // 1.2 Вызов окна Пистолеты-пулеметы
     @FXML
     private void handleSubmachineGuns() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/weapons/SubmachineGuns.fxml"));
-        ScrollPane submachineGuns = (ScrollPane) fxmlLoader.load();
+        ScrollPane submachineGuns = fxmlLoader.load();
         barter.setCenter(submachineGuns);
 
         SubmachineGunsController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getSubmachineGunsCount());
     }
 
-    // Вызов окна Пулеметы
+    private SubmachineGunsCount getSubmachineGunsCount() {
+        SubmachineGunsCount submachineGunsCount = null;
+        for (SubmachineGunsCount thisCount : sciApplication.getSubmachineGunsCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                submachineGunsCount = thisCount;
+            }
+        }
+        return submachineGunsCount;
+    }
+
+    // 1.3 Вызов окна Пулеметы
     public void handleMachineGuns() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/weapons/MachineGuns.fxml"));
-        ScrollPane machineGuns = (ScrollPane) fxmlLoader.load();
+        ScrollPane machineGuns = fxmlLoader.load();
         barter.setCenter(machineGuns);
 
         MachineGunsController controller = fxmlLoader.getController();
         controller.setBarterController(this);
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getMachineGunsCount());
     }
 
-    // Вызов окна Снайперские винтовки
+    private MachineGunsCount getMachineGunsCount() {
+        MachineGunsCount machineGunsCount = null;
+        for (MachineGunsCount thisCount : sciApplication.getMachineGunsCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                machineGunsCount = thisCount;
+            }
+        }
+        return machineGunsCount;
+    }
+
+    // 1.4 Вызов окна Снайперские винтовки
     public void handleSniperRifles () throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/weapons/SniperRifles.fxml"));
-        ScrollPane sniperRifles = (ScrollPane) fxmlLoader.load();
+        ScrollPane sniperRifles = fxmlLoader.load();
         barter.setCenter(sniperRifles);
 
         SniperRiflesController controller = fxmlLoader.getController();
         controller.setBarterController(this);
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getSniperRiflesCount());
     }
 
-    // Вызов окна Дробовики и ружья
+    private SniperRiflesCount getSniperRiflesCount() {
+        SniperRiflesCount sniperRiflesCount = null;
+        for (SniperRiflesCount thisCount : sciApplication.getSniperRiflesCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                sniperRiflesCount = thisCount;
+            }
+        }
+        return sniperRiflesCount;
+    }
+
+    // 1.5 Вызов окна Дробовики и ружья
     @FXML
     private void handleShotgunsAndRifles() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/weapons/ShotgunsAndRifles.fxml"));
-        ScrollPane shotgunsAndRifles = (ScrollPane) fxmlLoader.load();
+        ScrollPane shotgunsAndRifles = fxmlLoader.load();
         barter.setCenter(shotgunsAndRifles);
 
         ShotgunsAndRiflesController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getShotgunsAndRiflesCount());
     }
 
-    // Вызов окна Пистолеты
+    private ShotgunsAndRiflesCount getShotgunsAndRiflesCount() {
+        ShotgunsAndRiflesCount shotgunsAndRiflesCount = null;
+        for (ShotgunsAndRiflesCount thisCount : sciApplication.getShotgunsAndRiflesCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                shotgunsAndRiflesCount = thisCount;
+            }
+        }
+        return shotgunsAndRiflesCount;
+    }
+
+    // 1.6 Вызов окна Пистолеты
     @FXML
     private void handlePistols() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/weapons/Pistols.fxml"));
-        ScrollPane pistols = (ScrollPane) fxmlLoader.load();
+        ScrollPane pistols = fxmlLoader.load();
         barter.setCenter(pistols);
 
         PistolsController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getPistolsCount());
     }
 
-    // Вызов окна Ближний бой
+    private PistolsCount getPistolsCount() {
+        PistolsCount pistolsCount = null;
+        for (PistolsCount thisCount : sciApplication.getPistolsCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                pistolsCount = thisCount;
+            }
+        }
+        return pistolsCount;
+    }
+
+    // 1.7 Вызов окна Ближний бой
     @FXML
     private void handleMeleeWeapons() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/weapons/MeleeWeapons.fxml"));
-        ScrollPane meleeWeapons = (ScrollPane) fxmlLoader.load();
+        ScrollPane meleeWeapons = fxmlLoader.load();
         barter.setCenter(meleeWeapons);
 
         MeleeWeaponsController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
         controller.setPerson(person);
-        controller.setBarterMeleeWeapons(sciApplication.getBarterMeleeWeaponsData().get(person.getId() - 1));
+        controller.setField(getMeleeWeaponsCount());
     }
 
-    // Вызов окна Рюкзаки и сумки
+    private MeleeWeaponsCount getMeleeWeaponsCount() {
+        MeleeWeaponsCount meleeWeaponsCount = null;
+        for (MeleeWeaponsCount thisCount : sciApplication.getMeleeWeaponsCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                meleeWeaponsCount = thisCount;
+            }
+         }
+        return meleeWeaponsCount;
+    }
+
+    // 2.1 Вызов окна Рюкзаки и сумки
     @FXML
     private void handleBackpacksAndPouches() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/other/BackpacksAndPouches.fxml"));
-        ScrollPane backpacksAndPouches = (ScrollPane) fxmlLoader.load();
+        ScrollPane backpacksAndPouches = fxmlLoader.load();
         barter.setCenter(backpacksAndPouches);
 
         BackpacksAndPouchesController controller = fxmlLoader.getController();
@@ -124,7 +204,7 @@ public class BarterController {
     @FXML
     private void handleContainers() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/other/Containers.fxml"));
-        ScrollPane containers = (ScrollPane) fxmlLoader.load();
+        ScrollPane containers = fxmlLoader.load();
         barter.setCenter(containers);
 
         ContainersController controller = fxmlLoader.getController();
@@ -135,7 +215,7 @@ public class BarterController {
     @FXML
     private void handleDevices() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/other/Devices.fxml"));
-        ScrollPane devices = (ScrollPane) fxmlLoader.load();
+        ScrollPane devices = fxmlLoader.load();
         barter.setCenter(devices);
 
         DevicesController controller = fxmlLoader.getController();
@@ -146,7 +226,7 @@ public class BarterController {
     @FXML
     private void handleCosmetics() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/other/Cosmetics.fxml"));
-        ScrollPane cosmetics = (ScrollPane) fxmlLoader.load();
+        ScrollPane cosmetics = fxmlLoader.load();
         barter.setCenter(cosmetics);
 
         CosmeticsController controller = fxmlLoader.getController();
@@ -157,7 +237,7 @@ public class BarterController {
     @FXML
     private void handleAccessories() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/other/Accessories.fxml"));
-        ScrollPane accessories = (ScrollPane) fxmlLoader.load();
+        ScrollPane accessories = fxmlLoader.load();
         barter.setCenter(accessories);
 
         AccessoriesController controller = fxmlLoader.getController();
@@ -168,7 +248,7 @@ public class BarterController {
     @FXML
     private void handleOther() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/other/Other.fxml"));
-        ScrollPane other = (ScrollPane) fxmlLoader.load();
+        ScrollPane other = fxmlLoader.load();
         barter.setCenter(other);
 
         OtherController controller = fxmlLoader.getController();
@@ -179,7 +259,7 @@ public class BarterController {
     @FXML
     private void handleMuzzlesAndSilencers() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/attachments/MuzzlesAndSilencers.fxml"));
-        ScrollPane muzzlesAndSilencers = (ScrollPane) fxmlLoader.load();
+        ScrollPane muzzlesAndSilencers = fxmlLoader.load();
         barter.setCenter(muzzlesAndSilencers);
 
         MuzzlesAndSilencersController controller = fxmlLoader.getController();
@@ -190,7 +270,7 @@ public class BarterController {
     @FXML
     private void handleMagazines() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/attachments/Magazines.fxml"));
-        ScrollPane magazines = (ScrollPane) fxmlLoader.load();
+        ScrollPane magazines = fxmlLoader.load();
         barter.setCenter(magazines);
 
         MagazinesController controller = fxmlLoader.getController();
@@ -201,7 +281,7 @@ public class BarterController {
     @FXML
     private void handleHanguardsAndBrackets() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/attachments/HanguardsAndBrackets.fxml"));
-        ScrollPane hanguardsAndBrackets = (ScrollPane) fxmlLoader.load();
+        ScrollPane hanguardsAndBrackets = fxmlLoader.load();
         barter.setCenter(hanguardsAndBrackets);
 
         HanguardsAndBracketsController controller = fxmlLoader.getController();
@@ -212,7 +292,7 @@ public class BarterController {
     @FXML
     private void handleSights() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/attachments/Sights.fxml"));
-        ScrollPane sights = (ScrollPane) fxmlLoader.load();
+        ScrollPane sights = fxmlLoader.load();
         barter.setCenter(sights);
 
         SightsController controller = fxmlLoader.getController();
@@ -223,7 +303,7 @@ public class BarterController {
     @FXML
     private void handleHandles() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/attachments/Handles.fxml"));
-        ScrollPane handles = (ScrollPane) fxmlLoader.load();
+        ScrollPane handles = fxmlLoader.load();
         barter.setCenter(handles);
 
         HandlesController controller = fxmlLoader.getController();
@@ -234,7 +314,7 @@ public class BarterController {
     @FXML
     private void handleOtherAttachments() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/attachments/OtherAttachments.fxml"));
-        ScrollPane otherAttachments = (ScrollPane) fxmlLoader.load();
+        ScrollPane otherAttachments = fxmlLoader.load();
         barter.setCenter(otherAttachments);
 
         OtherAttachmentsController controller = fxmlLoader.getController();
@@ -244,7 +324,7 @@ public class BarterController {
     // Вызов окна Боевые
     public void handleCombat() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/suits/Combat.fxml"));
-        ScrollPane combat = (ScrollPane) fxmlLoader.load();
+        ScrollPane combat = fxmlLoader.load();
         barter.setCenter(combat);
 
         CombatController controller = fxmlLoader.getController();
@@ -255,7 +335,7 @@ public class BarterController {
     // Вызов окна Комбинированные
     public void handleCombined() throws  IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/suits/Combined.fxml"));
-        ScrollPane combined = (ScrollPane) fxmlLoader.load();
+        ScrollPane combined = fxmlLoader.load();
         barter.setCenter(combined);
 
         CombinedController controller = fxmlLoader.getController();
@@ -266,7 +346,7 @@ public class BarterController {
     // Вызов окна Научные
     public void handleScientist() throws  IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/suits/Scientist.fxml"));
-        ScrollPane scientist = (ScrollPane) fxmlLoader.load();
+        ScrollPane scientist = fxmlLoader.load();
         barter.setCenter(scientist);
 
         ScientistController controller = fxmlLoader.getController();

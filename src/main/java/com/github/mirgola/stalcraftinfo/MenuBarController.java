@@ -5,7 +5,7 @@ import javafx.scene.control.TableView;
 
 import java.sql.SQLException;
 
-public class RootLayoutController {
+public class MenuBarController {
     private TableView<Person> personTable;
     private SciApplication sciApplication;
 
@@ -17,21 +17,23 @@ public class RootLayoutController {
         this.sciApplication = sciApplication;
     }
 
+    // Добавление нового персонажа
     @FXML
-    private void handleNewUser() throws SQLException {
+    private void handleNewPerson() throws SQLException {
         StringBuilder nickname = new StringBuilder();
         StringBuilder fraction = new StringBuilder();
         boolean okClicked = sciApplication.showUserEdit("Добавить нового персонажа", nickname, fraction);
         if(okClicked) {
             Person person = new Person(nickname.toString(), fraction.toString());
             sciApplication.getPersonData().add(person);
-            SciDB.newUser(person);
-            SciDB.newUserOther(person);
+            SciDB.newPerson(person);
+            SciDB.newPersonOther(person);
         }
     }
 
+    // Редактирование персонажа
     @FXML
-    private void handleEditUser() throws SQLException{
+    private void handleEditPerson() throws SQLException{
         Person person = personTable.getSelectionModel().getSelectedItem();
         StringBuilder nickname = new StringBuilder(person.getNickname());
         StringBuilder fraction = new StringBuilder(person.getFraction());
@@ -39,15 +41,16 @@ public class RootLayoutController {
         if(okClicked) {
             person.setNickname(nickname.toString());
             person.setFraction(fraction.toString());
-            SciDB.editUser(person);
+            SciDB.editPerson(person);
         }
     }
 
+    // Удаление персонажа
     @FXML
-    private void handleDeleteUser() throws SQLException {
+    private void handleDeletePerson() throws SQLException {
         Person person = personTable.getSelectionModel().getSelectedItem();
         int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
         personTable.getItems().remove(selectedIndex);
-        SciDB.deleteUser(person);
+        SciDB.deletePerson(person);
     }
 }

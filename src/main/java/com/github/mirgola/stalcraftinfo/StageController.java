@@ -12,6 +12,11 @@ public class StageController {
     private Stage stage;
     private Scene scene;
 
+    public void setSciApplication(SciApplication sciApplication) {
+        stage = sciApplication.getPrimaryStage();
+        scene = sciApplication.getScene();
+    }
+
     // Закрытие приложения
     @FXML
     private void closeButton() {
@@ -46,10 +51,5 @@ public class StageController {
                 stage.setY(event.getScreenY() + yOffset);
             }
         });
-    }
-
-    public void setSciApplication(SciApplication sciApplication) {
-        stage = sciApplication.getPrimaryStage();
-        scene = sciApplication.getScene();
     }
 }

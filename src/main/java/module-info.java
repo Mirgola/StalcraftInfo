@@ -5,8 +5,6 @@ module com.github.mirgola.stalcraftinfo {
     requires java.desktop;
     requires javafx.graphics;
     requires javafx.base;
-    //requires com.github.mirgola.stalcraftinfo;
-
 
     opens com.github.mirgola.stalcraftinfo to javafx.fxml;
     opens com.github.mirgola.stalcraftinfo.barter.attachments to javafx.fxml;

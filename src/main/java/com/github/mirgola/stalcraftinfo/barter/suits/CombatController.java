@@ -1,7 +1,6 @@
 package com.github.mirgola.stalcraftinfo.barter.suits;
 
-import com.github.mirgola.stalcraftinfo.BarterController;
-import com.github.mirgola.stalcraftinfo.SciApplication;
+import com.github.mirgola.stalcraftinfo.MenuBarBarterController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -11,7 +10,7 @@ import javafx.scene.layout.Pane;
 import java.io.IOException;
 
 public class CombatController {
-    BarterController barterController;
+    MenuBarBarterController barterController;
 
     @FXML
     private Label l1label;
@@ -63,7 +62,7 @@ public class CombatController {
     @FXML
     private Pane c4126_c4127_c4128_c4129Pane;
 
-    public void setBarterController(BarterController barterController) {
+    public void setBarterController(MenuBarBarterController barterController) {
         this.barterController = barterController;
     }
 

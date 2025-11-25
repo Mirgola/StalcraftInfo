@@ -316,7 +316,7 @@
                      </children>
                   </GridPane>
                   <Label fx:id="nicknameFractionLabel" alignment="CENTER" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
-                  <Button layoutX="676.0" layoutY="761.0" mnemonicParsing="false" onAction="#handlePersonEdin" prefHeight="30.0" prefWidth="90.0" text="Изменить" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
+                  <Button layoutX="676.0" layoutY="761.0" mnemonicParsing="false" onAction="#handlePersonInfoEdin" prefHeight="30.0" prefWidth="90.0" text="Изменить" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" />
                   <Button layoutX="564.0" layoutY="759.0" mnemonicParsing="false" onAction="#handleBarter" prefHeight="30.0" prefWidth="90.0" text="Бартер" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="105.0" />
                </children></AnchorPane>
         </items>
