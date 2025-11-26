@@ -27,7 +27,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="«Лимб»" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="c2401Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleC2401Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="323.0" layoutY="291.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="100.0">
@@ -42,7 +42,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fad864;" text="EMR-65 «Spark»" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" visible="false" />
+                  <TextField fx:id="c2402Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleC2402Field" prefHeight="30.0" prefWidth="47.0" visible="false" />
                </children>
             </Pane>
             <Pane layoutX="333.0" layoutY="301.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="210.0">
@@ -57,7 +57,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fad864;" text="ZIVCAS 3.0 «Expanse»" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" visible="false" />
+                  <TextField fx:id="c2403Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleC2403Field" prefHeight="30.0" prefWidth="47.0" visible="false" />
                </children>
             </Pane>
          </children>

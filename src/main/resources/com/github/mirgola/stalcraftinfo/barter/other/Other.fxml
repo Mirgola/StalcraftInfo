@@ -26,7 +26,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="ДШД САК-1" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="o2601Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleO2601Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Label fx:id="l2label" alignment="CENTER" layoutX="15.0" layoutY="35.0" prefHeight="20.0" prefWidth="265.0" text="Label2" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="30.0" />
@@ -42,7 +42,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" text="Черный Регалий" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="o2602Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleO2602Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
          </children>

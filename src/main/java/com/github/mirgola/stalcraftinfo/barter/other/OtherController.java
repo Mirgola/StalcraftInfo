@@ -1,13 +1,26 @@
 package com.github.mirgola.stalcraftinfo.barter.other;
 
+import com.github.mirgola.stalcraftinfo.Person;
+import com.github.mirgola.stalcraftinfo.SciDB;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
+import java.sql.SQLException;
 
 public class OtherController {
+    private Person person;
+    private OtherCount otherCount;
+    
     @FXML
-    private Label l1label;
+    private Label l1label, l2label;
+
     @FXML
-    private Label l2label;
+    private TextField o2601Field, o2602Field;
+
+    public void setPerson(Person person) {
+        this.person = person;
+    }
 
     public void setLabel(String fraction) {
         if (fraction.equals("Рубеж") || fraction.equals("Заря") || fraction.equals("Сталкеры")) {
@@ -34,6 +47,35 @@ public class OtherController {
             if (fraction.equals("Бандиты")) {
                 l2label.setText("Фракции Севера | 1 Уровень");
             }
+        }
+    }
+
+    public void setField(OtherCount otherCount) {
+        this.otherCount = otherCount;
+        System.out.println(otherCount.getNicknamePerson());
+        o2601Field.setText(Integer.toString(otherCount.getO2601()));
+        o2602Field.setText(Integer.toString(otherCount.getO2602()));
+    }
+
+    @FXML
+    private void handleO2601Field() throws SQLException {
+        if(o2601Field.isEditable()){
+            otherCount.setO2601(Integer.parseInt(o2601Field.getText()));
+            SciDB.updateOtherCount(person, otherCount);
+            o2601Field.setEditable(false);
+        } else {
+            o2601Field.setEditable(true);
+        }
+    }
+
+    @FXML
+    private void handleO2602Field() throws SQLException {
+        if(o2602Field.isEditable()){
+            otherCount.setO2602(Integer.parseInt(o2602Field.getText()));
+            SciDB.updateOtherCount(person, otherCount);
+            o2602Field.setEditable(false);
+        } else {
+            o2602Field.setEditable(true);
         }
     }
 }

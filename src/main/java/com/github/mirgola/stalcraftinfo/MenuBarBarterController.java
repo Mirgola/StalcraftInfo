@@ -198,9 +198,21 @@ public class MenuBarBarterController {
 
         BackpacksAndPouchesController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getBackpacksAndPouchesCount());
     }
 
-    // Вызов окна Контейнеры
+    private BackpacksAndPouchesCount getBackpacksAndPouchesCount() {
+        BackpacksAndPouchesCount backpacksAndPouchesCount = null;
+        for (BackpacksAndPouchesCount thisCount : sciApplication.getBackpacksAndPouchesCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                backpacksAndPouchesCount = thisCount;
+            }
+        }
+        return backpacksAndPouchesCount;
+    }
+
+    // 2.2 Вызов окна Контейнеры
     @FXML
     private void handleContainers() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/other/Containers.fxml"));
@@ -209,9 +221,21 @@ public class MenuBarBarterController {
 
         ContainersController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getContainersCount());
     }
 
-    // Вызов окна Устройства
+    private ContainersCount getContainersCount() {
+        ContainersCount containersCount = null;
+        for (ContainersCount thisCount : sciApplication.getContainersCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                containersCount = thisCount;
+            }
+        }
+        return containersCount;
+    }
+
+    // 2.3 Вызов окна Устройства
     @FXML
     private void handleDevices() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/other/Devices.fxml"));
@@ -220,9 +244,21 @@ public class MenuBarBarterController {
 
         DevicesController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getDevicesCount());
     }
 
-    // Вызов окна Косметика
+    private DevicesCount getDevicesCount() {
+        DevicesCount devicesCount = null;
+        for (DevicesCount thisCount : sciApplication.getDevicesCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                devicesCount = thisCount;
+            }
+        }
+        return devicesCount;
+    }
+
+    // 2.4 Вызов окна Косметика
     @FXML
     private void handleCosmetics() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/other/Cosmetics.fxml"));
@@ -231,9 +267,21 @@ public class MenuBarBarterController {
 
         CosmeticsController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getCosmeticsCount());
     }
 
-    // Вызов окна Аксессуары
+    private CosmeticsCount getCosmeticsCount() {
+        CosmeticsCount cosmeticsCount = null;
+        for (CosmeticsCount thisCount : sciApplication.getCosmeticsCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                cosmeticsCount = thisCount;
+            }
+        }
+        return cosmeticsCount;
+    }
+
+    // 2.5 Вызов окна Аксессуары
     @FXML
     private void handleAccessories() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/other/Accessories.fxml"));
@@ -242,9 +290,21 @@ public class MenuBarBarterController {
 
         AccessoriesController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getAccessoriesCount());
     }
 
-    // Вызов окнна Прочее
+    private AccessoriesCount getAccessoriesCount() {
+        AccessoriesCount accessoriesCount = null;
+        for (AccessoriesCount thisCount : sciApplication.getAccessoriesCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                accessoriesCount = thisCount;
+            }
+        }
+        return accessoriesCount;
+    }
+
+    // 2.6 Вызов окнна Прочее
     @FXML
     private void handleOther() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/other/Other.fxml"));
@@ -253,6 +313,18 @@ public class MenuBarBarterController {
 
         OtherController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getOtherCount());
+    }
+
+    private OtherCount getOtherCount() {
+        OtherCount otherCount = null;
+        for (OtherCount thisCount : sciApplication.getOtherCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                otherCount = thisCount;
+            }
+        }
+        return otherCount;
     }
 
     // Вызов окна Надульники и глушители

@@ -1,13 +1,14 @@
 package com.github.mirgola.stalcraftinfo;
 
 import com.github.mirgola.stalcraftinfo.barter.weapons.*;
+import com.github.mirgola.stalcraftinfo.barter.other.*;
 import java.sql.*;
 
 public class SciDB {
     private static Connection connection;
     private static Statement statement;
     private static final String[] tableNameCount = {"W_AssaultRiflesCount", "W_SubmachineGunsCount", "W_MachineGunsCount", "W_SniperRiflesCount",
-            "W_ShotgunsAndRiflesCount", "W_PistolsCount", "W_MeleeWeaponsCount", "O_BackpacksandPouchesCount", "O_ContainersCount", "O_DevicesCount",
+            "W_ShotgunsAndRiflesCount", "W_PistolsCount", "W_MeleeWeaponsCount", "O_BackpacksAndPouchesCount", "O_ContainersCount", "O_DevicesCount",
             "O_CosmeticsCount", "O_AccessoriesCount", "O_OtherCount", "A_MuzzlesAndSilencersCount", "A_MagazinesCount", "A_HanguardsAndBracketsCount",
             "A_SightsCount", "A_HandlesCount", "A_OtherAttachmentsCount", "S_CombatCount", "S_CombinedCount", "S_ScientistCount"};
 
@@ -372,6 +373,149 @@ public class SciDB {
         }
     }
 
+    // 2.1 Заполение списка из таблицы "BackpacksAndPouchesCount"
+    public static void readBackpacksAndPouchesCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM O_BackpacksAndPouchesCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int bap2101 = resultSet.getInt("bap2101");
+                int bap2102 = resultSet.getInt("bap2102");
+                int bap2103 = resultSet.getInt("bap2103");
+                int bap2104 = resultSet.getInt("bap2104");
+                int bap2105 = resultSet.getInt("bap2105");
+                int bap2106 = resultSet.getInt("bap2106");
+                int bap2107 = resultSet.getInt("bap2107");
+                int bap2108 = resultSet.getInt("bap2108");
+                int bap2109 = resultSet.getInt("bap2109");
+                int bap2110 = resultSet.getInt("bap2110");
+                int bap2111 = resultSet.getInt("bap2111");
+                int bap2112 = resultSet.getInt("bap2112");
+                int bap2113 = resultSet.getInt("bap2113");
+                int bap2114 = resultSet.getInt("bap2114");
+                int bap2115 = resultSet.getInt("bap2115");
+                int bap2116 = resultSet.getInt("bap2116");
+                int bap2117 = resultSet.getInt("bap2117");
+
+                sciApplication.getBackpacksAndPouchesCountData().add(new BackpacksAndPouchesCount(idPerson, nicknamePerson,
+                        bap2101, bap2102, bap2103, bap2104, bap2105, bap2106, bap2107, bap2108, bap2109, bap2110,
+                        bap2111, bap2112, bap2113, bap2114, bap2115, bap2116, bap2117));
+            }
+        }
+    }
+
+    // 2.2 Заполение списка из таблицы "ContainersCount"
+    public static void readContainersCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM O_ContainersCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int c2201 = resultSet.getInt("c2201");
+                int c2202 = resultSet.getInt("c2202");
+                int c2203 = resultSet.getInt("c2203");
+                int c2204 = resultSet.getInt("c2204");
+                int c2205 = resultSet.getInt("c2205");
+                int c2206 = resultSet.getInt("c2206");
+                int c2207 = resultSet.getInt("c2207");
+                int c2208 = resultSet.getInt("c2208");
+                int c2209 = resultSet.getInt("c2209");
+                int c2210 = resultSet.getInt("c2210");
+                int c2211 = resultSet.getInt("c2211");
+                int c2212 = resultSet.getInt("c2212");
+                int c2213 = resultSet.getInt("c2213");
+                int c2214 = resultSet.getInt("c2214");
+                int c2215 = resultSet.getInt("c2215");
+                int c2216 = resultSet.getInt("c2216");
+                int c2217 = resultSet.getInt("c2217");
+                int c2218 = resultSet.getInt("c2218");
+                int c2219 = resultSet.getInt("c2219");
+                int c2220 = resultSet.getInt("c2220");
+                int c2221 = resultSet.getInt("c2221");
+                int c2222 = resultSet.getInt("c2222");
+
+                sciApplication.getContainersCountData().add(new ContainersCount(idPerson, nicknamePerson,
+                        c2201, c2202, c2203, c2204, c2205, c2206, c2207, c2208, c2209, c2210,
+                        c2211, c2212, c2213, c2214, c2215, c2216, c2217, c2218, c2219, c2220,
+                        c2221, c2222));
+            }
+        }
+    }
+
+    // 2.3 Заполение списка из таблицы "DevicesCount"
+    public static void readDevicesCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM O_DevicesCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int d2301 = resultSet.getInt("d2301");
+                int d2302 = resultSet.getInt("d2302");
+                int d2303 = resultSet.getInt("d2303");
+                int d2304 = resultSet.getInt("d2304");
+                int d2305 = resultSet.getInt("d2305");
+                int d2306 = resultSet.getInt("d2306");
+                int d2307 = resultSet.getInt("d2307");
+                int d2308 = resultSet.getInt("d2308");
+                int d2309 = resultSet.getInt("d2309");
+                int d2310 = resultSet.getInt("d2310");
+                int d2311 = resultSet.getInt("d2311");
+
+                sciApplication.getDevicesCountData().add(new DevicesCount(idPerson, nicknamePerson,
+                        d2301, d2302, d2303, d2304, d2305, d2306, d2307, d2308, d2309, d2310,
+                        d2311));
+            }
+        }
+    }
+
+    // 2.4 Заполение списка из таблицы "CosmeticsCount"
+    public static void readCosmeticsCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM O_CosmeticsCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int c2401 = resultSet.getInt("c2401");
+                int c2402 = resultSet.getInt("c2402");
+                int c2403 = resultSet.getInt("c2403");
+
+                sciApplication.getCosmeticsCountData().add(new CosmeticsCount(idPerson, nicknamePerson,
+                        c2401, c2402, c2403));
+            }
+        }
+    }
+
+    // 2.5 Заполение списка из таблицы "AccessoriesCount"
+    public static void readAccessoriesCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM O_AccessoriesCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int a2501 = resultSet.getInt("a2501");
+                int a2502 = resultSet.getInt("a2502");
+                int a2503 = resultSet.getInt("a2503");
+                int a2504 = resultSet.getInt("a2504");
+                int a2505 = resultSet.getInt("a2505");
+                int a2506 = resultSet.getInt("a2506");
+
+                sciApplication.getAccessoriesCountData().add(new AccessoriesCount(idPerson, nicknamePerson,
+                        a2501, a2502, a2503, a2504, a2505, a2506));
+            }
+        }
+    }
+
+    // 2.6 Заполение списка из таблицы "OtherCount"
+    public static void readOtherCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM O_OtherCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int o2601 = resultSet.getInt("o2601");
+                int o2602 = resultSet.getInt("o2602");
+
+                sciApplication.getOtherCountData().add(new OtherCount(idPerson, nicknamePerson,
+                        o2601, o2602));
+            }
+        }
+    }
+
     //
     // Изменение информации о персонаже
     public static void updatePersonInfo(Person person) throws SQLException {
@@ -633,6 +777,145 @@ public class SciDB {
                 updateIfChanged(person.getId(), "W_MeleeWeaponsCount", "mw1714", meleeWeaponsCount.getMw1714(), resultSet.getInt("mw1714"));
                 updateIfChanged(person.getId(), "W_MeleeWeaponsCount", "mw1715", meleeWeaponsCount.getMw1715(), resultSet.getInt("mw1715"));
                 updateIfChanged(person.getId(), "W_MeleeWeaponsCount", "mw1716", meleeWeaponsCount.getMw1716(), resultSet.getInt("mw1716"));
+            }
+        }
+    }
+
+    // 2.1 Изменение количества крафтов предметов для BackpacksAndPouchesCount
+    public static void updateBackpacksAndPouchesCount(Person person, BackpacksAndPouchesCount backpacksAndPouchesCount) throws SQLException {
+        String Sql = "SELECT * FROM O_BackpacksAndPouchesCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2101", backpacksAndPouchesCount.getBap2101(), resultSet.getInt("bap2101"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2102", backpacksAndPouchesCount.getBap2102(), resultSet.getInt("bap2102"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2103", backpacksAndPouchesCount.getBap2103(), resultSet.getInt("bap2103"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2104", backpacksAndPouchesCount.getBap2104(), resultSet.getInt("bap2104"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2105", backpacksAndPouchesCount.getBap2104(), resultSet.getInt("bap2105"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2106", backpacksAndPouchesCount.getBap2106(), resultSet.getInt("bap2106"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2107", backpacksAndPouchesCount.getBap2107(), resultSet.getInt("bap2107"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2108", backpacksAndPouchesCount.getBap2108(), resultSet.getInt("bap2108"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2109", backpacksAndPouchesCount.getBap2109(), resultSet.getInt("bap2109"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2110", backpacksAndPouchesCount.getBap2110(), resultSet.getInt("bap2110"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2111", backpacksAndPouchesCount.getBap2111(), resultSet.getInt("bap2111"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2112", backpacksAndPouchesCount.getBap2112(), resultSet.getInt("bap2112"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2113", backpacksAndPouchesCount.getBap2113(), resultSet.getInt("bap2113"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2114", backpacksAndPouchesCount.getBap2114(), resultSet.getInt("bap2114"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2115", backpacksAndPouchesCount.getBap2115(), resultSet.getInt("bap2115"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2116", backpacksAndPouchesCount.getBap2116(), resultSet.getInt("bap2116"));
+                updateIfChanged(person.getId(), "O_BackpacksAndPouchesCount", "bap2117", backpacksAndPouchesCount.getBap2117(), resultSet.getInt("bap2117"));
+            }
+        }
+    }
+
+    // 2.2 Изменение количества крафтов предметов для ContainersCount
+    public static void updateContainersCount(Person person, ContainersCount containersCount) throws SQLException {
+        String Sql = "SELECT * FROM O_ContainersCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2201", containersCount.getC2201(), resultSet.getInt("c2201"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2202", containersCount.getC2202(), resultSet.getInt("c2202"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2203", containersCount.getC2203(), resultSet.getInt("c2203"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2204", containersCount.getC2204(), resultSet.getInt("c2204"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2205", containersCount.getC2205(), resultSet.getInt("c2205"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2206", containersCount.getC2206(), resultSet.getInt("c2206"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2207", containersCount.getC2207(), resultSet.getInt("c2207"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2208", containersCount.getC2207(), resultSet.getInt("c2208"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2209", containersCount.getC2209(), resultSet.getInt("c2209"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2210", containersCount.getC2210(), resultSet.getInt("c2210"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2211", containersCount.getC2211(), resultSet.getInt("c2211"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2212", containersCount.getC2212(), resultSet.getInt("c2212"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2213", containersCount.getC2213(), resultSet.getInt("c2213"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2214", containersCount.getC2214(), resultSet.getInt("c2214"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2215", containersCount.getC2215(), resultSet.getInt("c2215"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2216", containersCount.getC2216(), resultSet.getInt("c2216"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2217", containersCount.getC2217(), resultSet.getInt("c2217"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2218", containersCount.getC2218(), resultSet.getInt("c2218"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2219", containersCount.getC2219(), resultSet.getInt("c2219"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2220", containersCount.getC2220(), resultSet.getInt("c2220"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2221", containersCount.getC2221(), resultSet.getInt("c2221"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2222", containersCount.getC2222(), resultSet.getInt("c2222"));
+            }
+        }
+    }
+
+    // 2.3 Изменение количества крафтов предметов для DevicesCount
+    public static void updateDevicesCount(Person person, DevicesCount devicesCount) throws SQLException {
+        String Sql = "SELECT * FROM O_DevicesCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "O_DevicesCount", "d2301", devicesCount.getD2301(), resultSet.getInt("d2301"));
+                updateIfChanged(person.getId(), "O_DevicesCount", "d2302", devicesCount.getD2302(), resultSet.getInt("d2302"));
+                updateIfChanged(person.getId(), "O_DevicesCount", "d2303", devicesCount.getD2303(), resultSet.getInt("d2303"));
+                updateIfChanged(person.getId(), "O_DevicesCount", "d2304", devicesCount.getD2304(), resultSet.getInt("d2304"));
+                updateIfChanged(person.getId(), "O_DevicesCount", "d2305", devicesCount.getD2305(), resultSet.getInt("d2305"));
+                updateIfChanged(person.getId(), "O_DevicesCount", "d2306", devicesCount.getD2306(), resultSet.getInt("d2306"));
+                updateIfChanged(person.getId(), "O_DevicesCount", "d2307", devicesCount.getD2307(), resultSet.getInt("d2307"));
+                updateIfChanged(person.getId(), "O_DevicesCount", "d2308", devicesCount.getD2307(), resultSet.getInt("d2308"));
+                updateIfChanged(person.getId(), "O_DevicesCount", "d2309", devicesCount.getD2309(), resultSet.getInt("d2309"));
+                updateIfChanged(person.getId(), "O_DevicesCount", "d2310", devicesCount.getD2310(), resultSet.getInt("d2310"));
+                updateIfChanged(person.getId(), "O_DevicesCount", "d2311", devicesCount.getD2311(), resultSet.getInt("d2311"));
+            }
+        }
+    }
+
+    // 2.4 Изменение количества крафтов предметов для CosmeticsCount
+    public static void updateCosmeticsCount(Person person, CosmeticsCount cosmeticsCount) throws SQLException {
+        String Sql = "SELECT * FROM O_CosmeticsCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "O_CosmeticsCount", "c2401", cosmeticsCount.getC2401(), resultSet.getInt("c2401"));
+                updateIfChanged(person.getId(), "O_CosmeticsCount", "c2402", cosmeticsCount.getC2402(), resultSet.getInt("c2402"));
+                updateIfChanged(person.getId(), "O_CosmeticsCount", "c2403", cosmeticsCount.getC2403(), resultSet.getInt("c2403"));
+            }
+        }
+    }
+
+    // 2.5 Изменение количества крафтов предметов для AccessoriesCount
+    public static void updateAccessoriesCount(Person person, AccessoriesCount accessoriesCount) throws SQLException {
+        String Sql = "SELECT * FROM O_AccessoriesCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "O_AccessoriesCount", "a2501", accessoriesCount.getA2501(), resultSet.getInt("a2501"));
+                updateIfChanged(person.getId(), "O_AccessoriesCount", "a2502", accessoriesCount.getA2502(), resultSet.getInt("a2502"));
+                updateIfChanged(person.getId(), "O_AccessoriesCount", "a2503", accessoriesCount.getA2503(), resultSet.getInt("a2503"));
+                updateIfChanged(person.getId(), "O_AccessoriesCount", "a2504", accessoriesCount.getA2504(), resultSet.getInt("a2504"));
+                updateIfChanged(person.getId(), "O_AccessoriesCount", "a2505", accessoriesCount.getA2505(), resultSet.getInt("a2505"));
+                updateIfChanged(person.getId(), "O_AccessoriesCount", "a2506", accessoriesCount.getA2506(), resultSet.getInt("a2506"));
+            }
+        }
+    }
+
+    // 2.6 Изменение количества крафтов предметов для OtherCount
+    public static void updateOtherCount(Person person, OtherCount otherCount) throws SQLException {
+        String Sql = "SELECT * FROM O_OtherCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "O_OtherCount", "o2601", otherCount.getO2601(), resultSet.getInt("o2601"));
+                updateIfChanged(person.getId(), "O_OtherCount", "o2602", otherCount.getO2602(), resultSet.getInt("o2602"));
             }
         }
     }
