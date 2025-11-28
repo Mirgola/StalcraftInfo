@@ -30,7 +30,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" text="Надствольное крепление БМ" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="hab3301Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleHab3301Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="323.0" layoutY="291.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="100.0">
@@ -45,7 +45,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Планка с базой Пикатинни" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="hab3302Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleHab3302Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="333.0" layoutY="301.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="100.0">
@@ -60,7 +60,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Направляющая RIS для дробовиков" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="hab3303Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleHab3303Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="353.0" layoutY="321.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="210.0">
@@ -75,7 +75,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Повышающая RIS-планка" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="hab3305Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleHab3305Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1293.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="100.0">
@@ -90,7 +90,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Боковой кронштейн с планкой Пикатинни" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="hab3304Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleHab3304Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1613.0" layoutY="130.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="100.0">
@@ -105,7 +105,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Цевье для Сайга-12К" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="hab3306Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleHab3306Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
          </children>

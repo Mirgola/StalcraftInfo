@@ -104,7 +104,7 @@ public class AssaultRiflesController {
         ar1102Field.setText(Integer.toString(assaultRiflesCount.getAr1102()));
         ar1103Field.setText(Integer.toString(assaultRiflesCount.getAr1103()));
         ar1104Field.setText(Integer.toString(assaultRiflesCount.getAr1104()));
-        ar1105Field.setText(Integer.toString(assaultRiflesCount.getAr1104()));
+        ar1105Field.setText(Integer.toString(assaultRiflesCount.getAr1105()));
         ar1106Field.setText(Integer.toString(assaultRiflesCount.getAr1106()));
         ar1107Field.setText(Integer.toString(assaultRiflesCount.getAr1107()));
         ar1108Field.setText(Integer.toString(assaultRiflesCount.getAr1108()));

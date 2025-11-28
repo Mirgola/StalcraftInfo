@@ -56,7 +56,7 @@ public class AccessoriesController {
         a2502Field.setText(Integer.toString(accessoriesCount.getA2502()));
         a2503Field.setText(Integer.toString(accessoriesCount.getA2503()));
         a2504Field.setText(Integer.toString(accessoriesCount.getA2504()));
-        a2505Field.setText(Integer.toString(accessoriesCount.getA2504()));
+        a2505Field.setText(Integer.toString(accessoriesCount.getA2505()));
         a2506Field.setText(Integer.toString(accessoriesCount.getA2506()));
     }
     

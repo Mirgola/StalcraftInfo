@@ -93,7 +93,7 @@ public class PistolsController {
         p1602Field.setText(Integer.toString(pistolsCount.getP1602()));
         p1603Field.setText(Integer.toString(pistolsCount.getP1603()));
         p1604Field.setText(Integer.toString(pistolsCount.getP1604()));
-        p1605Field.setText(Integer.toString(pistolsCount.getP1604()));
+        p1605Field.setText(Integer.toString(pistolsCount.getP1605()));
         p1606Field.setText(Integer.toString(pistolsCount.getP1606()));
         p1607Field.setText(Integer.toString(pistolsCount.getP1607()));
         p1608Field.setText(Integer.toString(pistolsCount.getP1608()));

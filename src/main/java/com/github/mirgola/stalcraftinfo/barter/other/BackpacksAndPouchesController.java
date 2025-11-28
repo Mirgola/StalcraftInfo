@@ -86,7 +86,7 @@ public class BackpacksAndPouchesController {
         bap2102Field.setText(Integer.toString(backpacksAndPouchesCount.getBap2102()));
         bap2103Field.setText(Integer.toString(backpacksAndPouchesCount.getBap2103()));
         bap2104Field.setText(Integer.toString(backpacksAndPouchesCount.getBap2104()));
-        bap2105Field.setText(Integer.toString(backpacksAndPouchesCount.getBap2104()));
+        bap2105Field.setText(Integer.toString(backpacksAndPouchesCount.getBap2105()));
         bap2106Field.setText(Integer.toString(backpacksAndPouchesCount.getBap2106()));
         bap2107Field.setText(Integer.toString(backpacksAndPouchesCount.getBap2107()));
         bap2108Field.setText(Integer.toString(backpacksAndPouchesCount.getBap2108()));

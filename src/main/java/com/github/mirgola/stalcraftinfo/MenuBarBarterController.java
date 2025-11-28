@@ -327,7 +327,7 @@ public class MenuBarBarterController {
         return otherCount;
     }
 
-    // Вызов окна Надульники и глушители
+    // 3.1 Вызов окна Надульники и глушители
     @FXML
     private void handleMuzzlesAndSilencers() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/attachments/MuzzlesAndSilencers.fxml"));
@@ -336,9 +336,21 @@ public class MenuBarBarterController {
 
         MuzzlesAndSilencersController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getMuzzlesAndSilencersCount());
     }
 
-    // Вызов окна Магазины
+        private MuzzlesAndSilencersCount getMuzzlesAndSilencersCount() {
+        MuzzlesAndSilencersCount muzzlesAndSilencersCount = null;
+        for (MuzzlesAndSilencersCount thisCount : sciApplication.getMuzzlesAndSilencersCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                muzzlesAndSilencersCount = thisCount;
+            }
+        }
+        return muzzlesAndSilencersCount;
+    }
+
+    // 3.2 Вызов окна Магазины
     @FXML
     private void handleMagazines() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/attachments/Magazines.fxml"));
@@ -347,9 +359,21 @@ public class MenuBarBarterController {
 
         MagazinesController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getMagazinesCount());
     }
 
-    // Вызов окна Цевья и крепления
+    private MagazinesCount getMagazinesCount() {
+        MagazinesCount magazinesCount = null;
+        for (MagazinesCount thisCount : sciApplication.getMagazinesCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                magazinesCount = thisCount;
+            }
+        }
+        return magazinesCount;
+    }
+
+    // 3.3 Вызов окна Цевья и крепления
     @FXML
     private void handleHanguardsAndBrackets() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/attachments/HanguardsAndBrackets.fxml"));
@@ -358,9 +382,21 @@ public class MenuBarBarterController {
 
         HanguardsAndBracketsController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(geHanguardsAndBracketsCount());
     }
 
-    // Вызов окна Прицелы
+    private HanguardsAndBracketsCount geHanguardsAndBracketsCount() {
+        HanguardsAndBracketsCount hanguardsAndBracketsCount = null;
+        for (HanguardsAndBracketsCount thisCount : sciApplication.getHanguardsAndBracketsCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                hanguardsAndBracketsCount = thisCount;
+            }
+        }
+        return hanguardsAndBracketsCount;
+    }
+
+    // 3.4 Вызов окна Прицелы
     @FXML
     private void handleSights() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/attachments/Sights.fxml"));
@@ -369,9 +405,21 @@ public class MenuBarBarterController {
 
         SightsController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(geSightsCount());
     }
 
-    // Вызов окна Рукоятки
+    private SightsCount geSightsCount() {
+        SightsCount sightsCount = null;
+        for (SightsCount thisCount : sciApplication.getSightsCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                sightsCount = thisCount;
+            }
+        }
+        return sightsCount;
+    }
+
+    // 3.5 Вызов окна Рукоятки
     @FXML
     private void handleHandles() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/attachments/Handles.fxml"));
@@ -380,9 +428,21 @@ public class MenuBarBarterController {
 
         HandlesController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(geHandlesCount());
     }
 
-    // Вызовы окна Прочие обвесы
+    private HandlesCount geHandlesCount() {
+        HandlesCount handlesCount = null;
+        for (HandlesCount thisCount : sciApplication.getHandlesCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                handlesCount = thisCount;
+            }
+        }
+        return handlesCount;
+    }
+
+    // 3.6 Вызовы окна Прочие обвесы
     @FXML
     private void handleOtherAttachments() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/attachments/OtherAttachments.fxml"));
@@ -391,6 +451,18 @@ public class MenuBarBarterController {
 
         OtherAttachmentsController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(geOtherAttachmentsCount());
+    }
+
+    private OtherAttachmentsCount geOtherAttachmentsCount() {
+        OtherAttachmentsCount otherAttachmentsCount = null;
+        for (OtherAttachmentsCount thisCount : sciApplication.getOtherAttachmentsCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                otherAttachmentsCount = thisCount;
+            }
+        }
+        return otherAttachmentsCount;
     }
 
     // Вызов окна Боевые

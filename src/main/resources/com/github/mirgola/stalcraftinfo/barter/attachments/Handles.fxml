@@ -32,7 +32,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Тактическая рукоятка FMA TD Grip" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="h3501Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleH3501Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="332.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="210.0">
@@ -47,7 +47,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Тактическая рукоятка KAC Vertical Foregrip" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="h3505Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleH3505Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="313.0" layoutY="281.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="210.0">
@@ -62,7 +62,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Рукоять переноса огня FMA DARK EARTH" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="h3502Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" onAction="#handleH3502Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="323.0" layoutY="291.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="100.0">
@@ -77,7 +77,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Тактическая рукоятка Magpul AFG" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="h3504Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleH3504Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="333.0" layoutY="301.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="100.0">
@@ -92,7 +92,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="FX PTKB FAB Defense" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="h3507Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleH3507Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="343.0" layoutY="311.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="210.0">
@@ -107,7 +107,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Вертикальная рукоятка Tapco" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="h3508Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleH3508Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="353.0" layoutY="321.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="210.0">
@@ -122,7 +122,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Magpul RVG" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="h3511Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleH3511Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1293.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="100.0">
@@ -137,7 +137,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Тактическая рукоятка Fortis SHIFT Vertical, черная" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="h3510Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleH3510Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1613.0" layoutY="130.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="100.0">
@@ -152,7 +152,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Тактическая рукоятка Viking Tactics UVG" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" visible="false" />
+                  <TextField fx:id="h3513Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleH3513Field" prefHeight="30.0" prefWidth="47.0" visible="false" />
                </children>
             </Pane>
             <Pane layoutX="635.0" layoutY="515.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="132.0">
@@ -197,7 +197,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="РК-1" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="h3512Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleH3512Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="320.0">
@@ -212,7 +212,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="РК-0" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="h3509Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleH3509Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="320.0">
@@ -227,7 +227,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Вертикальная рукоятка ANG4" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="h3506Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleH3506Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="725.0" layoutY="605.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="352.0">
@@ -260,7 +260,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="РК-5" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="h3503Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" onAction="#handleH3503Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="270.0" layoutY="793.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="352.0">

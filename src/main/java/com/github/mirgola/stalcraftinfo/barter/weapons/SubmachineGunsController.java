@@ -94,7 +94,7 @@ public class SubmachineGunsController {
         sg1202Field.setText(Integer.toString(submachineGunsCount.getSg1202()));
         sg1203Field.setText(Integer.toString(submachineGunsCount.getSg1203()));
         sg1204Field.setText(Integer.toString(submachineGunsCount.getSg1204()));
-        sg1205Field.setText(Integer.toString(submachineGunsCount.getSg1204()));
+        sg1205Field.setText(Integer.toString(submachineGunsCount.getSg1205()));
         sg1206Field.setText(Integer.toString(submachineGunsCount.getSg1206()));
         sg1207Field.setText(Integer.toString(submachineGunsCount.getSg1207()));
         sg1208Field.setText(Integer.toString(submachineGunsCount.getSg1208()));

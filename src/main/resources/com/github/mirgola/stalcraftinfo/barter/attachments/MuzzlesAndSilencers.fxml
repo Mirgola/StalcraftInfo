@@ -10,9 +10,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Polyline?>
 
-<ScrollPane stylesheets="@../../dracula.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.mirgola.stalcraftinfo.barter.attachments.MuzzlesAndSilencersController">
+<ScrollPane fx:id="scrollPane" stylesheets="@../../dracula.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.mirgola.stalcraftinfo.barter.attachments.MuzzlesAndSilencersController">
    <content>
-      <AnchorPane prefHeight="1950.0" prefWidth="1850.0">
+      <AnchorPane fx:id="anchorPane" prefHeight="1950.0" prefWidth="1850.0">
          <children>
             <Label layoutX="56.0" layoutY="6.0" prefHeight="20.0" text="Выбранная категория: Обвесы &gt; Надульники и глушители" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
             <Label fx:id="l1label" alignment="CENTER" layoutX="5.0" layoutY="25.0" prefHeight="20.0" prefWidth="265.0" text="Label1" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="30.0" />
@@ -33,7 +33,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Пламегаситель Noveske KX3" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3101Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3101Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="332.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="540.0">
@@ -48,7 +48,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Precision Armament M11 Severe Duty 7.62x51" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3109Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3109Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="313.0" layoutY="281.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="540.0">
@@ -63,7 +63,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Resistance Armament Compensator" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3102Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" onAction="#handleMas3102Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="323.0" layoutY="291.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="100.0">
@@ -78,7 +78,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="CMMG SV Brake 7.62x51" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3107Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3107Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="333.0" layoutY="301.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="100.0">
@@ -93,7 +93,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Глушитель SCAR-SD" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3117Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3117Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="343.0" layoutY="311.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="210.0">
@@ -108,7 +108,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Keeno Arms SHREWD 7.62x51" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3118Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3118Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="353.0" layoutY="321.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="210.0">
@@ -123,7 +123,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="VG6 EPSILON 762 Muzzle Brake" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3133Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3133Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1293.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="100.0">
@@ -138,7 +138,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="SIG Sauer SRD762Ti" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3132Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3132Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1613.0" layoutY="130.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="100.0">
@@ -153,7 +153,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Удлиненный ствол D-Eagle VII" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3149Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3149Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1633.0" layoutY="150.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="100.0">
@@ -168,7 +168,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Удлиненный ствол D-Eagle XIX" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3150Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3150Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="210.0">
@@ -183,7 +183,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Пламегаситель Lantac BMD" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" visible="false" />
+                  <TextField fx:id="mas3151Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3151Field" prefHeight="30.0" prefWidth="47.0" visible="false" />
                </children>
             </Pane>
             <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="320.0">
@@ -198,7 +198,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Пламегаситель Lantac Dragon 7.62" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" visible="false" />
+                  <TextField fx:id="mas3152Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3152Field" prefHeight="30.0" prefWidth="47.0" visible="false" />
                </children>
             </Pane>
             <Pane layoutX="635.0" layoutY="515.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="132.0">
@@ -267,7 +267,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Глушитель KAC Style QD" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3134Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3134Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="320.0">
@@ -282,7 +282,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Глушитель SureFire SOCOM556-RC2" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3119Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3119Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="320.0">
@@ -297,7 +297,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Diamondhead Compensator" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3108Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3108Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="725.0" layoutY="605.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="352.0">
@@ -330,7 +330,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="HK BLITZ 5.56" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3120Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3120Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="430.0">
@@ -345,7 +345,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="VG6 EPSILON 556 Muzzle Brake" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3135Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3135Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="735.0" layoutY="615.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="462.0">
@@ -375,7 +375,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="SureFire Pro Comp 7.62x51" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3121Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3121Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="540.0">
@@ -390,7 +390,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Odin Works ATLAS 7.62x51" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3136Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3136Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="342.0" layoutY="110.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="650.0">
@@ -405,7 +405,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Hera Arms CC Compensator" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3110Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3110Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1673.0" layoutY="190.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="650.0">
@@ -420,7 +420,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="AlienTech 5.56" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3122Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3122Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="650.0">
@@ -435,7 +435,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Bulletec ST-6012" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3137Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3137Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="295.0" layoutY="683.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="295.0" AnchorPane.topAnchor="682.0">
@@ -481,7 +481,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="MICRO BADGER" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3103Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" onAction="#handleMas3103Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="352.0" layoutY="120.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="760.0">
@@ -496,7 +496,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Пламегаситель LoneWolf" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3111Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3111Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1683.0" layoutY="200.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="760.0">
@@ -511,7 +511,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Глушитель SUPRA K-8 С.К.О.С." />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3123Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3123Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1673.0" layoutY="190.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="760.0">
@@ -526,7 +526,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Глушитель Osprey" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3138Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3138Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1693.0" layoutY="210.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="870.0">
@@ -541,7 +541,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Custom Guns Doncaster" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3124Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3124Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1683.0" layoutY="200.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="870.0">
@@ -556,7 +556,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Удлиненный ствол 9 мм" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3139Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3139Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="270.0" layoutY="793.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="792.0">
@@ -602,7 +602,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="VR-09" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3104Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" onAction="#handleMas3104Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="362.0" layoutY="130.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="980.0">
@@ -617,7 +617,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="3 Port Mini Compensator" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3112Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3112Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1703.0" layoutY="220.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="980.0">
@@ -632,7 +632,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Hi-Point Razor" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3125Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3125Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1693.0" layoutY="210.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="980.0">
@@ -647,7 +647,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="GE-OCTO Gunethics" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3140Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3140Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="271.0" layoutY="1013.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="1012.0">
@@ -680,7 +680,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Пламегаситель AKademia Тьма" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3105Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" onAction="#handleMas3105Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="372.0" layoutY="140.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="1090.0">
@@ -695,7 +695,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Spikes Tactical Dynacomp" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3113Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3113Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1713.0" layoutY="230.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1090.0">
@@ -710,7 +710,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="SPVV 7.62" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3126Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3126Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1703.0" layoutY="220.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1090.0">
@@ -725,7 +725,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Рукоятка для ОЦ-14 «Гроза»" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3141Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3141Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="1090.0">
@@ -740,7 +740,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="ДТК АШ-12" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3153Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3153Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1713.0" layoutY="230.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1200.0">
@@ -755,7 +755,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Venom Tactical Antidote" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3142Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3142Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="382.0" layoutY="150.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="1310.0">
@@ -770,7 +770,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="ДТК «Вихрь»" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3114Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3114Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1723.0" layoutY="240.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1310.0">
@@ -785,7 +785,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="ПБС-4" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3127Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3127Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1723.0" layoutY="240.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1310.0">
@@ -800,7 +800,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Имкас ПСУЗВ–11ТМ.12" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3143Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3143Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1733.0" layoutY="250.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1420.0">
@@ -815,7 +815,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="SRVV MBR Jet" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3128Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3128Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1733.0" layoutY="250.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1420.0">
@@ -830,7 +830,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="ДТК Цитадель 5.45" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3144Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3144Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="271.0" layoutY="1123.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="1122.0">
@@ -902,7 +902,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="ДТК-2" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3106Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="43.0" onAction="#handleMas3106Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="392.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="1530.0">
@@ -917,7 +917,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="АКМЛ" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3115Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3115Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1743.0" layoutY="260.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1530.0">
@@ -932,7 +932,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="ДТК «Косой»" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3129Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3129Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1743.0" layoutY="260.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1530.0">
@@ -947,7 +947,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Jmac Customs RDC 4C 7.62" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3145Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3145Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="402.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="1640.0">
@@ -962,7 +962,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="ДТК-1" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3116Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3116Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1753.0" layoutY="270.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1640.0">
@@ -977,7 +977,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="PWS CQB 74" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3130Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3130Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1753.0" layoutY="270.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1640.0">
@@ -992,7 +992,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Jmac Customs RDC 4C 5.45" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3146Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3146Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1763.0" layoutY="280.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1750.0">
@@ -1007,7 +1007,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="ПБС-1" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3131Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3131Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1763.0" layoutY="280.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1750.0">
@@ -1022,7 +1022,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Глушитель АТГ" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3147Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3147Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1773.0" layoutY="290.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="1860.0">
@@ -1037,7 +1037,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Глушитель для ОЦ-14 «Гроза»" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3148Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3148Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1673.0" layoutY="190.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="1860.0">
@@ -1052,7 +1052,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Глушитель АШ-12/МЦ-558" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="mas3154Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleMas3154Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="271.0" layoutY="1563.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="1562.0">

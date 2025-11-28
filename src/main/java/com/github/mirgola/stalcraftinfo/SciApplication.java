@@ -1,5 +1,6 @@
 package com.github.mirgola.stalcraftinfo;
 
+import com.github.mirgola.stalcraftinfo.barter.attachments.*;
 import com.github.mirgola.stalcraftinfo.barter.other.*;
 import com.github.mirgola.stalcraftinfo.barter.weapons.*;
 import javafx.application.Application;
@@ -42,6 +43,13 @@ public class SciApplication extends Application {
     private ObservableList<AccessoriesCount> accessoriesCountData = FXCollections.observableArrayList();
     private ObservableList<OtherCount> otherCountData = FXCollections.observableArrayList();
 
+    private ObservableList<MuzzlesAndSilencersCount> muzzlesAndSilencersCountData = FXCollections.observableArrayList();
+    private ObservableList<MagazinesCount> magazinesCountData = FXCollections.observableArrayList();
+    private ObservableList<HanguardsAndBracketsCount> hanguardsAndBracketsCountData = FXCollections.observableArrayList();
+    private ObservableList<SightsCount> sightsCountData = FXCollections.observableArrayList();
+    private ObservableList<HandlesCount> handlesCountData = FXCollections.observableArrayList();
+    private ObservableList<OtherAttachmentsCount> otherAttachmentsCountData = FXCollections.observableArrayList();
+
     public SciApplication() throws SQLException {
         SciDB.readUsers(this);
         SciDB.readBarter(this);
@@ -60,6 +68,13 @@ public class SciApplication extends Application {
         SciDB.readCosmeticsCount(this);
         SciDB.readAccessoriesCount(this);
         SciDB.readOtherCount(this);
+
+        SciDB.readMuzzlesAndSilencersCount(this);
+        SciDB.readMagazinesCount(this);
+        SciDB.readHanguardsAndBracketsCount(this);
+        SciDB.readSightsCount(this);
+        SciDB.readHandlesCount(this);
+        SciDB.readOtherAttachmentsCount(this);
     }
 
     public ObservableList<Person> getPersonData() {return personData;}
@@ -79,6 +94,13 @@ public class SciApplication extends Application {
     public ObservableList<CosmeticsCount> getCosmeticsCountData() {return cosmeticsCountData;}
     public ObservableList<AccessoriesCount> getAccessoriesCountData() {return accessoriesCountData;}
     public ObservableList<OtherCount> getOtherCountData() {return otherCountData;}
+
+    public ObservableList<MuzzlesAndSilencersCount> getMuzzlesAndSilencersCountData() {return muzzlesAndSilencersCountData;}
+    public ObservableList<MagazinesCount> getMagazinesCountData() {return magazinesCountData;}
+    public ObservableList<HanguardsAndBracketsCount> getHanguardsAndBracketsCountData() {return hanguardsAndBracketsCountData;}
+    public ObservableList<SightsCount> getSightsCountData() {return sightsCountData;}
+    public ObservableList<HandlesCount> getHandlesCountData() {return handlesCountData;}
+    public ObservableList<OtherAttachmentsCount> getOtherAttachmentsCountData() {return otherAttachmentsCountData;}
 
     @Override
     public void start(Stage stage) throws IOException {

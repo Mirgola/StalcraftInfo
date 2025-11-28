@@ -103,7 +103,7 @@ public class ShotgunsAndRiflesController {
         sar1502Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1502()));
         sar1503Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1503()));
         sar1504Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1504()));
-        sar1505Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1504()));
+        sar1505Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1505()));
         sar1506Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1506()));
         sar1507Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1507()));
         sar1508Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1508()));

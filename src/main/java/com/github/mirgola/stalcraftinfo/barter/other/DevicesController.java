@@ -85,7 +85,7 @@ public class DevicesController {
         d2302Field.setText(Integer.toString(devicesCount.getD2302()));
         d2303Field.setText(Integer.toString(devicesCount.getD2303()));
         d2304Field.setText(Integer.toString(devicesCount.getD2304()));
-        d2305Field.setText(Integer.toString(devicesCount.getD2304()));
+        d2305Field.setText(Integer.toString(devicesCount.getD2305()));
         d2306Field.setText(Integer.toString(devicesCount.getD2306()));
         d2307Field.setText(Integer.toString(devicesCount.getD2307()));
         d2308Field.setText(Integer.toString(devicesCount.getD2308()));

@@ -86,7 +86,7 @@ public class ContainersController {
         c2202Field.setText(Integer.toString(containersCount.getC2202()));
         c2203Field.setText(Integer.toString(containersCount.getC2203()));
         c2204Field.setText(Integer.toString(containersCount.getC2204()));
-        c2205Field.setText(Integer.toString(containersCount.getC2204()));
+        c2205Field.setText(Integer.toString(containersCount.getC2205()));
         c2206Field.setText(Integer.toString(containersCount.getC2206()));
         c2207Field.setText(Integer.toString(containersCount.getC2207()));
         c2208Field.setText(Integer.toString(containersCount.getC2208()));

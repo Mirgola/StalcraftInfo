@@ -1,5 +1,6 @@
 package com.github.mirgola.stalcraftinfo;
 
+import com.github.mirgola.stalcraftinfo.barter.attachments.*;
 import com.github.mirgola.stalcraftinfo.barter.weapons.*;
 import com.github.mirgola.stalcraftinfo.barter.other.*;
 import java.sql.*;
@@ -143,7 +144,7 @@ public class SciDB {
         resultSet.close();
     }
 
-    // 1.1 Заполение списка из таблицы "AssaultRiflesCount"
+    // 1.1 Заполнение списка из таблицы "AssaultRiflesCount"
     public static void readAssaultRiflesCount(SciApplication sciApplication) throws SQLException {
         try (ResultSet resultSet = statement.executeQuery("SELECT * FROM W_AssaultRiflesCount")) {
             while (resultSet.next()) {
@@ -193,7 +194,7 @@ public class SciDB {
         }
     }
 
-    // 1.2 Заполение списка из таблицы "SubmachineGunsCount"
+    // 1.2 Заполнение списка из таблицы "SubmachineGunsCount"
     public static void readSubmachineGunsCount(SciApplication sciApplication) throws SQLException {
         try (ResultSet resultSet = statement.executeQuery("SELECT * FROM W_SubmachineGunsCount")) {
             while (resultSet.next()) {
@@ -247,7 +248,7 @@ public class SciDB {
         }
     }
 
-    // 1.4 Заполение списка из таблицы "SniperRiflesCount"
+    // 1.4 Заполнение списка из таблицы "SniperRiflesCount"
     public static void readSniperRiflesCount(SciApplication sciApplication) throws SQLException {
         try (ResultSet resultSet = statement.executeQuery("SELECT * FROM W_SniperRiflesCount")) {
             while (resultSet.next()) {
@@ -284,7 +285,7 @@ public class SciDB {
         }
     }
 
-    // 1.5 Заполение списка из таблицы "ShotgunsAndRiflesCount"
+    // 1.5 Заполнение списка из таблицы "ShotgunsAndRiflesCount"
     public static void readShotgunsAndRiflesCount(SciApplication sciApplication) throws SQLException {
         try (ResultSet resultSet = statement.executeQuery("SELECT * FROM W_ShotgunsAndRiflesCount")) {
             while (resultSet.next()) {
@@ -313,7 +314,7 @@ public class SciDB {
         }
     }
 
-    // 1.6 Заполение списка из таблицы "PistolsCount"
+    // 1.6 Заполнение списка из таблицы "PistolsCount"
     public static void readPistolsCount(SciApplication sciApplication) throws SQLException {
         try (ResultSet resultSet = statement.executeQuery("SELECT * FROM W_PistolsCount")) {
             while (resultSet.next()) {
@@ -373,7 +374,7 @@ public class SciDB {
         }
     }
 
-    // 2.1 Заполение списка из таблицы "BackpacksAndPouchesCount"
+    // 2.1 Заполнение списка из таблицы "BackpacksAndPouchesCount"
     public static void readBackpacksAndPouchesCount(SciApplication sciApplication) throws SQLException {
         try (ResultSet resultSet = statement.executeQuery("SELECT * FROM O_BackpacksAndPouchesCount")) {
             while (resultSet.next()) {
@@ -404,7 +405,7 @@ public class SciDB {
         }
     }
 
-    // 2.2 Заполение списка из таблицы "ContainersCount"
+    // 2.2 Заполнение списка из таблицы "ContainersCount"
     public static void readContainersCount(SciApplication sciApplication) throws SQLException {
         try (ResultSet resultSet = statement.executeQuery("SELECT * FROM O_ContainersCount")) {
             while (resultSet.next()) {
@@ -441,7 +442,7 @@ public class SciDB {
         }
     }
 
-    // 2.3 Заполение списка из таблицы "DevicesCount"
+    // 2.3 Заполнение списка из таблицы "DevicesCount"
     public static void readDevicesCount(SciApplication sciApplication) throws SQLException {
         try (ResultSet resultSet = statement.executeQuery("SELECT * FROM O_DevicesCount")) {
             while (resultSet.next()) {
@@ -466,7 +467,7 @@ public class SciDB {
         }
     }
 
-    // 2.4 Заполение списка из таблицы "CosmeticsCount"
+    // 2.4 Заполнение списка из таблицы "CosmeticsCount"
     public static void readCosmeticsCount(SciApplication sciApplication) throws SQLException {
         try (ResultSet resultSet = statement.executeQuery("SELECT * FROM O_CosmeticsCount")) {
             while (resultSet.next()) {
@@ -482,7 +483,7 @@ public class SciDB {
         }
     }
 
-    // 2.5 Заполение списка из таблицы "AccessoriesCount"
+    // 2.5 Заполнение списка из таблицы "AccessoriesCount"
     public static void readAccessoriesCount(SciApplication sciApplication) throws SQLException {
         try (ResultSet resultSet = statement.executeQuery("SELECT * FROM O_AccessoriesCount")) {
             while (resultSet.next()) {
@@ -501,7 +502,7 @@ public class SciDB {
         }
     }
 
-    // 2.6 Заполение списка из таблицы "OtherCount"
+    // 2.6 Заполнение списка из таблицы "OtherCount"
     public static void readOtherCount(SciApplication sciApplication) throws SQLException {
         try (ResultSet resultSet = statement.executeQuery("SELECT * FROM O_OtherCount")) {
             while (resultSet.next()) {
@@ -512,6 +513,249 @@ public class SciDB {
 
                 sciApplication.getOtherCountData().add(new OtherCount(idPerson, nicknamePerson,
                         o2601, o2602));
+            }
+        }
+    }
+
+    // 3.1 Заполнение списка из таблицы "MuzzlesAndSilencersCount"
+    public static void readMuzzlesAndSilencersCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM A_MuzzlesAndSilencersCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int mas3101 = resultSet.getInt("mas3101");
+                int mas3102 = resultSet.getInt("mas3102");
+                int mas3103 = resultSet.getInt("mas3103");
+                int mas3104 = resultSet.getInt("mas3104");
+                int mas3105 = resultSet.getInt("mas3105");
+                int mas3106 = resultSet.getInt("mas3106");
+                int mas3107 = resultSet.getInt("mas3107");
+                int mas3108 = resultSet.getInt("mas3108");
+                int mas3109 = resultSet.getInt("mas3109");
+                int mas3110 = resultSet.getInt("mas3110");
+                int mas3111 = resultSet.getInt("mas3111");
+                int mas3112 = resultSet.getInt("mas3112");
+                int mas3113 = resultSet.getInt("mas3113");
+                int mas3114 = resultSet.getInt("mas3114");
+                int mas3115 = resultSet.getInt("mas3115");
+                int mas3116 = resultSet.getInt("mas3116");
+                int mas3117 = resultSet.getInt("mas3117");
+                int mas3118 = resultSet.getInt("mas3118");
+                int mas3119 = resultSet.getInt("mas3119");
+                int mas3120 = resultSet.getInt("mas3120");
+                int mas3121 = resultSet.getInt("mas3121");
+                int mas3122 = resultSet.getInt("mas3122");
+                int mas3123 = resultSet.getInt("mas3123");
+                int mas3124 = resultSet.getInt("mas3124");
+                int mas3125 = resultSet.getInt("mas3125");
+                int mas3126 = resultSet.getInt("mas3126");
+                int mas3127 = resultSet.getInt("mas3127");
+                int mas3128 = resultSet.getInt("mas3128");
+                int mas3129 = resultSet.getInt("mas3129");
+                int mas3130 = resultSet.getInt("mas3130");
+                int mas3131 = resultSet.getInt("mas3131");
+                int mas3132 = resultSet.getInt("mas3132");
+                int mas3133 = resultSet.getInt("mas3133");
+                int mas3134 = resultSet.getInt("mas3134");
+                int mas3135 = resultSet.getInt("mas3135");
+                int mas3136 = resultSet.getInt("mas3136");
+                int mas3137 = resultSet.getInt("mas3137");
+                int mas3138 = resultSet.getInt("mas3138");
+                int mas3139 = resultSet.getInt("mas3139");
+                int mas3140 = resultSet.getInt("mas3140");
+                int mas3141 = resultSet.getInt("mas3141");
+                int mas3142 = resultSet.getInt("mas3142");
+                int mas3143 = resultSet.getInt("mas3143");
+                int mas3144 = resultSet.getInt("mas3144");
+                int mas3145 = resultSet.getInt("mas3145");
+                int mas3146 = resultSet.getInt("mas3146");
+                int mas3147 = resultSet.getInt("mas3147");
+                int mas3148 = resultSet.getInt("mas3148");
+                int mas3149 = resultSet.getInt("mas3149");
+                int mas3150 = resultSet.getInt("mas3150");
+                int mas3151 = resultSet.getInt("mas3151");
+                int mas3152 = resultSet.getInt("mas3152");
+                int mas3153 = resultSet.getInt("mas3153");
+                int mas3154 = resultSet.getInt("mas3154");
+
+                sciApplication.getMuzzlesAndSilencersCountData().add(new MuzzlesAndSilencersCount(idPerson, nicknamePerson,
+                        mas3101, mas3102, mas3103, mas3104, mas3105, mas3106, mas3107, mas3108, mas3109, mas3110,
+                        mas3111, mas3112, mas3113, mas3114, mas3115, mas3116, mas3117, mas3118, mas3119, mas3120,
+                        mas3121, mas3122, mas3123, mas3124, mas3125, mas3126, mas3127, mas3128, mas3129, mas3130,
+                        mas3131, mas3132, mas3133, mas3134, mas3135, mas3136, mas3137, mas3138, mas3139, mas3140,
+                        mas3141, mas3142, mas3143, mas3144, mas3145, mas3146, mas3147, mas3148, mas3149, mas3150,
+                        mas3151, mas3152, mas3153, mas3154));
+            }
+        }
+    }
+
+    // 3.2 Заполнение списка из таблицы "MagazinesCount"
+    public static void readMagazinesCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM A_MagazinesCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int m3201 = resultSet.getInt("m3201");
+                int m3202 = resultSet.getInt("m3202");
+                int m3203 = resultSet.getInt("m3203");
+                int m3204 = resultSet.getInt("m3204");
+                int m3205 = resultSet.getInt("m3205");
+                int m3206 = resultSet.getInt("m3206");
+                int m3207 = resultSet.getInt("m3207");
+                int m3208 = resultSet.getInt("m3208");
+                int m3209 = resultSet.getInt("m3209");
+                int m3210 = resultSet.getInt("m3210");
+                int m3211 = resultSet.getInt("m3211");
+                int m3212 = resultSet.getInt("m3212");
+                int m3213 = resultSet.getInt("m3213");
+                int m3214 = resultSet.getInt("m3214");
+                int m3215 = resultSet.getInt("m3215");
+                int m3216 = resultSet.getInt("m3216");
+                int m3217 = resultSet.getInt("m3217");
+                int m3218 = resultSet.getInt("m3218");
+                int m3219 = resultSet.getInt("m3219");
+                int m3220 = resultSet.getInt("m3220");
+                int m3221 = resultSet.getInt("m3221");
+                int m3222 = resultSet.getInt("m3222");
+                int m3223 = resultSet.getInt("m3223");
+                int m3224 = resultSet.getInt("m3224");
+                int m3225 = resultSet.getInt("m3225");
+                int m3226 = resultSet.getInt("m3226");
+                int m3227 = resultSet.getInt("m3227");
+                int m3228 = resultSet.getInt("m3228");
+                int m3229 = resultSet.getInt("m3229");
+                int m3230 = resultSet.getInt("m3230");
+                int m3231 = resultSet.getInt("m3231");
+
+                sciApplication.getMagazinesCountData().add(new MagazinesCount(idPerson, nicknamePerson,
+                        m3201, m3202, m3203, m3204, m3205, m3206, m3207, m3208, m3209, m3210,
+                        m3211, m3212, m3213, m3214, m3215, m3216, m3217, m3218, m3219, m3220,
+                        m3221, m3222, m3223, m3224, m3225, m3226, m3227, m3228, m3229, m3230,
+                        m3231));
+            }
+        }
+    }
+
+    // 3.3 Заполнение списка из таблицы "HanguardsAndBracketsCount"
+    public static void readHanguardsAndBracketsCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM A_HanguardsAndBracketsCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int hab3301 = resultSet.getInt("hab3301");
+                int hab3302 = resultSet.getInt("hab3302");
+                int hab3303 = resultSet.getInt("hab3303");
+                int hab3304 = resultSet.getInt("hab3304");
+                int hab3305 = resultSet.getInt("hab3305");
+                int hab3306 = resultSet.getInt("hab3306");
+
+                sciApplication.getHanguardsAndBracketsCountData().add(new HanguardsAndBracketsCount(idPerson, nicknamePerson,
+                        hab3301, hab3302, hab3303, hab3304, hab3305, hab3306));
+            }
+        }
+    }
+
+    // 3.4 Заполнение списка из таблицы "SightsCount"
+    public static void readSightsCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM A_SightsCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int s3401 = resultSet.getInt("s3401");
+                int s3402 = resultSet.getInt("s3402");
+                int s3403 = resultSet.getInt("s3403");
+                int s3404 = resultSet.getInt("s3404");
+                int s3405 = resultSet.getInt("s3405");
+                int s3406 = resultSet.getInt("s3406");
+                int s3407 = resultSet.getInt("s3407");
+                int s3408 = resultSet.getInt("s3408");
+                int s3409 = resultSet.getInt("s3409");
+                int s3410 = resultSet.getInt("s3410");
+                int s3411 = resultSet.getInt("s3411");
+                int s3412 = resultSet.getInt("s3412");
+                int s3413 = resultSet.getInt("s3413");
+                int s3414 = resultSet.getInt("s3414");
+                int s3415 = resultSet.getInt("s3415");
+                int s3416 = resultSet.getInt("s3416");
+                int s3417 = resultSet.getInt("s3417");
+                int s3418 = resultSet.getInt("s3418");
+                int s3419 = resultSet.getInt("s3419");
+                int s3420 = resultSet.getInt("s3420");
+                int s3421 = resultSet.getInt("s3421");
+                int s3422 = resultSet.getInt("s3422");
+                int s3423 = resultSet.getInt("s3423");
+                int s3424 = resultSet.getInt("s3424");
+                int s3425 = resultSet.getInt("s3425");
+                int s3426 = resultSet.getInt("s3426");
+                int s3427 = resultSet.getInt("s3427");
+                int s3428 = resultSet.getInt("s3428");
+                int s3429 = resultSet.getInt("s3429");
+                int s3430 = resultSet.getInt("s3430");
+                int s3431 = resultSet.getInt("s3431");
+                int s3432 = resultSet.getInt("s3432");
+                int s3433 = resultSet.getInt("s3433");
+                int s3434 = resultSet.getInt("s3434");
+                int s3435 = resultSet.getInt("s3435");
+                int s3436 = resultSet.getInt("s3436");
+
+                sciApplication.getSightsCountData().add(new SightsCount(idPerson, nicknamePerson,
+                        s3401, s3402, s3403, s3404, s3405, s3406, s3407, s3408, s3409, s3410,
+                        s3411, s3412, s3413, s3414, s3415, s3416, s3417, s3418, s3419, s3420,
+                        s3421, s3422, s3423, s3424, s3425, s3426, s3427, s3428, s3429, s3430,
+                        s3431, s3432, s3433, s3434, s3435, s3436));
+            }
+        }
+    }
+
+    // 3.5 Заполнение списка из таблицы "HandlesCount"
+    public static void readHandlesCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM A_HandlesCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int h3501 = resultSet.getInt("h3501");
+                int h3502 = resultSet.getInt("h3502");
+                int h3503 = resultSet.getInt("h3503");
+                int h3504 = resultSet.getInt("h3504");
+                int h3505 = resultSet.getInt("h3505");
+                int h3506 = resultSet.getInt("h3506");
+                int h3507 = resultSet.getInt("h3507");
+                int h3508 = resultSet.getInt("h3508");
+                int h3509 = resultSet.getInt("h3509");
+                int h3510 = resultSet.getInt("h3510");
+                int h3511 = resultSet.getInt("h3511");
+                int h3512 = resultSet.getInt("h3512");
+                int h3513 = resultSet.getInt("h3513");
+
+                sciApplication.getHandlesCountData().add(new HandlesCount(idPerson, nicknamePerson,
+                        h3501, h3502, h3503, h3504, h3505, h3506, h3507, h3508, h3509, h3510,
+                        h3511, h3512, h3513));
+            }
+        }
+    }
+
+    // 3.6 Заполнение списка из таблицы "OtherAttachmentsCount"
+    public static void readOtherAttachmentsCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM A_OtherAttachmentsCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int oa3601 = resultSet.getInt("oa3601");
+                int oa3602 = resultSet.getInt("oa3602");
+                int oa3603 = resultSet.getInt("oa3603");
+                int oa3604 = resultSet.getInt("oa3604");
+                int oa3605 = resultSet.getInt("oa3605");
+                int oa3606 = resultSet.getInt("oa3606");
+                int oa3607 = resultSet.getInt("oa3607");
+                int oa3608 = resultSet.getInt("oa3608");
+                int oa3609 = resultSet.getInt("oa3609");
+                int oa3610 = resultSet.getInt("oa3610");
+                int oa3611 = resultSet.getInt("oa3611");
+                int oa3612 = resultSet.getInt("oa3612");
+
+                sciApplication.getOtherAttachmentsCountData().add(new OtherAttachmentsCount(idPerson, nicknamePerson,
+                        oa3601, oa3602, oa3603, oa3604, oa3605, oa3606, oa3607, oa3608, oa3609, oa3610,
+                        oa3611, oa3612));
             }
         }
     }
@@ -575,7 +819,7 @@ public class SciDB {
                 updateIfChanged(person.getId(), "W_AssaultRiflesCount", "ar1105", assaultRiflesCount.getAr1105(), resultSet.getInt("ar1105"));
                 updateIfChanged(person.getId(), "W_AssaultRiflesCount", "ar1106", assaultRiflesCount.getAr1106(), resultSet.getInt("ar1106"));
                 updateIfChanged(person.getId(), "W_AssaultRiflesCount", "ar1107", assaultRiflesCount.getAr1107(), resultSet.getInt("ar1107"));
-                updateIfChanged(person.getId(), "W_AssaultRiflesCount", "ar1108", assaultRiflesCount.getAr1107(), resultSet.getInt("ar1108"));
+                updateIfChanged(person.getId(), "W_AssaultRiflesCount", "ar1108", assaultRiflesCount.getAr1108(), resultSet.getInt("ar1108"));
                 updateIfChanged(person.getId(), "W_AssaultRiflesCount", "ar1109", assaultRiflesCount.getAr1109(), resultSet.getInt("ar1109"));
                 updateIfChanged(person.getId(), "W_AssaultRiflesCount", "ar1110", assaultRiflesCount.getAr1110(), resultSet.getInt("ar1110"));
                 updateIfChanged(person.getId(), "W_AssaultRiflesCount", "ar1111", assaultRiflesCount.getAr1111(), resultSet.getInt("ar1111"));
@@ -622,7 +866,7 @@ public class SciDB {
                 updateIfChanged(person.getId(), "W_SubmachineGunsCount", "sg1205", submachineGunsCount.getSg1205(), resultSet.getInt("sg1205"));
                 updateIfChanged(person.getId(), "W_SubmachineGunsCount", "sg1206", submachineGunsCount.getSg1206(), resultSet.getInt("sg1206"));
                 updateIfChanged(person.getId(), "W_SubmachineGunsCount", "sg1207", submachineGunsCount.getSg1207(), resultSet.getInt("sg1207"));
-                updateIfChanged(person.getId(), "W_SubmachineGunsCount", "sg1208", submachineGunsCount.getSg1207(), resultSet.getInt("sg1208"));
+                updateIfChanged(person.getId(), "W_SubmachineGunsCount", "sg1208", submachineGunsCount.getSg1208(), resultSet.getInt("sg1208"));
                 updateIfChanged(person.getId(), "W_SubmachineGunsCount", "sg1209", submachineGunsCount.getSg1209(), resultSet.getInt("sg1209"));
                 updateIfChanged(person.getId(), "W_SubmachineGunsCount", "sg1210", submachineGunsCount.getSg1210(), resultSet.getInt("sg1210"));
                 updateIfChanged(person.getId(), "W_SubmachineGunsCount", "sg1211", submachineGunsCount.getSg1211(), resultSet.getInt("sg1211"));
@@ -827,7 +1071,7 @@ public class SciDB {
                 updateIfChanged(person.getId(), "O_ContainersCount", "c2205", containersCount.getC2205(), resultSet.getInt("c2205"));
                 updateIfChanged(person.getId(), "O_ContainersCount", "c2206", containersCount.getC2206(), resultSet.getInt("c2206"));
                 updateIfChanged(person.getId(), "O_ContainersCount", "c2207", containersCount.getC2207(), resultSet.getInt("c2207"));
-                updateIfChanged(person.getId(), "O_ContainersCount", "c2208", containersCount.getC2207(), resultSet.getInt("c2208"));
+                updateIfChanged(person.getId(), "O_ContainersCount", "c2208", containersCount.getC2208(), resultSet.getInt("c2208"));
                 updateIfChanged(person.getId(), "O_ContainersCount", "c2209", containersCount.getC2209(), resultSet.getInt("c2209"));
                 updateIfChanged(person.getId(), "O_ContainersCount", "c2210", containersCount.getC2210(), resultSet.getInt("c2210"));
                 updateIfChanged(person.getId(), "O_ContainersCount", "c2211", containersCount.getC2211(), resultSet.getInt("c2211"));
@@ -862,7 +1106,7 @@ public class SciDB {
                 updateIfChanged(person.getId(), "O_DevicesCount", "d2305", devicesCount.getD2305(), resultSet.getInt("d2305"));
                 updateIfChanged(person.getId(), "O_DevicesCount", "d2306", devicesCount.getD2306(), resultSet.getInt("d2306"));
                 updateIfChanged(person.getId(), "O_DevicesCount", "d2307", devicesCount.getD2307(), resultSet.getInt("d2307"));
-                updateIfChanged(person.getId(), "O_DevicesCount", "d2308", devicesCount.getD2307(), resultSet.getInt("d2308"));
+                updateIfChanged(person.getId(), "O_DevicesCount", "d2308", devicesCount.getD2308(), resultSet.getInt("d2308"));
                 updateIfChanged(person.getId(), "O_DevicesCount", "d2309", devicesCount.getD2309(), resultSet.getInt("d2309"));
                 updateIfChanged(person.getId(), "O_DevicesCount", "d2310", devicesCount.getD2310(), resultSet.getInt("d2310"));
                 updateIfChanged(person.getId(), "O_DevicesCount", "d2311", devicesCount.getD2311(), resultSet.getInt("d2311"));
@@ -916,6 +1160,236 @@ public class SciDB {
             if (resultSet.next()) {
                 updateIfChanged(person.getId(), "O_OtherCount", "o2601", otherCount.getO2601(), resultSet.getInt("o2601"));
                 updateIfChanged(person.getId(), "O_OtherCount", "o2602", otherCount.getO2602(), resultSet.getInt("o2602"));
+            }
+        }
+    }
+
+    // 3.1 Изменение количества крафтов предметов для MuzzlesAndSilencersCount
+    public static void updateMuzzlesAndSilencersCount(Person person, MuzzlesAndSilencersCount muzzlesAndSilencersCount) throws SQLException {
+        String Sql = "SELECT * FROM A_MuzzlesAndSilencersCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3101", muzzlesAndSilencersCount.getMas3101(), resultSet.getInt("mas3101"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3102", muzzlesAndSilencersCount.getMas3102(), resultSet.getInt("mas3102"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3103", muzzlesAndSilencersCount.getMas3103(), resultSet.getInt("mas3103"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3104", muzzlesAndSilencersCount.getMas3104(), resultSet.getInt("mas3104"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3105", muzzlesAndSilencersCount.getMas3105(), resultSet.getInt("mas3105"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3106", muzzlesAndSilencersCount.getMas3106(), resultSet.getInt("mas3106"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3107", muzzlesAndSilencersCount.getMas3107(), resultSet.getInt("mas3107"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3108", muzzlesAndSilencersCount.getMas3108(), resultSet.getInt("mas3108"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3109", muzzlesAndSilencersCount.getMas3109(), resultSet.getInt("mas3109"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3110", muzzlesAndSilencersCount.getMas3110(), resultSet.getInt("mas3110"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3111", muzzlesAndSilencersCount.getMas3111(), resultSet.getInt("mas3111"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3112", muzzlesAndSilencersCount.getMas3112(), resultSet.getInt("mas3112"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3113", muzzlesAndSilencersCount.getMas3113(), resultSet.getInt("mas3113"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3114", muzzlesAndSilencersCount.getMas3114(), resultSet.getInt("mas3114"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3115", muzzlesAndSilencersCount.getMas3115(), resultSet.getInt("mas3115"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3116", muzzlesAndSilencersCount.getMas3116(), resultSet.getInt("mas3116"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3117", muzzlesAndSilencersCount.getMas3117(), resultSet.getInt("mas3117"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3118", muzzlesAndSilencersCount.getMas3118(), resultSet.getInt("mas3118"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3119", muzzlesAndSilencersCount.getMas3119(), resultSet.getInt("mas3119"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3120", muzzlesAndSilencersCount.getMas3120(), resultSet.getInt("mas3120"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3121", muzzlesAndSilencersCount.getMas3121(), resultSet.getInt("mas3121"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3122", muzzlesAndSilencersCount.getMas3122(), resultSet.getInt("mas3122"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3123", muzzlesAndSilencersCount.getMas3123(), resultSet.getInt("mas3123"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3124", muzzlesAndSilencersCount.getMas3124(), resultSet.getInt("mas3124"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3125", muzzlesAndSilencersCount.getMas3125(), resultSet.getInt("mas3125"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3126", muzzlesAndSilencersCount.getMas3126(), resultSet.getInt("mas3126"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3127", muzzlesAndSilencersCount.getMas3127(), resultSet.getInt("mas3127"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3128", muzzlesAndSilencersCount.getMas3128(), resultSet.getInt("mas3128"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3129", muzzlesAndSilencersCount.getMas3129(), resultSet.getInt("mas3129"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3130", muzzlesAndSilencersCount.getMas3130(), resultSet.getInt("mas3130"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3131", muzzlesAndSilencersCount.getMas3131(), resultSet.getInt("mas3131"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3132", muzzlesAndSilencersCount.getMas3132(), resultSet.getInt("mas3132"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3133", muzzlesAndSilencersCount.getMas3133(), resultSet.getInt("mas3133"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3134", muzzlesAndSilencersCount.getMas3134(), resultSet.getInt("mas3134"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3135", muzzlesAndSilencersCount.getMas3135(), resultSet.getInt("mas3135"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3136", muzzlesAndSilencersCount.getMas3136(), resultSet.getInt("mas3136"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3137", muzzlesAndSilencersCount.getMas3137(), resultSet.getInt("mas3137"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3138", muzzlesAndSilencersCount.getMas3138(), resultSet.getInt("mas3138"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3139", muzzlesAndSilencersCount.getMas3139(), resultSet.getInt("mas3139"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3140", muzzlesAndSilencersCount.getMas3140(), resultSet.getInt("mas3140"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3141", muzzlesAndSilencersCount.getMas3141(), resultSet.getInt("mas3141"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3142", muzzlesAndSilencersCount.getMas3142(), resultSet.getInt("mas3142"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3143", muzzlesAndSilencersCount.getMas3143(), resultSet.getInt("mas3143"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3144", muzzlesAndSilencersCount.getMas3144(), resultSet.getInt("mas3144"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3145", muzzlesAndSilencersCount.getMas3145(), resultSet.getInt("mas3145"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3146", muzzlesAndSilencersCount.getMas3146(), resultSet.getInt("mas3146"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3147", muzzlesAndSilencersCount.getMas3147(), resultSet.getInt("mas3147"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3148", muzzlesAndSilencersCount.getMas3148(), resultSet.getInt("mas3148"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3149", muzzlesAndSilencersCount.getMas3149(), resultSet.getInt("mas3149"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3150", muzzlesAndSilencersCount.getMas3150(), resultSet.getInt("mas3150"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3151", muzzlesAndSilencersCount.getMas3151(), resultSet.getInt("mas3151"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3152", muzzlesAndSilencersCount.getMas3152(), resultSet.getInt("mas3152"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3153", muzzlesAndSilencersCount.getMas3153(), resultSet.getInt("mas3153"));
+                updateIfChanged(person.getId(), "A_MuzzlesAndSilencersCount", "mas3154", muzzlesAndSilencersCount.getMas3154(), resultSet.getInt("mas3154"));
+            }
+        }
+    }
+
+    // 3.2 Изменение количества крафтов предметов для MagazinesCount
+    public static void updateMagazinesCount(Person person, MagazinesCount magazinesCount) throws SQLException {
+        String Sql = "SELECT * FROM A_MagazinesCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3201", magazinesCount.getM3201(), resultSet.getInt("m3201"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3202", magazinesCount.getM3202(), resultSet.getInt("m3202"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3203", magazinesCount.getM3203(), resultSet.getInt("m3203"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3204", magazinesCount.getM3204(), resultSet.getInt("m3204"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3205", magazinesCount.getM3205(), resultSet.getInt("m3205"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3206", magazinesCount.getM3206(), resultSet.getInt("m3206"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3207", magazinesCount.getM3207(), resultSet.getInt("m3207"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3208", magazinesCount.getM3208(), resultSet.getInt("m3208"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3209", magazinesCount.getM3209(), resultSet.getInt("m3209"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3210", magazinesCount.getM3210(), resultSet.getInt("m3210"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3211", magazinesCount.getM3211(), resultSet.getInt("m3211"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3212", magazinesCount.getM3212(), resultSet.getInt("m3212"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3213", magazinesCount.getM3213(), resultSet.getInt("m3213"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3214", magazinesCount.getM3214(), resultSet.getInt("m3214"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3215", magazinesCount.getM3215(), resultSet.getInt("m3215"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3216", magazinesCount.getM3216(), resultSet.getInt("m3216"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3217", magazinesCount.getM3217(), resultSet.getInt("m3217"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3218", magazinesCount.getM3218(), resultSet.getInt("m3218"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3219", magazinesCount.getM3219(), resultSet.getInt("m3219"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3220", magazinesCount.getM3220(), resultSet.getInt("m3220"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3221", magazinesCount.getM3221(), resultSet.getInt("m3221"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3222", magazinesCount.getM3222(), resultSet.getInt("m3222"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3223", magazinesCount.getM3223(), resultSet.getInt("m3223"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3224", magazinesCount.getM3224(), resultSet.getInt("m3224"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3225", magazinesCount.getM3225(), resultSet.getInt("m3225"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3226", magazinesCount.getM3226(), resultSet.getInt("m3226"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3227", magazinesCount.getM3227(), resultSet.getInt("m3227"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3228", magazinesCount.getM3228(), resultSet.getInt("m3228"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3229", magazinesCount.getM3229(), resultSet.getInt("m3229"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3230", magazinesCount.getM3230(), resultSet.getInt("m3230"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3231", magazinesCount.getM3231(), resultSet.getInt("m3231"));
+            }
+        }
+    }
+
+    // 3.3 Изменение количества крафтов предметов для HanguardsAndBracketsCount
+    public static void updateHanguardsAndBracketsCount(Person person, HanguardsAndBracketsCount hanguardsAndBracketsCount) throws SQLException {
+        String Sql = "SELECT * FROM A_HanguardsAndBracketsCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "A_HanguardsAndBracketsCount", "hab3301", hanguardsAndBracketsCount.getHab3301(), resultSet.getInt("hab3301"));
+                updateIfChanged(person.getId(), "A_HanguardsAndBracketsCount", "hab3302", hanguardsAndBracketsCount.getHab3302(), resultSet.getInt("hab3302"));
+                updateIfChanged(person.getId(), "A_HanguardsAndBracketsCount", "hab3303", hanguardsAndBracketsCount.getHab3303(), resultSet.getInt("hab3303"));
+                updateIfChanged(person.getId(), "A_HanguardsAndBracketsCount", "hab3304", hanguardsAndBracketsCount.getHab3304(), resultSet.getInt("hab3304"));
+                updateIfChanged(person.getId(), "A_HanguardsAndBracketsCount", "hab3305", hanguardsAndBracketsCount.getHab3305(), resultSet.getInt("hab3305"));
+                updateIfChanged(person.getId(), "A_HanguardsAndBracketsCount", "hab3306", hanguardsAndBracketsCount.getHab3306(), resultSet.getInt("hab3306"));
+            }
+        }
+    }
+
+    // 3.4 Изменение количества крафтов предметов для SightsCount
+    public static void updateSightsCount(Person person, SightsCount sightsCount) throws SQLException {
+        String Sql = "SELECT * FROM A_SightsCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "A_SightsCount", "s3401", sightsCount.getS3401(), resultSet.getInt("s3401"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3402", sightsCount.getS3402(), resultSet.getInt("s3402"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3403", sightsCount.getS3403(), resultSet.getInt("s3403"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3404", sightsCount.getS3404(), resultSet.getInt("s3404"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3405", sightsCount.getS3405(), resultSet.getInt("s3405"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3406", sightsCount.getS3406(), resultSet.getInt("s3406"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3407", sightsCount.getS3407(), resultSet.getInt("s3407"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3408", sightsCount.getS3408(), resultSet.getInt("s3408"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3409", sightsCount.getS3409(), resultSet.getInt("s3409"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3410", sightsCount.getS3410(), resultSet.getInt("s3410"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3411", sightsCount.getS3411(), resultSet.getInt("s3411"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3412", sightsCount.getS3412(), resultSet.getInt("s3412"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3413", sightsCount.getS3413(), resultSet.getInt("s3413"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3414", sightsCount.getS3414(), resultSet.getInt("s3414"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3415", sightsCount.getS3415(), resultSet.getInt("s3415"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3416", sightsCount.getS3416(), resultSet.getInt("s3416"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3417", sightsCount.getS3417(), resultSet.getInt("s3417"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3418", sightsCount.getS3418(), resultSet.getInt("s3418"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3419", sightsCount.getS3419(), resultSet.getInt("s3419"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3420", sightsCount.getS3420(), resultSet.getInt("s3420"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3421", sightsCount.getS3421(), resultSet.getInt("s3421"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3422", sightsCount.getS3422(), resultSet.getInt("s3422"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3423", sightsCount.getS3423(), resultSet.getInt("s3423"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3424", sightsCount.getS3424(), resultSet.getInt("s3424"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3425", sightsCount.getS3425(), resultSet.getInt("s3425"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3426", sightsCount.getS3426(), resultSet.getInt("s3426"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3427", sightsCount.getS3427(), resultSet.getInt("s3427"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3428", sightsCount.getS3428(), resultSet.getInt("s3428"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3429", sightsCount.getS3429(), resultSet.getInt("s3429"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3430", sightsCount.getS3430(), resultSet.getInt("s3430"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3431", sightsCount.getS3431(), resultSet.getInt("s3431"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3432", sightsCount.getS3432(), resultSet.getInt("s3432"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3433", sightsCount.getS3433(), resultSet.getInt("s3433"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3434", sightsCount.getS3434(), resultSet.getInt("s3434"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3435", sightsCount.getS3435(), resultSet.getInt("s3435"));
+                updateIfChanged(person.getId(), "A_SightsCount", "s3436", sightsCount.getS3436(), resultSet.getInt("s3436"));
+            }
+        }
+    }
+
+    // 3.5 Изменение количества крафтов предметов для HandlesCount
+    public static void updateHandlesCount(Person person, HandlesCount handlesCount) throws SQLException {
+        String Sql = "SELECT * FROM A_HandlesCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3501", handlesCount.getH3501(), resultSet.getInt("h3501"));
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3502", handlesCount.getH3502(), resultSet.getInt("h3502"));
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3503", handlesCount.getH3503(), resultSet.getInt("h3503"));
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3504", handlesCount.getH3504(), resultSet.getInt("h3504"));
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3505", handlesCount.getH3505(), resultSet.getInt("h3505"));
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3506", handlesCount.getH3506(), resultSet.getInt("h3506"));
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3507", handlesCount.getH3507(), resultSet.getInt("h3507"));
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3508", handlesCount.getH3508(), resultSet.getInt("h3508"));
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3509", handlesCount.getH3509(), resultSet.getInt("h3509"));
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3510", handlesCount.getH3510(), resultSet.getInt("h3510"));
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3511", handlesCount.getH3511(), resultSet.getInt("h3511"));
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3512", handlesCount.getH3512(), resultSet.getInt("h3512"));
+                updateIfChanged(person.getId(), "A_HandlesCount", "h3513", handlesCount.getH3513(), resultSet.getInt("h3513"));
+            }
+        }
+    }
+
+    // 3.6 Изменение количества крафтов предметов для OtherAttachmentsCount
+    public static void updateOtherAttachmentsCount(Person person, OtherAttachmentsCount otherAttachmentsCount) throws SQLException {
+        String Sql = "SELECT * FROM A_OtherAttachmentsCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3601", otherAttachmentsCount.getOa3601(), resultSet.getInt("oa3601"));
+                updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3602", otherAttachmentsCount.getOa3602(), resultSet.getInt("oa3602"));
+                updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3603", otherAttachmentsCount.getOa3603(), resultSet.getInt("oa3603"));
+                updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3604", otherAttachmentsCount.getOa3604(), resultSet.getInt("oa3604"));
+                updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3605", otherAttachmentsCount.getOa3605(), resultSet.getInt("oa3605"));
+                updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3606", otherAttachmentsCount.getOa3606(), resultSet.getInt("oa3606"));
+                updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3607", otherAttachmentsCount.getOa3607(), resultSet.getInt("oa3607"));
+                updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3608", otherAttachmentsCount.getOa3608(), resultSet.getInt("oa3608"));
+                updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3609", otherAttachmentsCount.getOa3609(), resultSet.getInt("oa3609"));
+                updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3610", otherAttachmentsCount.getOa3610(), resultSet.getInt("oa3610"));
+                updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3611", otherAttachmentsCount.getOa3611(), resultSet.getInt("oa3611"));
+                updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3612", otherAttachmentsCount.getOa3612(), resultSet.getInt("oa3612"));
             }
         }
     }

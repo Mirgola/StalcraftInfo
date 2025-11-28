@@ -10,9 +10,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Polyline?>
 
-<ScrollPane stylesheets="@../../dracula.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.mirgola.stalcraftinfo.barter.attachments.MagazinesController">
+<ScrollPane fx:id="scrollPane" stylesheets="@../../dracula.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.mirgola.stalcraftinfo.barter.attachments.MagazinesController">
    <content>
-      <AnchorPane prefHeight="1290.0" prefWidth="2165.0">
+      <AnchorPane fx:id="anchorPane" prefHeight="1290.0" prefWidth="2165.0">
          <children>
             <Label layoutX="56.0" layoutY="6.0" prefHeight="20.0" text="Выбранная категория: Обвесы &gt; Магазины " AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0" />
             <Label fx:id="l1label" alignment="CENTER" layoutX="5.0" layoutY="25.0" prefHeight="20.0" prefWidth="265.0" text="Label1" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="30.0" />
@@ -33,7 +33,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" text="Увеличенный магазин ПМ/ПБ" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3201Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3201Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="323.0" layoutY="291.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="100.0">
@@ -48,7 +48,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Увеличенный магазин Browning" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3202Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3202Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="333.0" layoutY="301.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="100.0">
@@ -63,7 +63,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Увеличенный магазин Colt" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3205Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3205Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="343.0" layoutY="311.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="210.0">
@@ -78,7 +78,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Магазин 5.45 PMAG, черный" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3206Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3206Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="353.0" layoutY="321.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="210.0">
@@ -93,7 +93,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Магазин 5.45 бакелитовый" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3211Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3211Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1293.0" layoutY="100.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="100.0">
@@ -108,7 +108,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Увеличенный магазин Beretta" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3210Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3210Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1613.0" layoutY="130.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="210.0">
@@ -123,7 +123,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин 5.45 пластиковый" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3214Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3214Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1633.0" layoutY="150.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="320.0">
@@ -138,7 +138,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин MAG SG545" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3222Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3222Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1643.0" layoutY="160.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="210.0">
@@ -153,7 +153,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин 5.45" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3221Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3221Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1895.0" AnchorPane.topAnchor="430.0">
@@ -168,7 +168,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Увеличенный магазин АШ-12" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3229Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3229Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="635.0" layoutY="515.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="900.0" AnchorPane.topAnchor="132.0">
@@ -224,7 +224,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин 5.45 «Вафля»" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3215Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3215Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="320.0" AnchorPane.topAnchor="210.0">
@@ -239,7 +239,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Увеличенный магазин Форт-12" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3203Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3203Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="725.0" layoutY="605.0" prefHeight="20.0" prefWidth="340.0" AnchorPane.leftAnchor="925.0" AnchorPane.topAnchor="352.0">
@@ -272,7 +272,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Магазин 7.62 бакелитовый" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3212Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3212Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="735.0" layoutY="615.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="925.0" AnchorPane.topAnchor="462.0">
@@ -302,7 +302,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин 7.62 пластиковый" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3216Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3216Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="760.0">
@@ -317,7 +317,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин АКМ десантный" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3217Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3217Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Line endX="88.0" endY="136.0" layoutX="1467.0" layoutY="556.0" startX="88.0" startY="-84.0" stroke="WHITE" />
@@ -357,7 +357,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин Magpul PMAG 7.62x39" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3225Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3225Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1693.0" layoutY="210.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="870.0">
@@ -372,7 +372,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Магазин 5.56 NATO STANAG" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3207Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3207Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1683.0" layoutY="200.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="870.0">
@@ -387,7 +387,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Магазин 5.56 NATO PMAG, черный" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3213Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3213Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1530.0" layoutY="462.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1530.0" AnchorPane.topAnchor="462.0">
@@ -433,7 +433,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Магазин 5.56 NATO STANAG" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3204Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3204Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1693.0" layoutY="210.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="980.0">
@@ -448,7 +448,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин EMAG" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3219Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3219Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1531.0" layoutY="1123.0" prefHeight="20.0" prefWidth="50.0" AnchorPane.leftAnchor="1531.0" AnchorPane.topAnchor="1122.0">
@@ -469,7 +469,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #7def7d;" text="Удлинитель магазина МР-133/МР-153" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3208Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3208Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1703.0" layoutY="220.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="1090.0">
@@ -484,7 +484,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин 5.56 Pufgun, черный" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3220Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3220Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="1090.0">
@@ -499,7 +499,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин PMAG GEN2 M2 MOE" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3227Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3227Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1713.0" layoutY="230.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="1200.0">
@@ -514,7 +514,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Увеличенный магазин «Кобра»" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3228Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3228Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1723.0" layoutY="240.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1200.0">
@@ -529,7 +529,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #8d8dff;" text="Барабанный магазин X-5" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3209Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3209Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1240.0" layoutY="1123.0" prefHeight="20.0" prefWidth="25.0" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="1122.0">
@@ -575,7 +575,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Увеличенный магазин ОЦ-14" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3223Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3223Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1653.0" layoutY="170.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="540.0">
@@ -590,7 +590,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин эргономичный для ВСС/Вал" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3224Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3224Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1663.0" layoutY="180.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1895.0" AnchorPane.topAnchor="540.0">
@@ -605,7 +605,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Увеличенный магазин для ВСС/Вал" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3230Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3230Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1673.0" layoutY="190.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1895.0" AnchorPane.topAnchor="650.0">
@@ -620,7 +620,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Барабанный магазин G3/M1A" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3231Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3231Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1673.0" layoutY="190.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1265.0" AnchorPane.topAnchor="870.0">
@@ -635,7 +635,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин 5.56 NATO STANAG" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3218Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3218Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
             <Pane layoutX="1683.0" layoutY="200.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1580.0" AnchorPane.topAnchor="870.0">
@@ -650,7 +650,7 @@
                      </children>
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин 5.56 NATO STANAG" />
-                  <TextField alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" prefHeight="30.0" prefWidth="47.0" />
+                  <TextField fx:id="m3226Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3226Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
          </children>
