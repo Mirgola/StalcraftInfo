@@ -606,8 +606,7 @@ public class PersonInfoController {
         sciApplication.showBarter(this);
     }
 
-    private void getGreenMoldRemains() {
-        Person person = personTable.getSelectionModel().getSelectedItem();
+    public void getRemains(Person person) {
         for(Barter barter : sciApplication.getBartersData()){
             if (barter.getId().equals("mw1704")){
 

@@ -1,17 +1,32 @@
 package com.github.mirgola.stalcraftinfo;
 
 import com.github.mirgola.stalcraftinfo.barter.attachments.*;
+import com.github.mirgola.stalcraftinfo.barter.suits.*;
 import com.github.mirgola.stalcraftinfo.barter.weapons.*;
 import com.github.mirgola.stalcraftinfo.barter.other.*;
 import java.sql.*;
 
 public class SciDB {
+    private static boolean okClicked = false;
     private static Connection connection;
     private static Statement statement;
+    private static final String[] tableName = {"W_AssaultRifles", "W_SubmachineGuns", "W_MachineGuns", "W_SniperRifles",
+            "W_ShotgunsAndRifles", "W_Pistols", "W_MeleeWeapons", "O_BackpacksAndPouches", "O_Containers", "O_Devices",
+            "O_Cosmetics", "O_Accessories", "O_Other", "A_MuzzlesAndSilencers", "A_Magazines", "A_HanguardsAndBrackets",
+            "A_Sights", "A_Handles", "A_OtherAttachments", "S_Combat", "S_Combined", "S_Scientist"};
+
     private static final String[] tableNameCount = {"W_AssaultRiflesCount", "W_SubmachineGunsCount", "W_MachineGunsCount", "W_SniperRiflesCount",
             "W_ShotgunsAndRiflesCount", "W_PistolsCount", "W_MeleeWeaponsCount", "O_BackpacksAndPouchesCount", "O_ContainersCount", "O_DevicesCount",
             "O_CosmeticsCount", "O_AccessoriesCount", "O_OtherCount", "A_MuzzlesAndSilencersCount", "A_MagazinesCount", "A_HanguardsAndBracketsCount",
             "A_SightsCount", "A_HandlesCount", "A_OtherAttachmentsCount", "S_CombatCount", "S_CombinedCount", "S_ScientistCount"};
+
+    public static boolean isOkClicked() {
+        return okClicked;
+    }
+
+    public static void setOkClickedTrue() { okClicked = true;}
+
+    public static void setOkClickedFalse() { okClicked = false;}
 
     // Подключение к базе данных
     public static void conn() throws ClassNotFoundException, SQLException {
@@ -104,44 +119,45 @@ public class SciDB {
 
     // Заполнение списка из всех таблиц предметов бартера
     public static void readBarter(SciApplication sciApplication) throws SQLException {
-        ResultSet resultSet = statement.executeQuery("SELECT * FROM W_MeleeWeapons");
-        while(resultSet.next()) {
-            String id = resultSet.getString("id");
-            String name = resultSet.getString("name");
-            int cost = resultSet.getInt("cost");
-            int greenMold = resultSet.getInt("greenMold");
-            int swampStone = resultSet.getInt("swampStone");
-            int stinkyRoot = resultSet.getInt("stinkyRoot");
-            int crappite = resultSet.getInt("crappite");
-            int piecesOfCopperWire = resultSet.getInt("piecesOfCopperWire");
-            int sprigOfChernobylChamomile = resultSet.getInt("sprigOfChernobylChamomile");
-            int pickle = resultSet.getInt("pickle");
-            int remainsOfRadioTransmitter = resultSet.getInt("remainsOfRadioTransmitter");
-            int alphaDataFragment = resultSet.getInt("alphaDataFragment");
-            int northernMoss = resultSet.getInt("northernMoss");
-            int dopeStone = resultSet.getInt("dopeStone");
-            int remainsOfBatteries = resultSet.getInt("remainsOfBatteries");
-            int betaDataFragment = resultSet.getInt("betaDataFragment");
-            int redFern = resultSet.getInt("redFern");
-            int substance07270 = resultSet.getInt("substance07270");
-            int remainsOfPsyTracker = resultSet.getInt("remainsOfPsyTracker");
-            int gammaDataFragment = resultSet.getInt("gammaDataFragment");
-            int quantumBattery = resultSet.getInt("quantumBattery");
-            int anomalousSerum = resultSet.getInt("anomalousSerum");
-            int bitterleaf = resultSet.getInt("bitterleaf");
-            int limbo = resultSet.getInt("limbo");
-            int lambdaDataFragment = resultSet.getInt("lambdaDataFragment");
-            int anomalousBattery = resultSet.getInt("anomalousBattery");
-            int limboPlasma = resultSet.getInt("limboPlasma");
+        for (String s : tableName) {
+            try (ResultSet resultSet = statement.executeQuery("SELECT * FROM " + s)) {
+                while(resultSet.next()) {
+                    String id = resultSet.getString("id");
+                    String name = resultSet.getString("name");
+                    int cost = resultSet.getInt("cost");
+                    int greenMold = resultSet.getInt("greenMold");
+                    int swampStone = resultSet.getInt("swampStone");
+                    int stinkyRoot = resultSet.getInt("stinkyRoot");
+                    int crappite = resultSet.getInt("crappite");
+                    int piecesOfCopperWire = resultSet.getInt("piecesOfCopperWire");
+                    int sprigOfChernobylChamomile = resultSet.getInt("sprigOfChernobylChamomile");
+                    int pickle = resultSet.getInt("pickle");
+                    int remainsOfRadioTransmitter = resultSet.getInt("remainsOfRadioTransmitter");
+                    int alphaDataFragment = resultSet.getInt("alphaDataFragment");
+                    int northernMoss = resultSet.getInt("northernMoss");
+                    int dopeStone = resultSet.getInt("dopeStone");
+                    int remainsOfBatteries = resultSet.getInt("remainsOfBatteries");
+                    int betaDataFragment = resultSet.getInt("betaDataFragment");
+                    int redFern = resultSet.getInt("redFern");
+                    int substance07270 = resultSet.getInt("substance07270");
+                    int remainsOfPsyTracker = resultSet.getInt("remainsOfPsyTracker");
+                    int gammaDataFragment = resultSet.getInt("gammaDataFragment");
+                    int quantumBattery = resultSet.getInt("quantumBattery");
+                    int anomalousSerum = resultSet.getInt("anomalousSerum");
+                    int bitterleaf = resultSet.getInt("bitterleaf");
+                    int limbo = resultSet.getInt("limbo");
+                    int lambdaDataFragment = resultSet.getInt("lambdaDataFragment");
+                    int anomalousBattery = resultSet.getInt("anomalousBattery");
+                    int limboPlasma = resultSet.getInt("limboPlasma");
 
-            sciApplication.getBartersData().add(new Barter(id, name, cost, greenMold, swampStone, stinkyRoot, crappite,
-                    piecesOfCopperWire, sprigOfChernobylChamomile, pickle, remainsOfRadioTransmitter, alphaDataFragment,
-                    northernMoss, dopeStone, remainsOfBatteries, betaDataFragment, redFern, substance07270,
-                    remainsOfPsyTracker, gammaDataFragment, quantumBattery, anomalousSerum, bitterleaf,
-                    limbo, lambdaDataFragment, anomalousBattery, limboPlasma));
+                    sciApplication.getBartersData().add(new Barter(id, name, cost, greenMold, swampStone, stinkyRoot, crappite,
+                            piecesOfCopperWire, sprigOfChernobylChamomile, pickle, remainsOfRadioTransmitter, alphaDataFragment,
+                            northernMoss, dopeStone, remainsOfBatteries, betaDataFragment, redFern, substance07270,
+                            remainsOfPsyTracker, gammaDataFragment, quantumBattery, anomalousSerum, bitterleaf,
+                            limbo, lambdaDataFragment, anomalousBattery, limboPlasma));
+                }
+            }
         }
-
-        resultSet.close();
     }
 
     // 1.1 Заполнение списка из таблицы "AssaultRiflesCount"
@@ -760,6 +776,110 @@ public class SciDB {
         }
     }
 
+    // 1.1 Заполнение списка из таблицы "CombatCount"
+    public static void readCombatCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM S_CombatCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int c4101 = resultSet.getInt("c4101");
+                int c4102 = resultSet.getInt("c4102");
+                int c4103 = resultSet.getInt("c4103");
+                int c4104 = resultSet.getInt("c4104");
+                int c4105 = resultSet.getInt("c4105");
+                int c4106 = resultSet.getInt("c4106");
+                int c4107 = resultSet.getInt("c4107");
+                int c4108 = resultSet.getInt("c4108");
+                int c4109 = resultSet.getInt("c4109");
+                int c4110 = resultSet.getInt("c4110");
+                int c4111 = resultSet.getInt("c4111");
+                int c4112 = resultSet.getInt("c4112");
+                int c4113 = resultSet.getInt("c4113");
+                int c4114 = resultSet.getInt("c4114");
+                int c4115 = resultSet.getInt("c4115");
+                int c4116 = resultSet.getInt("c4116");
+                int c4117 = resultSet.getInt("c4117");
+                int c4118 = resultSet.getInt("c4118");
+                int c4119 = resultSet.getInt("c4119");
+                int c4120 = resultSet.getInt("c4120");
+                int c4121 = resultSet.getInt("c4121");
+                int c4122 = resultSet.getInt("c4122");
+                int c4123 = resultSet.getInt("c4123");
+                int c4124 = resultSet.getInt("c4124");
+                int c4125 = resultSet.getInt("c4125");
+                int c4126 = resultSet.getInt("c4126");
+                int c4127 = resultSet.getInt("c4127");
+                int c4128 = resultSet.getInt("c4128");
+                int c4129 = resultSet.getInt("c4129");
+
+                sciApplication.getCombatCountData().add(new CombatCount(idPerson, nicknamePerson,
+                        c4101, c4102, c4103, c4104, c4105, c4106, c4107, c4108, c4109, c4110,
+                        c4111, c4112, c4113, c4114, c4115, c4116, c4117, c4118, c4119, c4120,
+                        c4121, c4122, c4123, c4124, c4125, c4126, c4127, c4128, c4129));
+            }
+        }
+    }
+
+    // 4.2 Заполнение списка из таблицы "CombinedCount"
+    public static void readCombinedCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM S_CombinedCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int c4201 = resultSet.getInt("c4201");
+                int c4202 = resultSet.getInt("c4202");
+                int c4203 = resultSet.getInt("c4203");
+                int c4204 = resultSet.getInt("c4204");
+                int c4205 = resultSet.getInt("c4205");
+                int c4206 = resultSet.getInt("c4206");
+                int c4207 = resultSet.getInt("c4207");
+                int c4208 = resultSet.getInt("c4208");
+                int c4209 = resultSet.getInt("c4209");
+                int c4210 = resultSet.getInt("c4210");
+                int c4211 = resultSet.getInt("c4211");
+                int c4212 = resultSet.getInt("c4212");
+                int c4213 = resultSet.getInt("c4213");
+                int c4214 = resultSet.getInt("c4214");
+                int c4215 = resultSet.getInt("c4215");
+                int c4216 = resultSet.getInt("c4216");
+                int c4217 = resultSet.getInt("c4217");
+                int c4218 = resultSet.getInt("c4218");
+                int c4219 = resultSet.getInt("c4219");
+
+                sciApplication.getCombinedCountData().add(new CombinedCount(idPerson, nicknamePerson,
+                        c4201, c4202, c4203, c4204, c4205, c4206, c4207, c4208, c4209, c4210,
+                        c4211, c4212, c4213, c4214, c4215, c4216, c4217, c4218, c4219));
+            }
+        }
+    }
+
+    // 4.3 Заполнение списка из таблицы "ScientistCount"
+    public static void readScientistCount(SciApplication sciApplication) throws SQLException {
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM S_ScientistCount")) {
+            while (resultSet.next()) {
+                int idPerson = resultSet.getInt("idPerson");
+                String nicknamePerson = resultSet.getString("nicknamePerson");
+                int s4301 = resultSet.getInt("s4301");
+                int s4302 = resultSet.getInt("s4302");
+                int s4303 = resultSet.getInt("s4303");
+                int s4304 = resultSet.getInt("s4304");
+                int s4305 = resultSet.getInt("s4305");
+                int s4306 = resultSet.getInt("s4306");
+                int s4307 = resultSet.getInt("s4307");
+                int s4308 = resultSet.getInt("s4308");
+                int s4309 = resultSet.getInt("s4309");
+                int s4310 = resultSet.getInt("s4310");
+                int s4311 = resultSet.getInt("s4311");
+                int s4312 = resultSet.getInt("s4312");
+                int s4313 = resultSet.getInt("s4313");
+
+                sciApplication.getScientistCountData().add(new ScientistCount(idPerson, nicknamePerson,
+                        s4301, s4302, s4303, s4304, s4305, s4306, s4307, s4308, s4309, s4310,
+                        s4311, s4312, s4313));
+            }
+        }
+    }
+
     //
     // Изменение информации о персонаже
     public static void updatePersonInfo(Person person) throws SQLException {
@@ -799,6 +919,44 @@ public class SciDB {
                 updateIfChanged(person.getId(), "Person", "arsenalPoints", person.getArsenalPoints(), resultSet.getInt("arsenalPoints"));
                 updateIfChanged(person.getId(), "Person", "seasonBox", person.getSeasonBox(), resultSet.getInt("seasonBox"));
                 updateIfChanged(person.getId(), "Person", "combatPassLevel", person.getCombatPassLevel(), resultSet.getInt("combatPassLevel"));
+            }
+        }
+    }
+
+    // Измение информации об остатках ресурсов для бартара персонажа
+    public static void updateRemains(Person person) throws SQLException {
+        String sql = "SELECT * FROM Person WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                updateIfChanged(person.getId(), "Person", "greenMold", person.getGreenMold(), resultSet.getInt("greenMold"));
+                updateIfChanged(person.getId(), "Person", "swampStone", person.getSwampStone(), resultSet.getInt("swampStone"));
+                updateIfChanged(person.getId(), "Person", "stinkyRoot", person.getStinkyRoot(), resultSet.getInt("stinkyRoot"));
+                updateIfChanged(person.getId(), "Person", "crappite", person.getCrappite(), resultSet.getInt("crappite"));
+                updateIfChanged(person.getId(), "Person", "piecesOfCopperWire", person.getPiecesOfCopperWire(), resultSet.getInt("piecesOfCopperWire"));
+                updateIfChanged(person.getId(), "Person", "sprigOfChernobylChamomile", person.getSprigOfChernobylChamomile(), resultSet.getInt("sprigOfChernobylChamomile"));
+                updateIfChanged(person.getId(), "Person", "pickle", person.getPickle(), resultSet.getInt("pickle"));
+                updateIfChanged(person.getId(), "Person", "remainsOfRadioTransmitter", person.getRemainsOfRadioTransmitter(), resultSet.getInt("remainsOfRadioTransmitter"));
+                updateIfChanged(person.getId(), "Person", "alphaDataFragment", person.getAlphaDataFragment(), resultSet.getInt("alphaDataFragment"));
+                updateIfChanged(person.getId(), "Person", "northernMoss", person.getNorthernMoss(), resultSet.getInt("northernMoss"));
+                updateIfChanged(person.getId(), "Person", "dopeStone", person.getDopeStone(), resultSet.getInt("dopeStone"));
+                updateIfChanged(person.getId(), "Person", "remainsOfBatteries", person.getRemainsOfBatteries(), resultSet.getInt("remainsOfBatteries"));
+                updateIfChanged(person.getId(), "Person", "betaDataFragment", person.getBetaDataFragment(), resultSet.getInt("betaDataFragment"));
+                updateIfChanged(person.getId(), "Person", "redFern", person.getRedFern(), resultSet.getInt("redFern"));
+                updateIfChanged(person.getId(), "Person", "substance07270", person.getSubstance07270(), resultSet.getInt("substance07270"));
+                updateIfChanged(person.getId(), "Person", "remainsOfPsyTracker", person.getRemainsOfPsyTracker(), resultSet.getInt("remainsOfPsyTracker"));
+                updateIfChanged(person.getId(), "Person", "gammaDataFragment", person.getGammaDataFragment(), resultSet.getInt("gammaDataFragment"));
+                updateIfChanged(person.getId(), "Person", "quantumBattery", person.getQuantumBattery(), resultSet.getInt("quantumBattery"));
+                updateIfChanged(person.getId(), "Person", "anomalousSerum", person.getAnomalousSerum(), resultSet.getInt("anomalousSerum"));
+                updateIfChanged(person.getId(), "Person", "bitterleaf", person.getBitterleaf(), resultSet.getInt("bitterleaf"));
+                updateIfChanged(person.getId(), "Person", "limbo", person.getLimbo(), resultSet.getInt("limbo"));
+                updateIfChanged(person.getId(), "Person", "lambdaDataFragment", person.getLambdaDataFragment(), resultSet.getInt("lambdaDataFragment"));
+                updateIfChanged(person.getId(), "Person", "anomalousBattery", person.getAnomalousBattery(), resultSet.getInt("anomalousBattery"));
+                updateIfChanged(person.getId(), "Person", "limboPlasma", person.getLimboPlasma(), resultSet.getInt("limboPlasma"));
+                updateIfChanged(person.getId(), "Person", "cost", person.getCost(), resultSet.getInt("cost"));
             }
         }
     }
@@ -1390,6 +1548,106 @@ public class SciDB {
                 updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3610", otherAttachmentsCount.getOa3610(), resultSet.getInt("oa3610"));
                 updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3611", otherAttachmentsCount.getOa3611(), resultSet.getInt("oa3611"));
                 updateIfChanged(person.getId(), "A_OtherAttachmentsCount", "oa3612", otherAttachmentsCount.getOa3612(), resultSet.getInt("oa3612"));
+            }
+        }
+    }
+
+    // 4.1 Изменение количества крафтов предметов для CombatCount
+    public static void updateCombatCount(Person person, CombatCount combatCount) throws SQLException {
+        String Sql = "SELECT * FROM S_CombatCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "S_CombatCount", "c4101", combatCount.getC4101(), resultSet.getInt("c4101"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4102", combatCount.getC4102(), resultSet.getInt("c4102"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4103", combatCount.getC4103(), resultSet.getInt("c4103"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4104", combatCount.getC4104(), resultSet.getInt("c4104"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4105", combatCount.getC4105(), resultSet.getInt("c4105"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4106", combatCount.getC4106(), resultSet.getInt("c4106"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4107", combatCount.getC4107(), resultSet.getInt("c4107"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4108", combatCount.getC4108(), resultSet.getInt("c4108"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4109", combatCount.getC4109(), resultSet.getInt("c4109"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4110", combatCount.getC4110(), resultSet.getInt("c4110"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4111", combatCount.getC4111(), resultSet.getInt("c4111"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4112", combatCount.getC4112(), resultSet.getInt("c4112"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4113", combatCount.getC4113(), resultSet.getInt("c4113"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4114", combatCount.getC4114(), resultSet.getInt("c4114"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4115", combatCount.getC4115(), resultSet.getInt("c4115"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4116", combatCount.getC4116(), resultSet.getInt("c4116"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4117", combatCount.getC4117(), resultSet.getInt("c4117"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4118", combatCount.getC4118(), resultSet.getInt("c4118"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4119", combatCount.getC4119(), resultSet.getInt("c4119"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4120", combatCount.getC4120(), resultSet.getInt("c4120"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4121", combatCount.getC4121(), resultSet.getInt("c4121"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4122", combatCount.getC4122(), resultSet.getInt("c4122"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4123", combatCount.getC4123(), resultSet.getInt("c4123"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4124", combatCount.getC4124(), resultSet.getInt("c4124"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4125", combatCount.getC4125(), resultSet.getInt("c4125"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4126", combatCount.getC4126(), resultSet.getInt("c4126"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4127", combatCount.getC4127(), resultSet.getInt("c4127"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4128", combatCount.getC4128(), resultSet.getInt("c4128"));
+                updateIfChanged(person.getId(), "S_CombatCount", "c4129", combatCount.getC4129(), resultSet.getInt("c4129"));
+            }
+        }
+    }
+
+    // 4.2 Изменение количества крафтов предметов для CombinedCount
+    public static void updateCombinedCount(Person person, CombinedCount combinedCount) throws SQLException {
+        String Sql = "SELECT * FROM S_CombinedCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4201", combinedCount.getC4201(), resultSet.getInt("c4201"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4202", combinedCount.getC4202(), resultSet.getInt("c4202"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4203", combinedCount.getC4203(), resultSet.getInt("c4203"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4204", combinedCount.getC4204(), resultSet.getInt("c4204"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4205", combinedCount.getC4205(), resultSet.getInt("c4205"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4206", combinedCount.getC4206(), resultSet.getInt("c4206"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4207", combinedCount.getC4207(), resultSet.getInt("c4207"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4208", combinedCount.getC4208(), resultSet.getInt("c4208"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4209", combinedCount.getC4209(), resultSet.getInt("c4209"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4210", combinedCount.getC4210(), resultSet.getInt("c4210"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4211", combinedCount.getC4211(), resultSet.getInt("c4211"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4212", combinedCount.getC4212(), resultSet.getInt("c4212"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4213", combinedCount.getC4213(), resultSet.getInt("c4213"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4214", combinedCount.getC4214(), resultSet.getInt("c4214"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4215", combinedCount.getC4215(), resultSet.getInt("c4215"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4216", combinedCount.getC4216(), resultSet.getInt("c4216"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4217", combinedCount.getC4217(), resultSet.getInt("c4217"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4218", combinedCount.getC4218(), resultSet.getInt("c4218"));
+                updateIfChanged(person.getId(), "S_CombinedCount", "c4219", combinedCount.getC4219(), resultSet.getInt("c4219"));
+            }
+        }
+    }
+
+    // 4.3 Изменение количества крафтов предметов для ScientistCount
+    public static void updateScientistCount(Person person, ScientistCount scientistCount) throws SQLException {
+        String Sql = "SELECT * FROM S_ScientistCount WHERE idPerson = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(Sql)) {
+            preparedStatement.setInt(1, person.getId());
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if (resultSet.next()) {
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4301", scientistCount.getS4301(), resultSet.getInt("s4301"));
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4302", scientistCount.getS4302(), resultSet.getInt("s4302"));
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4303", scientistCount.getS4303(), resultSet.getInt("s4303"));
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4304", scientistCount.getS4304(), resultSet.getInt("s4304"));
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4305", scientistCount.getS4305(), resultSet.getInt("s4305"));
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4306", scientistCount.getS4306(), resultSet.getInt("s4306"));
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4307", scientistCount.getS4307(), resultSet.getInt("s4307"));
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4308", scientistCount.getS4308(), resultSet.getInt("s4308"));
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4309", scientistCount.getS4309(), resultSet.getInt("s4309"));
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4310", scientistCount.getS4310(), resultSet.getInt("s4310"));
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4311", scientistCount.getS4311(), resultSet.getInt("s4311"));
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4312", scientistCount.getS4312(), resultSet.getInt("s4312"));
+                updateIfChanged(person.getId(), "S_ScientistCount", "s4313", scientistCount.getS4313(), resultSet.getInt("s4313"));
             }
         }
     }

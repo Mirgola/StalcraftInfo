@@ -2,6 +2,7 @@ package com.github.mirgola.stalcraftinfo;
 
 import com.github.mirgola.stalcraftinfo.barter.attachments.*;
 import com.github.mirgola.stalcraftinfo.barter.other.*;
+import com.github.mirgola.stalcraftinfo.barter.suits.*;
 import com.github.mirgola.stalcraftinfo.barter.weapons.*;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
@@ -50,6 +51,10 @@ public class SciApplication extends Application {
     private ObservableList<HandlesCount> handlesCountData = FXCollections.observableArrayList();
     private ObservableList<OtherAttachmentsCount> otherAttachmentsCountData = FXCollections.observableArrayList();
 
+    private ObservableList<CombatCount> combatCountData = FXCollections.observableArrayList();
+    private ObservableList<CombinedCount> combinedCountData = FXCollections.observableArrayList();
+    private ObservableList<ScientistCount> scientistCountData = FXCollections.observableArrayList();
+
     public SciApplication() throws SQLException {
         SciDB.readUsers(this);
         SciDB.readBarter(this);
@@ -75,6 +80,10 @@ public class SciApplication extends Application {
         SciDB.readSightsCount(this);
         SciDB.readHandlesCount(this);
         SciDB.readOtherAttachmentsCount(this);
+
+        SciDB.readCombatCount(this);
+        SciDB.readCombinedCount(this);
+        SciDB.readScientistCount(this);
     }
 
     public ObservableList<Person> getPersonData() {return personData;}
@@ -101,6 +110,10 @@ public class SciApplication extends Application {
     public ObservableList<SightsCount> getSightsCountData() {return sightsCountData;}
     public ObservableList<HandlesCount> getHandlesCountData() {return handlesCountData;}
     public ObservableList<OtherAttachmentsCount> getOtherAttachmentsCountData() {return otherAttachmentsCountData;}
+
+    public ObservableList<CombatCount> getCombatCountData() {return combatCountData;}
+    public ObservableList<CombinedCount> getCombinedCountData() {return combinedCountData;}
+    public ObservableList<ScientistCount> getScientistCountData() {return scientistCountData;}
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -245,6 +258,7 @@ public class SciApplication extends Application {
         controller1.setPerson(personTable.getSelectionModel().getSelectedItem());
         controller1.setSciApplication(this);
 
+        //
         controller.setPersonInfoController(personInfoController);
         controller.setPerson(personTable.getSelectionModel().getSelectedItem());
     }

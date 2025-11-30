@@ -383,10 +383,10 @@ public class MenuBarBarterController {
         HanguardsAndBracketsController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
         controller.setPerson(person);
-        controller.setField(geHanguardsAndBracketsCount());
+        controller.setField(getHanguardsAndBracketsCount());
     }
 
-    private HanguardsAndBracketsCount geHanguardsAndBracketsCount() {
+    private HanguardsAndBracketsCount getHanguardsAndBracketsCount() {
         HanguardsAndBracketsCount hanguardsAndBracketsCount = null;
         for (HanguardsAndBracketsCount thisCount : sciApplication.getHanguardsAndBracketsCountData()) {
             if (thisCount.getIdPerson() == person.getId()) {
@@ -406,10 +406,10 @@ public class MenuBarBarterController {
         SightsController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
         controller.setPerson(person);
-        controller.setField(geSightsCount());
+        controller.setField(getSightsCount());
     }
 
-    private SightsCount geSightsCount() {
+    private SightsCount getSightsCount() {
         SightsCount sightsCount = null;
         for (SightsCount thisCount : sciApplication.getSightsCountData()) {
             if (thisCount.getIdPerson() == person.getId()) {
@@ -429,10 +429,10 @@ public class MenuBarBarterController {
         HandlesController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
         controller.setPerson(person);
-        controller.setField(geHandlesCount());
+        controller.setField(getHandlesCount());
     }
 
-    private HandlesCount geHandlesCount() {
+    private HandlesCount getHandlesCount() {
         HandlesCount handlesCount = null;
         for (HandlesCount thisCount : sciApplication.getHandlesCountData()) {
             if (thisCount.getIdPerson() == person.getId()) {
@@ -452,10 +452,10 @@ public class MenuBarBarterController {
         OtherAttachmentsController controller = fxmlLoader.getController();
         controller.setLabel(person.getFraction());
         controller.setPerson(person);
-        controller.setField(geOtherAttachmentsCount());
+        controller.setField(getOtherAttachmentsCount());
     }
 
-    private OtherAttachmentsCount geOtherAttachmentsCount() {
+    private OtherAttachmentsCount getOtherAttachmentsCount() {
         OtherAttachmentsCount otherAttachmentsCount = null;
         for (OtherAttachmentsCount thisCount : sciApplication.getOtherAttachmentsCountData()) {
             if (thisCount.getIdPerson() == person.getId()) {
@@ -465,7 +465,7 @@ public class MenuBarBarterController {
         return otherAttachmentsCount;
     }
 
-    // Вызов окна Боевые
+    // 4.1 Вызов окна Боевые
     public void handleCombat() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/suits/Combat.fxml"));
         ScrollPane combat = fxmlLoader.load();
@@ -474,9 +474,21 @@ public class MenuBarBarterController {
         CombatController controller = fxmlLoader.getController();
         controller.setBarterController(this);
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getCombatCount(), person.getFraction());
     }
 
-    // Вызов окна Комбинированные
+    private CombatCount getCombatCount() {
+        CombatCount combatCount = null;
+        for (CombatCount thisCount : sciApplication.getCombatCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                combatCount = thisCount;
+            }
+        }
+        return combatCount;
+    }
+
+    // 4.2 Вызов окна Комбинированные
     public void handleCombined() throws  IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/suits/Combined.fxml"));
         ScrollPane combined = fxmlLoader.load();
@@ -485,9 +497,21 @@ public class MenuBarBarterController {
         CombinedController controller = fxmlLoader.getController();
         controller.setBarterController(this);
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getCombinedCount(), person.getFraction());
     }
 
-    // Вызов окна Научные
+    private CombinedCount getCombinedCount() {
+        CombinedCount combinedCount = null;
+        for (CombinedCount thisCount : sciApplication.getCombinedCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                combinedCount = thisCount;
+            }
+        }
+        return combinedCount;
+    }
+
+    // 4.3 Вызов окна Научные
     public void handleScientist() throws  IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("/com/github/mirgola/stalcraftinfo/barter/suits/Scientist.fxml"));
         ScrollPane scientist = fxmlLoader.load();
@@ -496,5 +520,17 @@ public class MenuBarBarterController {
         ScientistController controller = fxmlLoader.getController();
         controller.setBarterController(this);
         controller.setLabel(person.getFraction());
+        controller.setPerson(person);
+        controller.setField(getScientistCount(), person.getFraction());
+    }
+
+    private ScientistCount getScientistCount() {
+        ScientistCount scientistCount = null;
+        for (ScientistCount thisCount : sciApplication.getScientistCountData()) {
+            if (thisCount.getIdPerson() == person.getId()) {
+                scientistCount = thisCount;
+            }
+        }
+        return scientistCount;
     }
 }
