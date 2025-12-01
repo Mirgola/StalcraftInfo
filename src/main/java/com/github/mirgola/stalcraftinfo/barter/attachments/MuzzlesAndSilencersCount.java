@@ -1,11 +1,12 @@
 package com.github.mirgola.stalcraftinfo.barter.attachments;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class MuzzlesAndSilencersCount {
+public class MuzzlesAndSilencersCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty mas3101, mas3102, mas3103, mas3104, mas3105, mas3106, mas3107, mas3108, mas3109, mas3110,
@@ -86,6 +87,66 @@ public class MuzzlesAndSilencersCount {
                 
     }
 
+    public int getCountByWeaponId(String id) {
+        return switch(id) {
+            case "mas3101" -> getMas3101();
+            case "mas3102" -> getMas3102();
+            case "mas3103" -> getMas3103();
+            case "mas3104" -> getMas3104();
+            case "mas3105" -> getMas3105();
+            case "mas3106" -> getMas3106();
+            case "mas3107" -> getMas3107();
+            case "mas3108" -> getMas3108();
+            case "mas3109" -> getMas3109();
+            case "mas3110" -> getMas3110();
+            case "mas3111" -> getMas3111();
+            case "mas3112" -> getMas3112();
+            case "mas3113" -> getMas3113();
+            case "mas3114" -> getMas3114();
+            case "mas3115" -> getMas3115();
+            case "mas3116" -> getMas3116();
+            case "mas3117" -> getMas3117();
+            case "mas3118" -> getMas3118();
+            case "mas3119" -> getMas3119();
+            case "mas3120" -> getMas3120();
+            case "mas3121" -> getMas3121();
+            case "mas3122" -> getMas3122();
+            case "mas3123" -> getMas3123();
+            case "mas3124" -> getMas3124();
+            case "mas3125" -> getMas3125();
+            case "mas3126" -> getMas3126();
+            case "mas3127" -> getMas3127();
+            case "mas3128" -> getMas3128();
+            case "mas3129" -> getMas3129();
+            case "mas3130" -> getMas3130();
+            case "mas3131" -> getMas3131();
+            case "mas3132" -> getMas3132();
+            case "mas3133" -> getMas3133();
+            case "mas3134" -> getMas3134();
+            case "mas3135" -> getMas3135();
+            case "mas3136" -> getMas3136();
+            case "mas3137" -> getMas3137();
+            case "mas3138" -> getMas3138();
+            case "mas3139" -> getMas3139();
+            case "mas3140" -> getMas3140();
+            case "mas3141" -> getMas3141();
+            case "mas3142" -> getMas3142();
+            case "mas3143" -> getMas3143();
+            case "mas3144" -> getMas3144();
+            case "mas3145" -> getMas3145();
+            case "mas3146" -> getMas3146();
+            case "mas3147" -> getMas3147();
+            case "mas3148" -> getMas3148();
+            case "mas3149" -> getMas3149();
+            case "mas3150" -> getMas3150();
+            case "mas3151" -> getMas3151();
+            case "mas3152" -> getMas3152();
+            case "mas3153" -> getMas3153();
+            case "mas3154" -> getMas3154();
+            default -> 0;
+        };
+    }
+    
     // idPerson
     public int getIdPerson() {
         return idPerson.get();

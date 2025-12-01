@@ -1,11 +1,12 @@
 package com.github.mirgola.stalcraftinfo.barter.attachments;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class OtherAttachmentsCount {
+public class OtherAttachmentsCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty oa3601, oa3602, oa3603, oa3604, oa3605, oa3606, oa3607, oa3608, oa3609, oa3610,
@@ -29,6 +30,24 @@ public class OtherAttachmentsCount {
         this.oa3610 = new SimpleIntegerProperty(oa3610);
         this.oa3611 = new SimpleIntegerProperty(oa3611);
         this.oa3612 = new SimpleIntegerProperty(oa3612);
+    }
+
+    public int getCountByWeaponId(String id) {
+        return switch(id) {
+            case "oa3601" -> getOa3601();
+            case "oa3602" -> getOa3602();
+            case "oa3603" -> getOa3603();
+            case "oa3604" -> getOa3604();
+            case "oa3605" -> getOa3605();
+            case "oa3606" -> getOa3606();
+            case "oa3607" -> getOa3607();
+            case "oa3608" -> getOa3608();
+            case "oa3609" -> getOa3609();
+            case "oa3610" -> getOa3610();
+            case "oa3611" -> getOa3611();
+            case "oa3612" -> getOa3612();
+            default -> 0;
+        };
     }
 
     // idPerson

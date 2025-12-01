@@ -1,11 +1,12 @@
 package com.github.mirgola.stalcraftinfo.barter.suits;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class CombatCount {
+public class CombatCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty c4101, c4102, c4103, c4104, c4105, c4106, c4107, c4108, c4109, c4110,
@@ -50,6 +51,41 @@ public class CombatCount {
         this.c4127 = new SimpleIntegerProperty(c4127);
         this.c4128 = new SimpleIntegerProperty(c4128);
         this.c4129 = new SimpleIntegerProperty(c4129);
+    }
+
+    public int getCountByWeaponId(String id) {
+        return switch(id) {
+            case "c4101" -> getC4101();
+            case "c4102" -> getC4102();
+            case "c4103" -> getC4103();
+            case "c4104" -> getC4104();
+            case "c4105" -> getC4105();
+            case "c4106" -> getC4106();
+            case "c4107" -> getC4107();
+            case "c4108" -> getC4108();
+            case "c4109" -> getC4109();
+            case "c4110" -> getC4110();
+            case "c4111" -> getC4111();
+            case "c4112" -> getC4112();
+            case "c4113" -> getC4113();
+            case "c4114" -> getC4114();
+            case "c4115" -> getC4115();
+            case "c4116" -> getC4116();
+            case "c4117" -> getC4117();
+            case "c4118" -> getC4118();
+            case "c4119" -> getC4119();
+            case "c4120" -> getC4120();
+            case "c4121" -> getC4121();
+            case "c4122" -> getC4122();
+            case "c4123" -> getC4123();
+            case "c4124" -> getC4124();
+            case "c4125" -> getC4125();
+            case "c4126" -> getC4126();
+            case "c4127" -> getC4127();
+            case "c4128" -> getC4128();
+            case "c4129" -> getC4129();
+            default -> 0;
+        };
     }
 
     // idPerson

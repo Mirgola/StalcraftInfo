@@ -1,11 +1,12 @@
 package com.github.mirgola.stalcraftinfo.barter.weapons;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class AssaultRiflesCount {
+public class AssaultRiflesCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty ar1101, ar1102, ar1103, ar1104, ar1105, ar1106, ar1107, ar1108, ar1109, ar1110,
@@ -57,6 +58,46 @@ public class AssaultRiflesCount {
         this.ar1132 = new SimpleIntegerProperty(ar1132);
         this.ar1133 = new SimpleIntegerProperty(ar1133);
         this.ar1134 = new SimpleIntegerProperty(ar1134);
+    }
+
+    public int getCountByWeaponId(String id) {
+        return switch(id) {
+            case "ar1101" -> getAr1101();
+            case "ar1102" -> getAr1102();
+            case "ar1103" -> getAr1103();
+            case "ar1104" -> getAr1104();
+            case "ar1105" -> getAr1105();
+            case "ar1106" -> getAr1106();
+            case "ar1107" -> getAr1107();
+            case "ar1108" -> getAr1108();
+            case "ar1109" -> getAr1109();
+            case "ar1110" -> getAr1110();
+            case "ar1111" -> getAr1111();
+            case "ar1112" -> getAr1112();
+            case "ar1113" -> getAr1113();
+            case "ar1114" -> getAr1114();
+            case "ar1115" -> getAr1115();
+            case "ar1116" -> getAr1116();
+            case "ar1117" -> getAr1117();
+            case "ar1118" -> getAr1118();
+            case "ar1119" -> getAr1119();
+            case "ar1120" -> getAr1120();
+            case "ar1121" -> getAr1121();
+            case "ar1122" -> getAr1122();
+            case "ar1123" -> getAr1123();
+            case "ar1124" -> getAr1124();
+            case "ar1125" -> getAr1125();
+            case "ar1126" -> getAr1126();
+            case "ar1127" -> getAr1127();
+            case "ar1128" -> getAr1128();
+            case "ar1129" -> getAr1129();
+            case "ar1130" -> getAr1130();
+            case "ar1131" -> getAr1131();
+            case "ar1132" -> getAr1132();
+            case "ar1133" -> getAr1133();
+            case "ar1134" -> getAr1134();
+            default -> 0;
+        };
     }
 
     // idPerson

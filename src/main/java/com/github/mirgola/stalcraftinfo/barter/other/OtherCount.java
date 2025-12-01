@@ -1,11 +1,12 @@
 package com.github.mirgola.stalcraftinfo.barter.other;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class OtherCount {
+public class OtherCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty o2601, o2602;
@@ -16,6 +17,14 @@ public class OtherCount {
         this.nicknamePerson = new SimpleStringProperty(nicknamePerson);
         this.o2601 = new SimpleIntegerProperty(o2601);
         this.o2602 = new SimpleIntegerProperty(o2602);
+    }
+
+    public int getCountByWeaponId(String id) {
+        return switch(id) {
+            case "o2601" -> getO2601();
+            case "o2602" -> getO2602();
+            default -> 0;
+        };
     }
 
     // idPerson

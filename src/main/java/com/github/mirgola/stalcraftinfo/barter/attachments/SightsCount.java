@@ -1,11 +1,12 @@
 package com.github.mirgola.stalcraftinfo.barter.attachments;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class SightsCount {
+public class SightsCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty s3401, s3402, s3403, s3404, s3405, s3406, s3407, s3408, s3409, s3410,
@@ -60,6 +61,48 @@ public class SightsCount {
         this.s3434 = new SimpleIntegerProperty(s3434);
         this.s3435 = new SimpleIntegerProperty(s3435);
         this.s3436 = new SimpleIntegerProperty(s3436);
+    }
+
+    public int getCountByWeaponId(String id) {
+        return switch(id) {
+            case "s3401" -> getS3401();
+            case "s3402" -> getS3402();
+            case "s3403" -> getS3403();
+            case "s3404" -> getS3404();
+            case "s3405" -> getS3405();
+            case "s3406" -> getS3406();
+            case "s3407" -> getS3407();
+            case "s3408" -> getS3408();
+            case "s3409" -> getS3409();
+            case "s3410" -> getS3410();
+            case "s3411" -> getS3411();
+            case "s3412" -> getS3412();
+            case "s3413" -> getS3413();
+            case "s3414" -> getS3414();
+            case "s3415" -> getS3415();
+            case "s3416" -> getS3416();
+            case "s3417" -> getS3417();
+            case "s3418" -> getS3418();
+            case "s3419" -> getS3419();
+            case "s3420" -> getS3420();
+            case "s3421" -> getS3421();
+            case "s3422" -> getS3422();
+            case "s3423" -> getS3423();
+            case "s3424" -> getS3424();
+            case "s3425" -> getS3425();
+            case "s3426" -> getS3426();
+            case "s3427" -> getS3427();
+            case "s3428" -> getS3428();
+            case "s3429" -> getS3429();
+            case "s3430" -> getS3430();
+            case "s3431" -> getS3431();
+            case "s3432" -> getS3432();
+            case "s3433" -> getS3433();
+            case "s3434" -> getS3434();
+            case "s3435" -> getS3435();
+            case "s3436" -> getS3436();
+            default -> 0;
+        };
     }
 
     // idPerson

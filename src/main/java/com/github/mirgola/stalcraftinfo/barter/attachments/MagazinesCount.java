@@ -1,11 +1,12 @@
 package com.github.mirgola.stalcraftinfo.barter.attachments;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class MagazinesCount {
+public class MagazinesCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty m3201, m3202, m3203, m3204, m3205, m3206, m3207, m3208, m3209, m3210,
@@ -54,6 +55,43 @@ public class MagazinesCount {
         this.m3229 = new SimpleIntegerProperty(m3229);
         this.m3230 = new SimpleIntegerProperty(m3230);
         this.m3231 = new SimpleIntegerProperty(m3231);
+    }
+
+    public int getCountByWeaponId(String id) {
+        return switch(id) {
+            case "m3201" -> getM3201();
+            case "m3202" -> getM3202();
+            case "m3203" -> getM3203();
+            case "m3204" -> getM3204();
+            case "m3205" -> getM3205();
+            case "m3206" -> getM3206();
+            case "m3207" -> getM3207();
+            case "m3208" -> getM3208();
+            case "m3209" -> getM3209();
+            case "m3210" -> getM3210();
+            case "m3211" -> getM3211();
+            case "m3212" -> getM3212();
+            case "m3213" -> getM3213();
+            case "m3214" -> getM3214();
+            case "m3215" -> getM3215();
+            case "m3216" -> getM3216();
+            case "m3217" -> getM3217();
+            case "m3218" -> getM3218();
+            case "m3219" -> getM3219();
+            case "m3220" -> getM3220();
+            case "m3221" -> getM3221();
+            case "m3222" -> getM3222();
+            case "m3223" -> getM3223();
+            case "m3224" -> getM3224();
+            case "m3225" -> getM3225();
+            case "m3226" -> getM3226();
+            case "m3227" -> getM3227();
+            case "m3228" -> getM3228();
+            case "m3229" -> getM3229();
+            case "m3230" -> getM3230();
+            case "m3231" -> getM3231();
+            default -> 0;
+        };
     }
 
     // idPerson

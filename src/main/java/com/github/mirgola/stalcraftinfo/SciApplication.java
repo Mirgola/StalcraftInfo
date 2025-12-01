@@ -10,6 +10,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TableView;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
@@ -118,7 +119,9 @@ public class SciApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         this.primaryStage = stage;
-        this.primaryStage.initStyle(StageStyle.TRANSPARENT);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("/com/github/mirgola/stalcraftinfo/icons/stalcraft_icon.png")));
+        primaryStage.setTitle("Stalcraft Info");
 
         initStage();
         showMenuBar();
@@ -261,6 +264,7 @@ public class SciApplication extends Application {
         //
         controller.setPersonInfoController(personInfoController);
         controller.setPerson(personTable.getSelectionModel().getSelectedItem());
+        SciDB.setOkClickedFalse();
     }
 
     // Возвращает главную сцену.

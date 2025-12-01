@@ -1,11 +1,12 @@
 package com.github.mirgola.stalcraftinfo.barter.weapons;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class ShotgunsAndRiflesCount {
+public class ShotgunsAndRiflesCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty sar1501, sar1502, sar1503, sar1504, sar1505, sar1506, sar1507, sar1508, sar1509, sar1510,
@@ -32,6 +33,27 @@ public class ShotgunsAndRiflesCount {
         this.sar1513 = new SimpleIntegerProperty(sar1513);
         this.sar1514 = new SimpleIntegerProperty(sar1514);
         this.sar1515 = new SimpleIntegerProperty(sar1515);
+    }
+
+    public int getCountByWeaponId(String id) {
+        return switch(id) {
+            case "sar1501" -> getSar1501();
+            case "sar1502" -> getSar1502();
+            case "sar1503" -> getSar1503();
+            case "sar1504" -> getSar1504();
+            case "sar1505" -> getSar1505();
+            case "sar1506" -> getSar1506();
+            case "sar1507" -> getSar1507();
+            case "sar1508" -> getSar1508();
+            case "sar1509" -> getSar1509();
+            case "sar1510" -> getSar1510();
+            case "sar1511" -> getSar1511();
+            case "sar1512" -> getSar1512();
+            case "sar1513" -> getSar1513();
+            case "sar1514" -> getSar1514();
+            case "sar1515" -> getSar1515();
+            default -> 0;
+        };
     }
 
     // idPerson

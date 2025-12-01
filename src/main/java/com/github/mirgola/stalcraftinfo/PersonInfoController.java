@@ -1,11 +1,15 @@
 package com.github.mirgola.stalcraftinfo;
 
+import com.github.mirgola.stalcraftinfo.barter.weapons.*;
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 import java.io.IOException;
 import java.sql.SQLException;
 import java.text.DecimalFormat;
+import java.util.List;
+import java.util.function.Supplier;
 
 public class PersonInfoController {
     @FXML
@@ -606,12 +610,118 @@ public class PersonInfoController {
         sciApplication.showBarter(this);
     }
 
-    public void getRemains(Person person) {
-        for(Barter barter : sciApplication.getBartersData()){
-            if (barter.getId().equals("mw1704")){
+    public void setRemains(Person person) {
+        resetAllRemains(person);
 
-                //greenMoldRemains = barter.getGreenMold() * sciApplication.getBarterMeleeWeaponsData().get(person.getId() - 1).getMw1704();
-            }
-        }
+        List<Supplier<List<? extends BarterCount>>> barterCountCollections = List.of(
+                sciApplication::getAssaultRiflesCountData,          // 1.1
+                sciApplication::getSubmachineGunsCountData,         // 1.2
+                sciApplication::getMachineGunsCountData,            // 1.3
+                sciApplication::getSniperRiflesCountData,           // 1.4
+                sciApplication::getShotgunsAndRiflesCountData,      // 1.5
+                sciApplication::getPistolsCountData,                // 1.6
+                sciApplication::getMeleeWeaponsCountData,           // 1.7
+
+                sciApplication::getBackpacksAndPouchesCountData,    // 2.1
+                sciApplication::getContainersCountData,             // 2.2
+                sciApplication::getDevicesCountData,                // 2.3
+                sciApplication::getCosmeticsCountData,              // 2.4
+                sciApplication::getAccessoriesCountData,            // 2.5
+                sciApplication::getOtherCountData,                  // 2.6
+
+                sciApplication::getMuzzlesAndSilencersCountData,    // 3.1
+                sciApplication::getMagazinesCountData,              // 3.2
+                sciApplication::getHanguardsAndBracketsCountData,   // 3.3
+                sciApplication::getSightsCountData,                 // 3.4
+                sciApplication::getHandlesCountData,                // 3.5
+                sciApplication::getOtherAttachmentsCountData,       // 3.6
+
+                sciApplication::getCombatCountData,                 // 4.1
+                sciApplication::getCombinedCountData,               // 4.2
+                sciApplication::getScientistCountData               // 4.3
+        );
+
+        barterCountCollections.forEach(collection ->{
+            collection.get().stream()
+                    .filter(c -> c.getIdPerson() == person.getId())
+                    .findFirst()
+                    .ifPresent(c -> {
+                        sciApplication.getBartersData().stream()
+                                .forEach(barter -> {
+                                    int count = c.getCountByWeaponId(barter.getId());
+                                    if (count > 0) {
+                                        addBarterResources(person, barter, count);
+                                    }
+                                });
+                    });
+        });
+    }
+
+    private void resetAllRemains(Person person) {
+        person.setCostRemains(0);
+
+        person.setGreenMoldRemains(0);
+        person.setSwampStoneRemains(0);
+
+        person.setStinkyRootRemains(0);
+        person.setCrappiteRemains(0);
+        person.setPiecesOfCopperWireRemains(0);
+
+        person.setSprigOfChernobylChamomileRemains(0);
+        person.setPickleRemains(0);
+        person.setRemainsOfRadioTransmitterRemains(0);
+        person.setAlphaDataFragmentRemains(0);
+
+        person.setNorthernMossRemains(0);
+        person.setDopeStoneRemains(0);
+        person.setRemainsOfBatteriesRemains(0);
+        person.setBetaDataFragmentRemains(0);
+
+        person.setRedFernRemains(0);
+        person.setSubstance07270Remains(0);
+        person.setRemainsOfPsyTrackerRemains(0);
+        person.setGammaDataFragmentRemains(0);
+        person.setQuantumBatteryRemains(0);
+        person.setAnomalousSerumRemains(0);
+
+        person.setBitterleafRemains(0);
+        person.setLimboRemains(0);
+        person.setLambdaDataFragmentRemains(0);
+        person.setAnomalousBatteryRemains(0);
+        person.setLimboPlasmaRemains(0);
+    }
+
+    private void addBarterResources(Person person, Barter barter, int count) {
+        person.setCostRemains(person.getCostRemains() + barter.getCost() * count);
+
+        person.setGreenMoldRemains(person.getGreenMoldRemains() + barter.getGreenMold() * count);
+        person.setSwampStoneRemains(person.getSwampStoneRemains() + barter.getSwampStone() * count);
+
+        person.setStinkyRootRemains(person.getStinkyRootRemains() + barter.getStinkyRoot() * count);
+        person.setCrappiteRemains(person.getCrappiteRemains() + barter.getCrappite() * count);
+        person.setPiecesOfCopperWireRemains(person.getPiecesOfCopperWireRemains() + barter.getPiecesOfCopperWire() * count);
+
+        person.setSprigOfChernobylChamomileRemains(person.getSprigOfChernobylChamomileRemains() + barter.getSprigOfChernobylChamomile() * count);
+        person.setPickleRemains(person.getPickleRemains() + barter.getPickle() * count);
+        person.setRemainsOfRadioTransmitterRemains(person.getRemainsOfRadioTransmitterRemains() + barter.getRemainsOfRadioTransmitter() * count);
+        person.setAlphaDataFragmentRemains(person.getAlphaDataFragmentRemains() + barter.getAlphaDataFragment() * count);
+
+        person.setNorthernMossRemains(person.getNorthernMossRemains() + barter.getNorthernMoss() * count);
+        person.setDopeStoneRemains(person.getDopeStoneRemains() + barter.getDopeStone() * count);
+        person.setRemainsOfBatteriesRemains(person.getRemainsOfBatteriesRemains() + barter.getRemainsOfBatteries() * count);
+        person.setBetaDataFragmentRemains(person.getBetaDataFragmentRemains() + barter.getBetaDataFragment() * count);
+
+        person.setRedFernRemains(person.getRedFernRemains() + barter.getRedFern() * count);
+        person.setSubstance07270Remains(person.getSubstance07270Remains() + barter.getSubstance07270() * count);
+        person.setRemainsOfPsyTrackerRemains(person.getRemainsOfPsyTrackerRemains() + barter.getRemainsOfPsyTracker() * count);
+        person.setGammaDataFragmentRemains(person.getGammaDataFragmentRemains() + barter.getGammaDataFragment() * count);
+        person.setQuantumBatteryRemains(person.getQuantumBatteryRemains() + barter.getQuantumBattery() * count);
+        person.setAnomalousSerumRemains(person.getAnomalousSerumRemains() + barter.getAnomalousSerum() * count);
+
+        person.setBitterleafRemains(person.getBitterleafRemains() + barter.getBitterleaf() * count);
+        person.setLimboRemains(person.getLimboRemains() + barter.getLimbo() * count);
+        person.setLambdaDataFragmentRemains(person.getLambdaDataFragmentRemains() + barter.getLambdaDataFragment() * count);
+        person.setAnomalousBatteryRemains(person.getAnomalousBatteryRemains() + barter.getAnomalousBattery() * count);
+        person.setLimboPlasmaRemains(person.getLimboPlasmaRemains() + barter.getLimboPlasma() * count);
     }
 }

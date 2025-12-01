@@ -1,11 +1,12 @@
 package com.github.mirgola.stalcraftinfo.barter.weapons;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class MeleeWeaponsCount {
+public class MeleeWeaponsCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty mw1701, mw1702, mw1703, mw1704, mw1705, mw1706, mw1707, mw1708, mw1709, mw1710,
@@ -34,6 +35,28 @@ public class MeleeWeaponsCount {
         this.mw1714 = new SimpleIntegerProperty(mw1714);
         this.mw1715 = new SimpleIntegerProperty(mw1715);
         this.mw1716 = new SimpleIntegerProperty(mw1716);
+    }
+
+    public int getCountByWeaponId(String id) {
+        return switch(id) {
+            case "mw1701" -> getMw1701();
+            case "mw1702" -> getMw1702();
+            case "mw1703" -> getMw1703();
+            case "mw1704" -> getMw1704();
+            case "mw1705" -> getMw1705();
+            case "mw1706" -> getMw1706();
+            case "mw1707" -> getMw1707();
+            case "mw1708" -> getMw1708();
+            case "mw1709" -> getMw1709();
+            case "mw1710" -> getMw1710();
+            case "mw1711" -> getMw1711();
+            case "mw1712" -> getMw1712();
+            case "mw1713" -> getMw1713();
+            case "mw1714" -> getMw1714();
+            case "mw1715" -> getMw1715();
+            case "mw1716" -> getMw1716();
+            default -> 0;
+        };
     }
 
     // idPerson

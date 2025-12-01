@@ -1,11 +1,12 @@
 package com.github.mirgola.stalcraftinfo.barter.weapons;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class SubmachineGunsCount {
+public class SubmachineGunsCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty sg1201, sg1202, sg1203, sg1204, sg1205, sg1206, sg1207, sg1208, sg1209, sg1210,
@@ -41,6 +42,33 @@ public class SubmachineGunsCount {
         this.sg1219 = new SimpleIntegerProperty(sg1219);
         this.sg1220 = new SimpleIntegerProperty(sg1220);
         this.sg1221 = new SimpleIntegerProperty(sg1221);
+    }
+
+    public int getCountByWeaponId(String id) {
+        return switch(id) {
+            case "sg1201" -> getSg1201();
+            case "sg1202" -> getSg1202();
+            case "sg1203" -> getSg1203();
+            case "sg1204" -> getSg1204();
+            case "sg1205" -> getSg1205();
+            case "sg1206" -> getSg1206();
+            case "sg1207" -> getSg1207();
+            case "sg1208" -> getSg1208();
+            case "sg1209" -> getSg1209();
+            case "sg1210" -> getSg1210();
+            case "sg1211" -> getSg1211();
+            case "sg1212" -> getSg1212();
+            case "sg1213" -> getSg1213();
+            case "sg1214" -> getSg1214();
+            case "sg1215" -> getSg1215();
+            case "sg1216" -> getSg1216();
+            case "sg1217" -> getSg1217();
+            case "sg1218" -> getSg1218();
+            case "sg1219" -> getSg1219();
+            case "sg1220" -> getSg1220();
+            case "sg1221" -> getSg1221();
+            default -> 0;
+        };
     }
 
     // idPerson

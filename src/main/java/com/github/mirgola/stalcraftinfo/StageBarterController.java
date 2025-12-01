@@ -3,6 +3,8 @@ package com.github.mirgola.stalcraftinfo;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 
+import java.sql.SQLException;
+
 public class StageBarterController {
     private Stage stage;
     private PersonInfoController personInfoController;
@@ -22,8 +24,13 @@ public class StageBarterController {
 
     // Закрытие окна
     @FXML
-    private void closeButton() {
+    private void closeButton() throws SQLException {
         stage.close();
-        //personInfoController.showPersonDetails(person);
+        System.out.println(SciDB.isOkClicked());
+        if (SciDB.isOkClicked()) {
+            personInfoController.setRemains(person);
+            personInfoController.showPersonDetails(person);
+            SciDB.updateRemains(person);
+        }
     }
 }

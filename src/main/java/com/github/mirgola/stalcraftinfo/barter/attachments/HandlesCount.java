@@ -1,11 +1,12 @@
 package com.github.mirgola.stalcraftinfo.barter.attachments;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class HandlesCount {
+public class HandlesCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty h3501, h3502, h3503, h3504, h3505, h3506, h3507, h3508, h3509, h3510,
@@ -30,6 +31,25 @@ public class HandlesCount {
         this.h3511 = new SimpleIntegerProperty(h3511);
         this.h3512 = new SimpleIntegerProperty(h3512);
         this.h3513 = new SimpleIntegerProperty(h3513);
+    }
+
+    public int getCountByWeaponId(String id) {
+        return switch(id) {
+            case "h3501" -> getH3501();
+            case "h3502" -> getH3502();
+            case "h3503" -> getH3503();
+            case "h3504" -> getH3504();
+            case "h3505" -> getH3505();
+            case "h3506" -> getH3506();
+            case "h3507" -> getH3507();
+            case "h3508" -> getH3508();
+            case "h3509" -> getH3509();
+            case "h3510" -> getH3510();
+            case "h3511" -> getH3511();
+            case "h3512" -> getH3512();
+            case "h3513" -> getH3513();
+            default -> 0;
+        };
     }
 
     // idPerson

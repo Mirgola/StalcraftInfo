@@ -1,11 +1,12 @@
 package com.github.mirgola.stalcraftinfo.barter.other;
 
+import com.github.mirgola.stalcraftinfo.barter.BarterCount;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-public class ContainersCount {
+public class ContainersCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty c2201, c2202, c2203, c2204, c2205, c2206, c2207, c2208, c2209, c2210,
@@ -42,6 +43,34 @@ public class ContainersCount {
         this.c2220 = new SimpleIntegerProperty(c2220);
         this.c2221 = new SimpleIntegerProperty(c2221);
         this.c2222 = new SimpleIntegerProperty(c2222);
+    }
+
+    public int getCountByWeaponId(String id) {
+        return switch(id) {
+            case "c2201" -> getC2201();
+            case "c2202" -> getC2202();
+            case "c2203" -> getC2203();
+            case "c2204" -> getC2204();
+            case "c2205" -> getC2205();
+            case "c2206" -> getC2206();
+            case "c2207" -> getC2207();
+            case "c2208" -> getC2208();
+            case "c2209" -> getC2209();
+            case "c2210" -> getC2210();
+            case "c2211" -> getC2211();
+            case "c2212" -> getC2212();
+            case "c2213" -> getC2213();
+            case "c2214" -> getC2214();
+            case "c2215" -> getC2215();
+            case "c2216" -> getC2216();
+            case "c2217" -> getC2217();
+            case "c2218" -> getC2218();
+            case "c2219" -> getC2219();
+            case "c2220" -> getC2220();
+            case "c2221" -> getC2221();
+            case "c2222" -> getC2222();
+            default -> 0;
+        };
     }
 
     // idPerson

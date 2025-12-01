@@ -24,8 +24,6 @@ public class SciDB {
         return okClicked;
     }
 
-    public static void setOkClickedTrue() { okClicked = true;}
-
     public static void setOkClickedFalse() { okClicked = false;}
 
     // Подключение к базе данных
@@ -932,31 +930,31 @@ public class SciDB {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             while (resultSet.next()) {
-                updateIfChanged(person.getId(), "Person", "greenMold", person.getGreenMold(), resultSet.getInt("greenMold"));
-                updateIfChanged(person.getId(), "Person", "swampStone", person.getSwampStone(), resultSet.getInt("swampStone"));
-                updateIfChanged(person.getId(), "Person", "stinkyRoot", person.getStinkyRoot(), resultSet.getInt("stinkyRoot"));
-                updateIfChanged(person.getId(), "Person", "crappite", person.getCrappite(), resultSet.getInt("crappite"));
-                updateIfChanged(person.getId(), "Person", "piecesOfCopperWire", person.getPiecesOfCopperWire(), resultSet.getInt("piecesOfCopperWire"));
-                updateIfChanged(person.getId(), "Person", "sprigOfChernobylChamomile", person.getSprigOfChernobylChamomile(), resultSet.getInt("sprigOfChernobylChamomile"));
-                updateIfChanged(person.getId(), "Person", "pickle", person.getPickle(), resultSet.getInt("pickle"));
-                updateIfChanged(person.getId(), "Person", "remainsOfRadioTransmitter", person.getRemainsOfRadioTransmitter(), resultSet.getInt("remainsOfRadioTransmitter"));
-                updateIfChanged(person.getId(), "Person", "alphaDataFragment", person.getAlphaDataFragment(), resultSet.getInt("alphaDataFragment"));
-                updateIfChanged(person.getId(), "Person", "northernMoss", person.getNorthernMoss(), resultSet.getInt("northernMoss"));
-                updateIfChanged(person.getId(), "Person", "dopeStone", person.getDopeStone(), resultSet.getInt("dopeStone"));
-                updateIfChanged(person.getId(), "Person", "remainsOfBatteries", person.getRemainsOfBatteries(), resultSet.getInt("remainsOfBatteries"));
-                updateIfChanged(person.getId(), "Person", "betaDataFragment", person.getBetaDataFragment(), resultSet.getInt("betaDataFragment"));
-                updateIfChanged(person.getId(), "Person", "redFern", person.getRedFern(), resultSet.getInt("redFern"));
-                updateIfChanged(person.getId(), "Person", "substance07270", person.getSubstance07270(), resultSet.getInt("substance07270"));
-                updateIfChanged(person.getId(), "Person", "remainsOfPsyTracker", person.getRemainsOfPsyTracker(), resultSet.getInt("remainsOfPsyTracker"));
-                updateIfChanged(person.getId(), "Person", "gammaDataFragment", person.getGammaDataFragment(), resultSet.getInt("gammaDataFragment"));
-                updateIfChanged(person.getId(), "Person", "quantumBattery", person.getQuantumBattery(), resultSet.getInt("quantumBattery"));
-                updateIfChanged(person.getId(), "Person", "anomalousSerum", person.getAnomalousSerum(), resultSet.getInt("anomalousSerum"));
-                updateIfChanged(person.getId(), "Person", "bitterleaf", person.getBitterleaf(), resultSet.getInt("bitterleaf"));
-                updateIfChanged(person.getId(), "Person", "limbo", person.getLimbo(), resultSet.getInt("limbo"));
-                updateIfChanged(person.getId(), "Person", "lambdaDataFragment", person.getLambdaDataFragment(), resultSet.getInt("lambdaDataFragment"));
-                updateIfChanged(person.getId(), "Person", "anomalousBattery", person.getAnomalousBattery(), resultSet.getInt("anomalousBattery"));
-                updateIfChanged(person.getId(), "Person", "limboPlasma", person.getLimboPlasma(), resultSet.getInt("limboPlasma"));
-                updateIfChanged(person.getId(), "Person", "cost", person.getCost(), resultSet.getInt("cost"));
+                updateIfChanged(person.getId(), "Person", "greenMoldRemains", person.getGreenMoldRemains(), resultSet.getInt("greenMoldRemains"));
+                updateIfChanged(person.getId(), "Person", "swampStoneRemains", person.getSwampStoneRemains(), resultSet.getInt("swampStoneRemains"));
+                updateIfChanged(person.getId(), "Person", "stinkyRootRemains", person.getStinkyRootRemains(), resultSet.getInt("stinkyRootRemains"));
+                updateIfChanged(person.getId(), "Person", "crappiteRemains", person.getCrappiteRemains(), resultSet.getInt("crappiteRemains"));
+                updateIfChanged(person.getId(), "Person", "piecesOfCopperWireRemains", person.getPiecesOfCopperWireRemains(), resultSet.getInt("piecesOfCopperWireRemains"));
+                updateIfChanged(person.getId(), "Person", "sprigOfChernobylChamomileRemains", person.getSprigOfChernobylChamomileRemains(), resultSet.getInt("sprigOfChernobylChamomileRemains"));
+                updateIfChanged(person.getId(), "Person", "pickleRemains", person.getPickleRemains(), resultSet.getInt("pickleRemains"));
+                updateIfChanged(person.getId(), "Person", "remainsOfRadioTransmitterRemains", person.getRemainsOfRadioTransmitterRemains(), resultSet.getInt("remainsOfRadioTransmitterRemains"));
+                updateIfChanged(person.getId(), "Person", "alphaDataFragmentRemains", person.getAlphaDataFragmentRemains(), resultSet.getInt("alphaDataFragmentRemains"));
+                updateIfChanged(person.getId(), "Person", "northernMossRemains", person.getNorthernMossRemains(), resultSet.getInt("northernMossRemains"));
+                updateIfChanged(person.getId(), "Person", "dopeStoneRemains", person.getDopeStoneRemains(), resultSet.getInt("dopeStoneRemains"));
+                updateIfChanged(person.getId(), "Person", "remainsOfBatteriesRemains", person.getRemainsOfBatteriesRemains(), resultSet.getInt("remainsOfBatteriesRemains"));
+                updateIfChanged(person.getId(), "Person", "betaDataFragmentRemains", person.getBetaDataFragmentRemains(), resultSet.getInt("betaDataFragmentRemains"));
+                updateIfChanged(person.getId(), "Person", "redFernRemains", person.getRedFernRemains(), resultSet.getInt("redFernRemains"));
+                updateIfChanged(person.getId(), "Person", "substance07270Remains", person.getSubstance07270Remains(), resultSet.getInt("substance07270Remains"));
+                updateIfChanged(person.getId(), "Person", "remainsOfPsyTrackerRemains", person.getRemainsOfPsyTrackerRemains(), resultSet.getInt("remainsOfPsyTrackerRemains"));
+                updateIfChanged(person.getId(), "Person", "gammaDataFragmentRemains", person.getGammaDataFragmentRemains(), resultSet.getInt("gammaDataFragmentRemains"));
+                updateIfChanged(person.getId(), "Person", "quantumBatteryRemains", person.getQuantumBatteryRemains(), resultSet.getInt("quantumBatteryRemains"));
+                updateIfChanged(person.getId(), "Person", "anomalousSerumRemains", person.getAnomalousSerumRemains(), resultSet.getInt("anomalousSerumRemains"));
+                updateIfChanged(person.getId(), "Person", "bitterleafRemains", person.getBitterleafRemains(), resultSet.getInt("bitterleafRemains"));
+                updateIfChanged(person.getId(), "Person", "limboRemains", person.getLimboRemains(), resultSet.getInt("limboRemains"));
+                updateIfChanged(person.getId(), "Person", "lambdaDataFragmentRemains", person.getLambdaDataFragmentRemains(), resultSet.getInt("lambdaDataFragmentRemains"));
+                updateIfChanged(person.getId(), "Person", "anomalousBatteryRemains", person.getAnomalousBatteryRemains(), resultSet.getInt("anomalousBatteryRemains"));
+                updateIfChanged(person.getId(), "Person", "limboPlasmaRemains", person.getLimboPlasmaRemains(), resultSet.getInt("limboPlasmaRemains"));
+                updateIfChanged(person.getId(), "Person", "costRemains", person.getCostRemains(), resultSet.getInt("costRemains"));
             }
         }
     }
@@ -1660,6 +1658,10 @@ public class SciDB {
                 preparedStatement.setInt(1, newValue);
                 preparedStatement.setInt(2, personId);
                 preparedStatement.executeUpdate();
+            }
+
+            if (!isOkClicked()) {
+                okClicked = true;
             }
         }
     }
