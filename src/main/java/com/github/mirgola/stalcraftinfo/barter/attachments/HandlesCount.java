@@ -12,6 +12,11 @@ public class HandlesCount implements BarterCount {
     private final IntegerProperty h3501, h3502, h3503, h3504, h3505, h3506, h3507, h3508, h3509, h3510,
                                   h3511, h3512, h3513;
 
+    public HandlesCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,0,0,0);
+    }
+
     public HandlesCount(Integer idPerson, String nicknamePerson,
                         Integer h3501, Integer h3502, Integer h3503, Integer h3504, Integer h3505,
                         Integer h3506, Integer h3507, Integer h3508, Integer h3509, Integer h3510,

@@ -11,6 +11,11 @@ public class CosmeticsCount implements BarterCount {
     private final StringProperty nicknamePerson;
     private final IntegerProperty c2401, c2402, c2403;
 
+    public CosmeticsCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0);
+    }
+
     public CosmeticsCount(Integer idPerson, String nicknamePerson,
                           Integer c2401, Integer c2402, Integer c2403) {
         this.idPerson = new SimpleIntegerProperty(idPerson);

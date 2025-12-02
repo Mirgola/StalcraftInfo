@@ -11,6 +11,11 @@ public class OtherCount implements BarterCount {
     private final StringProperty nicknamePerson;
     private final IntegerProperty o2601, o2602;
 
+    public OtherCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0);
+    }
+
     public OtherCount(Integer idPerson, String nicknamePerson,
                       Integer o2601, Integer o2602) {
         this.idPerson = new SimpleIntegerProperty(idPerson);

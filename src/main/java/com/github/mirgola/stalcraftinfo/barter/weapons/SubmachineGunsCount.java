@@ -13,6 +13,13 @@ public class SubmachineGunsCount implements BarterCount {
                                   sg1211, sg1212, sg1213, sg1214, sg1215, sg1216, sg1217, sg1218, sg1219, sg1220,
                                   sg1221;
 
+    public SubmachineGunsCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0);
+    }
+
     public SubmachineGunsCount(Integer idPerson, String nicknamePerson,
                                Integer sg1201, Integer sg1202, Integer sg1203, Integer sg1204, Integer sg1205,
                                Integer sg1206, Integer sg1207, Integer sg1208, Integer sg1209, Integer sg1210,

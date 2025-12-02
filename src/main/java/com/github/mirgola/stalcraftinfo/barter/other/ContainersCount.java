@@ -13,6 +13,13 @@ public class ContainersCount implements BarterCount {
                                   c2211, c2212, c2213, c2214, c2215, c2216, c2217, c2218, c2219, c2220,
                                   c2221, c2222;
 
+    public ContainersCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0);
+    }
+
     public ContainersCount(Integer idPerson, String nicknamePerson,
                               Integer c2201, Integer c2202, Integer c2203, Integer c2204, Integer c2205,
                               Integer c2206, Integer c2207, Integer c2208, Integer c2209, Integer c2210,

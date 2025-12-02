@@ -13,6 +13,13 @@ public class SniperRiflesCount implements BarterCount {
                                   sr1411, sr1412, sr1413, sr1414, sr1415, sr1416, sr1417, sr1418, sr1419, sr1420,
                                   sr1421, sr1422;
 
+    public SniperRiflesCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0);
+    }
+
     public SniperRiflesCount(Integer idPerson, String nicknamePerson,
                               Integer sr1401, Integer sr1402, Integer sr1403, Integer sr1404, Integer sr1405,
                               Integer sr1406, Integer sr1407, Integer sr1408, Integer sr1409, Integer sr1410,

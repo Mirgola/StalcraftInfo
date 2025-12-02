@@ -12,6 +12,12 @@ public class OtherAttachmentsCount implements BarterCount {
     private final IntegerProperty oa3601, oa3602, oa3603, oa3604, oa3605, oa3606, oa3607, oa3608, oa3609, oa3610,
                                   oa3611, oa3612;
 
+    public OtherAttachmentsCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0);
+    }
+
     public OtherAttachmentsCount(Integer idPerson, String nicknamePerson,
                                  Integer oa3601, Integer oa3602, Integer oa3603, Integer oa3604, Integer oa3605,
                                  Integer oa3606, Integer oa3607, Integer oa3608, Integer oa3609, Integer oa3610,

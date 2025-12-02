@@ -12,6 +12,12 @@ public class ShotgunsAndRiflesCount implements BarterCount {
     private final IntegerProperty sar1501, sar1502, sar1503, sar1504, sar1505, sar1506, sar1507, sar1508, sar1509, sar1510,
                                   sar1511, sar1512, sar1513, sar1514, sar1515;
 
+    public ShotgunsAndRiflesCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0);
+    }
+
     public ShotgunsAndRiflesCount(Integer idPerson, String nicknamePerson,
                               Integer sar1501, Integer sar1502, Integer sar1503, Integer sar1504, Integer sar1505,
                               Integer sar1506, Integer sar1507, Integer sar1508, Integer sar1509, Integer sar1510,

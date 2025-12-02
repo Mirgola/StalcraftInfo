@@ -12,6 +12,12 @@ public class CombinedCount implements BarterCount {
     private final IntegerProperty c4201, c4202, c4203, c4204, c4205, c4206, c4207, c4208, c4209, c4210,
                                   c4211, c4212, c4213, c4214, c4215, c4216, c4217, c4218, c4219;
 
+    public CombinedCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0);
+    }
+
     public CombinedCount(Integer idPerson, String nicknamePerson,
                          Integer c4201, Integer c4202, Integer c4203, Integer c4204, Integer c4205,
                          Integer c4206, Integer c4207, Integer c4208, Integer c4209, Integer c4210,

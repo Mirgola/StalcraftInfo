@@ -11,6 +11,11 @@ public class HanguardsAndBracketsCount implements BarterCount {
     private final StringProperty nicknamePerson;
     private final IntegerProperty hab3301, hab3302, hab3303, hab3304, hab3305, hab3306;
 
+    public HanguardsAndBracketsCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0);
+    }
+
     public HanguardsAndBracketsCount(Integer idPerson, String nicknamePerson,
                               Integer hab3301, Integer hab3302, Integer hab3303, Integer hab3304, Integer hab3305,
                               Integer hab3306) {

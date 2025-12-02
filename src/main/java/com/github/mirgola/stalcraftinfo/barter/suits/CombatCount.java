@@ -13,6 +13,13 @@ public class CombatCount implements BarterCount {
                                   c4111, c4112, c4113, c4114, c4115, c4116, c4117, c4118, c4119, c4120,
                                   c4121, c4122, c4123, c4124, c4125, c4126, c4127, c4128, c4129;
 
+    public CombatCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0);
+    }
+
     public CombatCount(Integer idPerson, String nicknamePerson,
                        Integer c4101, Integer c4102, Integer c4103, Integer c4104, Integer c4105,
                        Integer c4106, Integer c4107, Integer c4108, Integer c4109, Integer c4110,

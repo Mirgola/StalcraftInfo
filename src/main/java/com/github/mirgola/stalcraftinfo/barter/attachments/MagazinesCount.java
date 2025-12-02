@@ -14,6 +14,14 @@ public class MagazinesCount implements BarterCount {
                                   m3221, m3222, m3223, m3224, m3225, m3226, m3227, m3228, m3229, m3230,
                                   m3231;
 
+    public MagazinesCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0);
+    }
+
     public MagazinesCount(Integer idPerson, String nicknamePerson,
                           Integer m3201, Integer m3202, Integer m3203, Integer m3204, Integer m3205,
                           Integer m3206, Integer m3207, Integer m3208, Integer m3209, Integer m3210,

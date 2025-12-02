@@ -1,5 +1,9 @@
 package com.github.mirgola.stalcraftinfo;
 
+import com.github.mirgola.stalcraftinfo.barter.attachments.*;
+import com.github.mirgola.stalcraftinfo.barter.other.*;
+import com.github.mirgola.stalcraftinfo.barter.suits.*;
+import com.github.mirgola.stalcraftinfo.barter.weapons.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 
@@ -28,6 +32,32 @@ public class MenuBarController {
             sciApplication.getPersonData().add(person);
             SciDB.newPerson(person);
             SciDB.newPersonOther(person);
+
+            sciApplication.getAssaultRiflesCountData().add(new AssaultRiflesCount(person.getId(), person.getNickname()));
+            sciApplication.getSubmachineGunsCountData().add(new SubmachineGunsCount(person.getId(), person.getNickname()));
+            sciApplication.getMachineGunsCountData().add(new MachineGunsCount(person.getId(), person.getNickname()));
+            sciApplication.getSniperRiflesCountData().add(new SniperRiflesCount(person.getId(), person.getNickname()));
+            sciApplication.getShotgunsAndRiflesCountData().add(new ShotgunsAndRiflesCount(person.getId(), person.getNickname()));
+            sciApplication.getPistolsCountData().add(new PistolsCount(person.getId(), person.getNickname()));
+            sciApplication.getMeleeWeaponsCountData().add(new MeleeWeaponsCount(person.getId(), person.getNickname()));
+
+            sciApplication.getBackpacksAndPouchesCountData().add(new BackpacksAndPouchesCount(person.getId(), person.getNickname()));
+            sciApplication.getContainersCountData().add(new ContainersCount(person.getId(), person.getNickname()));
+            sciApplication.getDevicesCountData().add(new DevicesCount(person.getId(), person.getNickname()));
+            sciApplication.getCosmeticsCountData().add(new CosmeticsCount(person.getId(), person.getNickname()));
+            sciApplication.getAccessoriesCountData().add(new AccessoriesCount(person.getId(), person.getNickname()));
+            sciApplication.getOtherCountData().add(new OtherCount(person.getId(), person.getNickname()));
+
+            sciApplication.getMuzzlesAndSilencersCountData().add(new MuzzlesAndSilencersCount(person.getId(), person.getNickname()));
+            sciApplication.getMagazinesCountData().add(new MagazinesCount(person.getId(), person.getNickname()));
+            sciApplication.getHanguardsAndBracketsCountData().add(new HanguardsAndBracketsCount(person.getId(), person.getNickname()));
+            sciApplication.getSightsCountData().add(new SightsCount(person.getId(), person.getNickname()));
+            sciApplication.getHandlesCountData().add(new HandlesCount(person.getId(), person.getNickname()));
+            sciApplication.getOtherAttachmentsCountData().add(new OtherAttachmentsCount(person.getId(), person.getNickname()));
+
+            sciApplication.getCombatCountData().add(new CombatCount(person.getId(), person.getNickname()));
+            sciApplication.getCombinedCountData().add(new CombinedCount(person.getId(), person.getNickname()));
+            sciApplication.getScientistCountData().add(new ScientistCount(person.getId(), person.getNickname()));
         }
     }
 

@@ -14,6 +14,14 @@ public class AssaultRiflesCount implements BarterCount {
                                   ar1121, ar1122, ar1123, ar1124, ar1125, ar1126, ar1127, ar1128, ar1129, ar1130,
                                   ar1131, ar1132, ar1133, ar1134;
 
+    public AssaultRiflesCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0);
+    }
+
     public AssaultRiflesCount(Integer idPerson, String nicknamePerson,
                               Integer ar1101, Integer ar1102, Integer ar1103, Integer ar1104, Integer ar1105,
                               Integer ar1106, Integer ar1107, Integer ar1108, Integer ar1109, Integer ar1110,

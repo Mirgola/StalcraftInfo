@@ -12,6 +12,12 @@ public class ScientistCount implements BarterCount {
     private final IntegerProperty s4301, s4302, s4303, s4304, s4305, s4306, s4307, s4308, s4309, s4310,
                                   s4311, s4312, s4313;
 
+    public ScientistCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0);
+    }
+
     public ScientistCount(Integer idPerson, String nicknamePerson,
                           Integer s4301, Integer s4302, Integer s4303, Integer s4304, Integer s4305,
                           Integer s4306, Integer s4307, Integer s4308, Integer s4309, Integer s4310,

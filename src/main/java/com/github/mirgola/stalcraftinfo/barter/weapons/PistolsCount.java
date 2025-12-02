@@ -12,6 +12,12 @@ public class PistolsCount implements BarterCount {
     private final IntegerProperty p1601, p1602, p1603, p1604, p1605, p1606, p1607, p1608, p1609, p1610,
                                   p1611, p1612, p1613, p1614, p1615, p1616, p1617;
 
+    public PistolsCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0);
+    }
+
     public PistolsCount(Integer idPerson, String nicknamePerson,
                         Integer p1601, Integer p1602, Integer p1603, Integer p1604, Integer p1605,
                         Integer p1606, Integer p1607, Integer p1608, Integer p1609, Integer p1610,

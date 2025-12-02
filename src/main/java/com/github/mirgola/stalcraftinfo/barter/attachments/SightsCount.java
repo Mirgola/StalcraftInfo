@@ -14,6 +14,14 @@ public class SightsCount implements BarterCount {
                                   s3421, s3422, s3423, s3424, s3425, s3426, s3427, s3428, s3429, s3430,
                                   s3431, s3432, s3433, s3434, s3435, s3436;
 
+    public SightsCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0);
+    }
+
     public SightsCount(Integer idPerson, String nicknamePerson,
                        Integer s3401, Integer s3402, Integer s3403, Integer s3404, Integer s3405,
                        Integer s3406, Integer s3407, Integer s3408, Integer s3409, Integer s3410,

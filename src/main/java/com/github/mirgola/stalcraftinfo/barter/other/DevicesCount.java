@@ -12,6 +12,12 @@ public class DevicesCount implements BarterCount {
     private final IntegerProperty d2301, d2302, d2303, d2304, d2305, d2306, d2307, d2308, d2309, d2310,
                                   d2311;
 
+    public DevicesCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0);
+    }
+
     public DevicesCount(Integer idPerson, String nicknamePerson,
                         Integer d2301, Integer d2302, Integer d2303, Integer d2304, Integer d2305,
                         Integer d2306, Integer d2307, Integer d2308, Integer d2309, Integer d2310,

@@ -11,6 +11,11 @@ public class AccessoriesCount implements BarterCount {
     private final StringProperty nicknamePerson;
     private final IntegerProperty a2501, a2502, a2503, a2504, a2505, a2506;
 
+    public AccessoriesCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0);
+    }
+
     public AccessoriesCount(Integer idPerson, String nicknamePerson,
                             Integer a2501, Integer a2502, Integer a2503, Integer a2504, Integer a2505,
                             Integer a2506) {

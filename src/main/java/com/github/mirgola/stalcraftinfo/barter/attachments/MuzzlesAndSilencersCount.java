@@ -16,6 +16,16 @@ public class MuzzlesAndSilencersCount implements BarterCount {
                                   mas3141, mas3142, mas3143, mas3144, mas3145, mas3146, mas3147, mas3148, mas3149, mas3150,
                                   mas3151, mas3152, mas3153, mas3154;
 
+    public MuzzlesAndSilencersCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0);
+    }
+
     public MuzzlesAndSilencersCount(Integer idPerson, String nicknamePerson,
                                     Integer mas3101, Integer mas3102, Integer mas3103, Integer mas3104, Integer mas3105,
                                     Integer mas3106, Integer mas3107, Integer mas3108, Integer mas3109, Integer mas3110,

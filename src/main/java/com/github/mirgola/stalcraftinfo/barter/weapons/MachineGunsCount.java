@@ -11,6 +11,10 @@ public class MachineGunsCount implements BarterCount {
     private final StringProperty nicknamePerson;
     private final IntegerProperty mg1301, mg1302, mg1303, mg1304, mg1305, mg1306;
 
+    public MachineGunsCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0);
+    }
 
     public MachineGunsCount(Integer idPerson, String nicknamePerson,
                               Integer mg1301, Integer mg1302, Integer mg1303, Integer mg1304, Integer mg1305,

@@ -12,6 +12,12 @@ public class BackpacksAndPouchesCount implements BarterCount {
     private final IntegerProperty bap2101, bap2102, bap2103, bap2104, bap2105, bap2106, bap2107, bap2108, bap2109, bap2110,
                                   bap2111, bap2112, bap2113, bap2114, bap2115, bap2116, bap2117;
 
+    public BackpacksAndPouchesCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0,0);
+    }
+
     public BackpacksAndPouchesCount(Integer idPerson, String nicknamePerson,
                               Integer bap2101, Integer bap2102, Integer bap2103, Integer bap2104, Integer bap2105,
                               Integer bap2106, Integer bap2107, Integer bap2108, Integer bap2109, Integer bap2110,

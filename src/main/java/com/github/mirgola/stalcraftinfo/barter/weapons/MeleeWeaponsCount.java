@@ -12,6 +12,12 @@ public class MeleeWeaponsCount implements BarterCount {
     private final IntegerProperty mw1701, mw1702, mw1703, mw1704, mw1705, mw1706, mw1707, mw1708, mw1709, mw1710,
                                   mw1711, mw1712, mw1713, mw1714, mw1715,mw1716;
 
+    public MeleeWeaponsCount(Integer idPerson, String nicknamePerson) {
+        this(idPerson, nicknamePerson,
+                0,0,0,0,0,0,0,0,0,0,
+                0,0,0,0,0,0);
+    }
+
     public MeleeWeaponsCount(Integer idPerson, String nicknameUser,
                              Integer mw1701, Integer mw1702, Integer mw1703, Integer mw1704, Integer mw1705,
                              Integer mw1706, Integer mw1707, Integer mw1708, Integer mw1709, Integer mw1710,
