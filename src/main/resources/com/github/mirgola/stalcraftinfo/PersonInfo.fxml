@@ -178,7 +178,7 @@
                         <Label fx:id="alphaDataFragmentRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="11" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="21" GridPane.columnIndex="3" GridPane.rowIndex="11" />
                         <Label fx:id="alphaDataFragmentTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="11" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="290" GridPane.columnIndex="5" GridPane.rowIndex="11" />
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="80" GridPane.columnIndex="5" GridPane.rowIndex="11" />
                         <Label fx:id="alphaDataFragmentRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="11" />
                         <Label fx:id="group_3TradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: #000000; -fx-background-color: #A9D08E;" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="12">
                            <font>
@@ -214,7 +214,7 @@
                         <Label fx:id="betaDataFragmentRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="16" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="40" GridPane.columnIndex="3" GridPane.rowIndex="16" />
                         <Label fx:id="betaDataFragmentTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="16" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="600" GridPane.columnIndex="5" GridPane.rowIndex="16" />
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="90" GridPane.columnIndex="5" GridPane.rowIndex="16" />
                         <Label fx:id="betaDataFragmentRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="16" />
                         <Label fx:id="group_4TradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: #000000; -fx-background-color: #A9D08E;" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="17">
                            <font>
@@ -250,7 +250,7 @@
                         <Label fx:id="gammaDataFragmentRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="21" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="66" GridPane.columnIndex="3" GridPane.rowIndex="21" />
                         <Label fx:id="gammaDataFragmentTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="21" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="900" GridPane.columnIndex="5" GridPane.rowIndex="21" />
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="100" GridPane.columnIndex="5" GridPane.rowIndex="21" />
                         <Label fx:id="gammaDataFragmentRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="21" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Квантовая батарея" GridPane.rowIndex="22" />
                         <Label fx:id="quantumBatteryLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="22" />
@@ -289,21 +289,21 @@
                         <Label fx:id="lambdaDataFragmentRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="27" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="100" GridPane.columnIndex="3" GridPane.rowIndex="27" />
                         <Label fx:id="lambdaDataFragmentTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="27" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="900" GridPane.columnIndex="5" GridPane.rowIndex="27" />
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="100" GridPane.columnIndex="5" GridPane.rowIndex="27" />
                         <Label fx:id="lambdaDataFragmentRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="27" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Аномальная батарея" GridPane.rowIndex="28" />
                         <Label fx:id="anomalousBatteryLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="28" />
                         <Label fx:id="anomalousBatteryRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="28" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="500" GridPane.columnIndex="3" GridPane.rowIndex="28" />
                         <Label fx:id="anomalousBatteryTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="28" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="2000" GridPane.columnIndex="5" GridPane.rowIndex="28" />
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="2 000" GridPane.columnIndex="5" GridPane.rowIndex="28" />
                         <Label fx:id="anomalousBatteryRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="28" />
                         <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Лимбоплазма" GridPane.rowIndex="29" />
                         <Label fx:id="limboPlasmaLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="29" />
                         <Label fx:id="limboPlasmaRemainsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="29" />
                         <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="800" GridPane.columnIndex="3" GridPane.rowIndex="29" />
                         <Label fx:id="limboPlasmaTradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="29" />
-                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="3000" GridPane.columnIndex="5" GridPane.rowIndex="29" />
+                        <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="3 000" GridPane.columnIndex="5" GridPane.rowIndex="29" />
                         <Label fx:id="limboPlasmaRubLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Label" GridPane.columnIndex="6" GridPane.rowIndex="29" />
                         <Label fx:id="group_6TradeCoinsLabel" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-text-fill: #000000; -fx-background-color: #A9D08E;" text="Label" GridPane.columnIndex="4" GridPane.rowIndex="30">
                            <font>

@@ -28,6 +28,8 @@ public class PersonInfoController {
 
     private int group_1;
     private int group_1TradeCoins;
+    private int greenMoldRemains;
+    private int swampStoneRemains;
     @FXML
     private Label group_1Label;
     @FXML
@@ -51,6 +53,9 @@ public class PersonInfoController {
 
     private int group_2;
     private int group_2TradeCoins;
+    private int stinkyRootRemains;
+    private int crappiteRemains;
+    private int piecesOfCopperWireRemains;
     @FXML
     private Label group_2Label;
     @FXML
@@ -82,6 +87,10 @@ public class PersonInfoController {
 
     private int group_3;
     private int group_3TradeCoins;
+    private int sprigOfChernobylChamomileRemains;
+    private int pickleRemains;
+    private int remainsOfRadioTransmitterRemains;
+    private int alphaDataFragmentRemains;
     @FXML
     private Label group_3Label;
     @FXML
@@ -121,6 +130,10 @@ public class PersonInfoController {
 
     private int group_4;
     private int group_4TradeCoins;
+    private int northernMossRemains;
+    private int dopeStoneRemains;
+    private int remainsOfBatteriesRemains;
+    private int betaDataFragmentRemains;
     @FXML
     private Label group_4Label;
     @FXML
@@ -160,6 +173,12 @@ public class PersonInfoController {
 
     private int group_5;
     private int group_5TradeCoins;
+    private int redFernRemains;
+    private int substance07270Remains;
+    private int remainsOfPsyTrackerRemains;
+    private int gammaDataFragmentRemains;
+    private int quantumBatteryRemains;
+    private int anomalousSerumRemains;
     @FXML
     private Label group_5Label;
     @FXML
@@ -211,6 +230,11 @@ public class PersonInfoController {
 
     private int group_6;
     private int group_6TradeCoins;
+    private int bitterleafRemains;
+    private int limboRemains;
+    private int lambdaDataFragmentRemains;
+    private int anomalousBatteryRemains;
+    private int limboPlasmaRemains;
     @FXML
     private Label group_6Label;
     @FXML
@@ -330,127 +354,152 @@ public class PersonInfoController {
             nicknameFractionLabel.setText(person.getNickname()+ " - " + person.getFraction());
 
             group_1 = (person.getGreenMold() * 6) + (person.getSwampStone() * 12);
-            group_1TradeCoins = (person.getGreenMoldRemains() * 1) + (person.getSwampStoneRemains() * 2);
+            greenMoldRemains = person.getGreenMold() - person.getGreenMoldRemains() < 0 ? person.getGreenMold() - person.getGreenMoldRemains() : 0;
+            swampStoneRemains = person.getSwampStone() - person.getSwampStoneRemains() < 0 ? person.getSwampStone() - person.getSwampStoneRemains() : 0;
+            group_1TradeCoins = (greenMoldRemains * -1) + (swampStoneRemains * -2);
             group_1Label.setText(decimalFormat.format(group_1));
             group_1TradeCoinsLabel.setText(decimalFormat.format(group_1TradeCoins));
             greenMoldLabel.setText(decimalFormat.format(person.getGreenMold()));
-            greenMoldRemainsLabel.setText(decimalFormat.format(person.getGreenMoldRemains()));
-            greenMoldTradeCoinsLabel.setText(decimalFormat.format(person.getGreenMoldRemains() * 1));
+            greenMoldRemainsLabel.setText(decimalFormat.format(greenMoldRemains));
+            greenMoldTradeCoinsLabel.setText(decimalFormat.format(greenMoldRemains * -1));
             greenMoldRubLabel.setText(decimalFormat.format(person.getGreenMold() * 6));
             swampStoneLabel.setText(decimalFormat.format(person.getSwampStone()));
-            swampStoneRemainsLabel.setText(decimalFormat.format(person.getSwampStoneRemains()));
-            swampStoneTradeCoinsLabel.setText(decimalFormat.format(person.getSwampStoneRemains() * 2));
+            swampStoneRemainsLabel.setText(decimalFormat.format(swampStoneRemains));
+            swampStoneTradeCoinsLabel.setText(decimalFormat.format(swampStoneRemains * -2));
             swampStoneRubLabel.setText(decimalFormat.format(person.getSwampStone() * 12));
 
             group_2 = (person.getStinkyRoot() * 16) + (person.getCrappite() * 24) + (person.getPiecesOfCopperWire() * 20);
-            group_2TradeCoins = (person.getStinkyRootRemains() * 3) + (person.getCrappiteRemains() * 4) + (person.getPiecesOfCopperWireRemains() * 4);
+            stinkyRootRemains = person.getStinkyRoot() - person.getStinkyRootRemains() < 0 ? person.getStinkyRoot() - person.getStinkyRootRemains() : 0;
+            crappiteRemains = person.getCrappite() - person.getCrappiteRemains() < 0 ? person.getCrappite() - person.getCrappiteRemains() : 0;
+            piecesOfCopperWireRemains = person.getPiecesOfCopperWire() - person.getPiecesOfCopperWireRemains() < 0 ? person.getPiecesOfCopperWire() - person.getPiecesOfCopperWireRemains() : 0;
+            group_2TradeCoins = (stinkyRootRemains * -3) + (crappiteRemains * -4) + (piecesOfCopperWireRemains * -4);
             group_2Label.setText(decimalFormat.format(group_2));
             group_2TradeCoinsLabel.setText(decimalFormat.format(group_2TradeCoins));
             stinkyRootLabel.setText(decimalFormat.format(person.getStinkyRoot()));
-            stinkyRootRemainsLabel.setText(decimalFormat.format(person.getStinkyRootRemains()));
-            stinkyRootTradeCoinsLabel.setText(decimalFormat.format(person.getStinkyRootRemains() * 3));
+            stinkyRootRemainsLabel.setText(decimalFormat.format(stinkyRootRemains));
+            stinkyRootTradeCoinsLabel.setText(decimalFormat.format(stinkyRootRemains * -3));
             stinkyRootRubLabel.setText(decimalFormat.format(person.getStinkyRoot() * 16));
             crappiteLabel.setText(decimalFormat.format(person.getCrappite()));
-            crappiteRemainsLabel.setText(decimalFormat.format(person.getCrappiteRemains()));
-            crappiteTradeCoinsLabel.setText(decimalFormat.format(person.getCrappiteRemains() * 4));
+            crappiteRemainsLabel.setText(decimalFormat.format(crappiteRemains));
+            crappiteTradeCoinsLabel.setText(decimalFormat.format(crappiteRemains * -4));
             crappiteRubLabel.setText(decimalFormat.format(person.getCrappite() * 24));
             piecesOfCopperWireLabel.setText(decimalFormat.format(person.getPiecesOfCopperWire()));
-            piecesOfCopperWireRemainsLabel.setText(decimalFormat.format(person.getPiecesOfCopperWireRemains()));
-            piecesOfCopperWireTradeCoinsLabel.setText(decimalFormat.format(person.getPiecesOfCopperWireRemains() * 4));
+            piecesOfCopperWireRemainsLabel.setText(decimalFormat.format(piecesOfCopperWireRemains));
+            piecesOfCopperWireTradeCoinsLabel.setText(decimalFormat.format(piecesOfCopperWireRemains * -4));
             piecesOfCopperWireRubLabel.setText(decimalFormat.format(person.getPiecesOfCopperWire() * 20));
 
-            group_3 = (person.getSprigOfChernobylChamomile() * 22) + (person.getPickle() * 32) + (person.getRemainsOfRadioTransmitter() * 25) + (person.getAlphaDataFragment() * 290);
-            group_3TradeCoins = (person.getSprigOfChernobylChamomileRemains() * 4) + (person.getPickleRemains() * 6) + (person.getRemainsOfRadioTransmitterRemains() * 4) + (person.getAlphaDataFragmentRemains() * 21);
+            group_3 = (person.getSprigOfChernobylChamomile() * 22) + (person.getPickle() * 32) + (person.getRemainsOfRadioTransmitter() * 25) + (person.getAlphaDataFragment() * 80);
+            sprigOfChernobylChamomileRemains = person.getSprigOfChernobylChamomile() - person.getSprigOfChernobylChamomileRemains() < 0 ? person.getSprigOfChernobylChamomile() - person.getSprigOfChernobylChamomileRemains() : 0;
+            pickleRemains = person.getPickle() - person.getPickleRemains() < 0 ? person.getPickle() - person.getPickleRemains() : 0;
+            remainsOfRadioTransmitterRemains = person.getRemainsOfRadioTransmitter() - person.getRemainsOfRadioTransmitterRemains() < 0 ? person.getRemainsOfRadioTransmitter() - person.getRemainsOfRadioTransmitterRemains() : 0;
+            alphaDataFragmentRemains = person.getAlphaDataFragment() - person.getAlphaDataFragmentRemains() < 0 ? person.getAlphaDataFragment() - person.getAlphaDataFragmentRemains() : 0;
+            group_3TradeCoins = (sprigOfChernobylChamomileRemains * -4) + (pickleRemains * -6) + (remainsOfRadioTransmitterRemains * -4) + (alphaDataFragmentRemains * -21);
             group_3Label.setText(decimalFormat.format(group_3));
             group_3TradeCoinsLabel.setText(decimalFormat.format(group_3TradeCoins));
             sprigOfChernobylChamomileLabel.setText(decimalFormat.format(person.getSprigOfChernobylChamomile()));
-            sprigOfChernobylChamomileRemainsLabel.setText(decimalFormat.format(person.getSprigOfChernobylChamomileRemains()));
-            sprigOfChernobylChamomileTradeCoinsLabel.setText(decimalFormat.format(person.getSprigOfChernobylChamomileRemains() * 4));
+            sprigOfChernobylChamomileRemainsLabel.setText(decimalFormat.format(sprigOfChernobylChamomileRemains));
+            sprigOfChernobylChamomileTradeCoinsLabel.setText(decimalFormat.format(sprigOfChernobylChamomileRemains * -4));
             sprigOfChernobylChamomileRubLabel.setText(decimalFormat.format(person.getSprigOfChernobylChamomile() * 22));
             pickleLabel.setText(decimalFormat.format(person.getPickle()));
-            pickleRemainsLabel.setText(decimalFormat.format(person.getPickleRemains()));
-            pickleTradeCoinsLabel.setText(decimalFormat.format(person.getPickleRemains() * 6));
+            pickleRemainsLabel.setText(decimalFormat.format(pickleRemains));
+            pickleTradeCoinsLabel.setText(decimalFormat.format(pickleRemains * -6));
             pickleRubLabel.setText(decimalFormat.format(person.getPickle() * 32));
             remainsOfRadioTransmitterLabel.setText(decimalFormat.format(person.getRemainsOfRadioTransmitter()));
-            remainsOfRadioTransmitterRemainsLabel.setText(decimalFormat.format(person.getRemainsOfRadioTransmitterRemains()));
-            remainsOfRadioTransmitterTradeCoinsLabel.setText(decimalFormat.format(person.getRemainsOfRadioTransmitterRemains() * 4));
+            remainsOfRadioTransmitterRemainsLabel.setText(decimalFormat.format(remainsOfRadioTransmitterRemains));
+            remainsOfRadioTransmitterTradeCoinsLabel.setText(decimalFormat.format(remainsOfRadioTransmitterRemains * -4));
             remainsOfRadioTransmitterRubLabel.setText(decimalFormat.format(person.getRemainsOfRadioTransmitter() * 25));
             alphaDataFragmentLabel.setText(decimalFormat.format(person.getAlphaDataFragment()));
-            alphaDataFragmentRemainsLabel.setText(decimalFormat.format(person.getAlphaDataFragmentRemains()));
-            alphaDataFragmentTradeCoinsLabel.setText(decimalFormat.format(person.getAlphaDataFragmentRemains() * 21));
-            alphaDataFragmentRubLabel.setText(decimalFormat.format(person.getAlphaDataFragment() * 290));
+            alphaDataFragmentRemainsLabel.setText(decimalFormat.format(alphaDataFragmentRemains));
+            alphaDataFragmentTradeCoinsLabel.setText(decimalFormat.format(alphaDataFragmentRemains * -21));
+            alphaDataFragmentRubLabel.setText(decimalFormat.format(person.getAlphaDataFragment() * 80));
 
-            group_4 = (person.getNorthernMoss() * 32) + (person.getDopeStone() * 40) + (person.getRemainsOfBatteries() * 36) + (person.getBetaDataFragment() * 600);
-            group_4TradeCoins = (person.getNorthernMossRemains() * 5) + (person.getDopeStoneRemains() * 8) + (person.getRemainsOfBatteriesRemains() * 7) + (person.getBetaDataFragmentRemains() * 40);
+            group_4 = (person.getNorthernMoss() * 32) + (person.getDopeStone() * 40) + (person.getRemainsOfBatteries() * 36) + (person.getBetaDataFragment() * 90);
+            northernMossRemains = person.getNorthernMoss() - person.getNorthernMossRemains() < 0 ? person.getNorthernMoss() - person.getNorthernMossRemains() : 0;
+            dopeStoneRemains = person.getDopeStone() - person.getDopeStoneRemains() < 0 ? person.getDopeStone() - person.getDopeStoneRemains() : 0;
+            remainsOfBatteriesRemains = person.getRemainsOfBatteries() - person.getRemainsOfBatteriesRemains() < 0 ? person.getRemainsOfBatteries() - person.getRemainsOfBatteriesRemains() : 0;
+            betaDataFragmentRemains = person.getBetaDataFragment() - person.getBetaDataFragmentRemains() < 0 ? person.getBetaDataFragment() - person.getBetaDataFragmentRemains() : 0;
+            group_4TradeCoins = (northernMossRemains * -5) + (dopeStoneRemains * -8) + (remainsOfBatteriesRemains * -7) + (betaDataFragmentRemains * -40);
             group_4Label.setText(decimalFormat.format(group_4));
             group_4TradeCoinsLabel.setText(decimalFormat.format(group_4TradeCoins));
             northernMossLabel.setText(decimalFormat.format(person.getNorthernMoss()));
-            northernMossRemainsLabel.setText(decimalFormat.format(person.getNorthernMossRemains()));
-            northernMossTradeCoinsLabel.setText(decimalFormat.format(person.getNorthernMossRemains() * 5));
+            northernMossRemainsLabel.setText(decimalFormat.format(northernMossRemains));
+            northernMossTradeCoinsLabel.setText(decimalFormat.format(northernMossRemains * -5));
             northernMossRubLabel.setText(decimalFormat.format(person.getNorthernMoss() * 32));
             dopeStoneLabel.setText(decimalFormat.format(person.getDopeStone()));
-            dopeStoneRemainsLabel.setText(decimalFormat.format(person.getDopeStoneRemains()));
-            dopeStoneTradeCoinsLabel.setText(decimalFormat.format(person.getDopeStoneRemains() * 8));
+            dopeStoneRemainsLabel.setText(decimalFormat.format(dopeStoneRemains));
+            dopeStoneTradeCoinsLabel.setText(decimalFormat.format(dopeStoneRemains * -8));
             dopeStoneRubLabel.setText(decimalFormat.format(person.getDopeStone() * 40));
             remainsOfBatteriesLabel.setText(decimalFormat.format(person.getRemainsOfBatteries()));
-            remainsOfBatteriesRemainsLabel.setText(decimalFormat.format(person.getRemainsOfBatteriesRemains()));
-            remainsOfBatteriesTradeCoinsLabel.setText(decimalFormat.format(person.getRemainsOfBatteriesRemains() * 7));
+            remainsOfBatteriesRemainsLabel.setText(decimalFormat.format(remainsOfBatteriesRemains));
+            remainsOfBatteriesTradeCoinsLabel.setText(decimalFormat.format(remainsOfBatteriesRemains * -7));
             remainsOfBatteriesRubLabel.setText(decimalFormat.format(person.getRemainsOfBatteries() * 36));
             betaDataFragmentLabel.setText(decimalFormat.format(person.getBetaDataFragment()));
-            betaDataFragmentRemainsLabel.setText(decimalFormat.format(person.getBetaDataFragmentRemains()));
-            betaDataFragmentTradeCoinsLabel.setText(decimalFormat.format(person.getBetaDataFragmentRemains() * 40));
-            betaDataFragmentRubLabel.setText(decimalFormat.format(person.getBetaDataFragment() * 600));
+            betaDataFragmentRemainsLabel.setText(decimalFormat.format(betaDataFragmentRemains));
+            betaDataFragmentTradeCoinsLabel.setText(decimalFormat.format(betaDataFragmentRemains * -40));
+            betaDataFragmentRubLabel.setText(decimalFormat.format(person.getBetaDataFragment() * 90));
 
-            group_5 = (person.getRedFern() * 60) + (person.getSubstance07270() * 48) + (person.getRemainsOfPsyTracker() * 42) + (person.getGammaDataFragment() * 900) + (person.getQuantumBattery() * 450);
-            group_5TradeCoins = (person.getRedFernRemains() * 10) + (person.getSubstance07270Remains() * 8) + (person.getRemainsOfPsyTrackerRemains() * 7) + (person.getGammaDataFragmentRemains() * 66) + (person.getQuantumBatteryRemains() * 42);
+            group_5 = (person.getRedFern() * 60) + (person.getSubstance07270() * 48) + (person.getRemainsOfPsyTracker() * 42) + (person.getGammaDataFragment() * 100) + (person.getQuantumBattery() * 450);
+            redFernRemains = person.getRedFern() - person.getRedFernRemains() < 0 ? person.getRedFern() - person.getRedFernRemains() : 0;
+            substance07270Remains = person.getSubstance07270() - person.getSubstance07270Remains() < 0 ? person.getSubstance07270() - person.getSubstance07270Remains() : 0;
+            remainsOfPsyTrackerRemains = person.getRemainsOfPsyTracker() - person.getRemainsOfPsyTrackerRemains() < 0 ? person.getRemainsOfPsyTracker() - person.getRemainsOfPsyTrackerRemains() : 0;
+            gammaDataFragmentRemains = person.getGammaDataFragment() - person.getGammaDataFragmentRemains() < 0 ? person.getGammaDataFragment() - person.getGammaDataFragmentRemains() : 0;
+            quantumBatteryRemains = person.getQuantumBattery() - person.getQuantumBatteryRemains() < 0 ? person.getQuantumBattery() - person.getQuantumBatteryRemains() : 0;
+            anomalousSerumRemains = person.getAnomalousSerum() - person.getAnomalousSerumRemains() < 0 ? person.getAnomalousSerum() - person.getAnomalousSerumRemains() : 0;
+            group_5TradeCoins = (redFernRemains * -10) + (substance07270Remains * -8) + (remainsOfPsyTrackerRemains * -7) + (gammaDataFragmentRemains * -66) + (quantumBatteryRemains * -42);
             group_5Label.setText(decimalFormat.format(group_5));
             group_5TradeCoinsLabel.setText(decimalFormat.format(group_5TradeCoins));
             redFernLabel.setText(decimalFormat.format(person.getRedFern()));
-            redFernRemainsLabel.setText(decimalFormat.format(person.getRedFernRemains()));
-            redFernTradeCoinsLabel.setText(decimalFormat.format(person.getRedFernRemains() * 10));
+            redFernRemainsLabel.setText(decimalFormat.format(redFernRemains));
+            redFernTradeCoinsLabel.setText(decimalFormat.format(redFernRemains * -10));
             redFernRubLabel.setText(decimalFormat.format(person.getRedFern() * 60));
             substance07270Label.setText(decimalFormat.format(person.getSubstance07270()));
-            substance07270RemainsLabel.setText(decimalFormat.format(person.getSubstance07270Remains()));
-            substance07270TradeCoinsLabel.setText(decimalFormat.format(person.getSubstance07270Remains() * 8));
+            substance07270RemainsLabel.setText(decimalFormat.format(substance07270Remains));
+            substance07270TradeCoinsLabel.setText(decimalFormat.format(substance07270Remains * -8));
             substance07270RubLabel.setText(decimalFormat.format(person.getSubstance07270() * 48));
             remainsOfPsyTrackerLabel.setText(decimalFormat.format(person.getRemainsOfPsyTracker()));
-            remainsOfPsyTrackerRemainsLabel.setText(decimalFormat.format(person.getRemainsOfPsyTrackerRemains()));
-            remainsOfPsyTrackerTradeCoinsLabel.setText(decimalFormat.format(person.getRemainsOfPsyTrackerRemains() * 7));
+            remainsOfPsyTrackerRemainsLabel.setText(decimalFormat.format(remainsOfPsyTrackerRemains));
+            remainsOfPsyTrackerTradeCoinsLabel.setText(decimalFormat.format(remainsOfPsyTrackerRemains * -7));
             remainsOfPsyTrackerRubLabel.setText(decimalFormat.format(person.getRemainsOfPsyTracker() * 42));
             gammaDataFragmentLabel.setText(decimalFormat.format(person.getGammaDataFragment()));
-            gammaDataFragmentRemainsLabel.setText(decimalFormat.format(person.getGammaDataFragmentRemains()));
-            gammaDataFragmentTradeCoinsLabel.setText(decimalFormat.format(person.getGammaDataFragmentRemains() * 66));
-            gammaDataFragmentRubLabel.setText(decimalFormat.format(person.getGammaDataFragment() * 900));
+            gammaDataFragmentRemainsLabel.setText(decimalFormat.format(gammaDataFragmentRemains));
+            gammaDataFragmentTradeCoinsLabel.setText(decimalFormat.format(gammaDataFragmentRemains * -66));
+            gammaDataFragmentRubLabel.setText(decimalFormat.format(person.getGammaDataFragment() * 100));
             quantumBatteryLabel.setText(decimalFormat.format(person.getQuantumBattery()));
-            quantumBatteryRemainsLabel.setText(decimalFormat.format(person.getQuantumBatteryRemains()));
-            quantumBatteryTradeCoinsLabel.setText(decimalFormat.format(person.getQuantumBatteryRemains() * 42));
+            quantumBatteryRemainsLabel.setText(decimalFormat.format(quantumBatteryRemains));
+            quantumBatteryTradeCoinsLabel.setText(decimalFormat.format(quantumBatteryRemains * -42));
             quantumBatteryRubLabel.setText(decimalFormat.format(person.getQuantumBattery() * 450));
             anomalousSerumLabel.setText(decimalFormat.format(person.getAnomalousSerum()));
-            anomalousSerumRemainsLabel.setText(decimalFormat.format(person.getAnomalousSerumRemains()));
+            anomalousSerumRemainsLabel.setText(decimalFormat.format(anomalousSerumRemains));
 
-            group_6 = (person.getBitterleaf() * 50) + (person.getLimbo() * 50) + (person.getLambdaDataFragment() * 900) + (person.getAnomalousBattery() * 2000) + (person.getLimboPlasma() * 3000);
-            group_6TradeCoins = (person.getBitterleafRemains() * 16) + (person.getLimboRemains() * 20) + (person.getLambdaDataFragmentRemains() * 100) + (person.getAnomalousBatteryRemains() * 500) + (person.getLimboPlasmaRemains() * 800);
+            group_6 = (person.getBitterleaf() * 50) + (person.getLimbo() * 50) + (person.getLambdaDataFragment() * 100) + (person.getAnomalousBattery() * 2000) + (person.getLimboPlasma() * 3000);
+            bitterleafRemains = person.getBitterleaf() - person.getBitterleafRemains() < 0 ? person.getBitterleaf() - person.getBitterleafRemains() : 0;
+            limboRemains = person.getLimbo() - person.getLimboRemains() < 0 ? person.getLimbo() - person.getLimboRemains() : 0;
+            lambdaDataFragmentRemains = person.getLambdaDataFragment() - person.getLambdaDataFragmentRemains() < 0 ? person.getLambdaDataFragment() - person.getLambdaDataFragmentRemains() : 0;
+            anomalousBatteryRemains = person.getAnomalousBattery() - person.getAnomalousBatteryRemains() < 0 ? person.getAnomalousBattery() - person.getAnomalousBatteryRemains() : 0;
+            limboPlasmaRemains = person.getLimboPlasma() - person.getLimboPlasmaRemains() < 0 ? person.getLimboPlasma() - person.getLimboPlasmaRemains() : 0;
+
+            group_6TradeCoins = (bitterleafRemains * -16) + (limboRemains * -20) + (lambdaDataFragmentRemains * -100) + (anomalousBatteryRemains * -500) + (limboPlasmaRemains * -800);
             group_6Label.setText(decimalFormat.format(group_6));
             group_6TradeCoinsLabel.setText(decimalFormat.format(group_6TradeCoins));
             bitterleafLabel.setText(decimalFormat.format(person.getBitterleaf()));
-            bitterleafRemainsLabel.setText(decimalFormat.format(person.getBitterleafRemains()));
-            bitterleafTradeCoinsLabel.setText(decimalFormat.format(person.getBitterleafRemains() * 16));
+            bitterleafRemainsLabel.setText(decimalFormat.format(bitterleafRemains));
+            bitterleafTradeCoinsLabel.setText(decimalFormat.format(bitterleafRemains * -16));
             bitterleafRubLabel.setText(decimalFormat.format(person.getBitterleaf() * 50));
             limboLabel.setText(decimalFormat.format(person.getLimbo()));
-            limboRemainsLabel.setText(decimalFormat.format(person.getLimboRemains()));
-            limboTradeCoinsLabel.setText(decimalFormat.format(person.getLimboRemains() * 20));
+            limboRemainsLabel.setText(decimalFormat.format(limboRemains));
+            limboTradeCoinsLabel.setText(decimalFormat.format(limboRemains * -20));
             limboRubLabel.setText(decimalFormat.format(person.getLimbo() * 50));
             lambdaDataFragmentLabel.setText(decimalFormat.format(person.getLambdaDataFragment()));
-            lambdaDataFragmentRemainsLabel.setText(decimalFormat.format(person.getLambdaDataFragmentRemains()));
-            lambdaDataFragmentTradeCoinsLabel.setText(decimalFormat.format(person.getLambdaDataFragmentRemains() * 100));
-            lambdaDataFragmentRubLabel.setText(decimalFormat.format(person.getLambdaDataFragment() * 900));
+            lambdaDataFragmentRemainsLabel.setText(decimalFormat.format(lambdaDataFragmentRemains));
+            lambdaDataFragmentTradeCoinsLabel.setText(decimalFormat.format(lambdaDataFragmentRemains * -100));
+            lambdaDataFragmentRubLabel.setText(decimalFormat.format(person.getLambdaDataFragment() * 100));
             anomalousBatteryLabel.setText(decimalFormat.format(person.getAnomalousBattery()));
-            anomalousBatteryRemainsLabel.setText(decimalFormat.format(person.getAnomalousBatteryRemains()));
-            anomalousBatteryTradeCoinsLabel.setText(decimalFormat.format(person.getAnomalousBatteryRemains() * 500));
+            anomalousBatteryRemainsLabel.setText(decimalFormat.format(anomalousBatteryRemains));
+            anomalousBatteryTradeCoinsLabel.setText(decimalFormat.format(anomalousBatteryRemains * -500));
             anomalousBatteryRubLabel.setText(decimalFormat.format(person.getAnomalousBattery() * 2000));
             limboPlasmaLabel.setText(decimalFormat.format(person.getLimboPlasma()));
-            limboPlasmaRemainsLabel.setText(decimalFormat.format(person.getLimboPlasmaRemains()));
-            limboPlasmaTradeCoinsLabel.setText(decimalFormat.format(person.getLimboPlasmaRemains() * 800));
+            limboPlasmaRemainsLabel.setText(decimalFormat.format(limboPlasmaRemains));
+            limboPlasmaTradeCoinsLabel.setText(decimalFormat.format(limboPlasmaRemains * -800));
             limboPlasmaRubLabel.setText(decimalFormat.format(person.getLimboPlasma() * 3000));
 
             group_All = group_1 + group_2 + group_3 + group_4 + group_5 + group_6;
