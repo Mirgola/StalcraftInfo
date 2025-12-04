@@ -24,6 +24,9 @@ public class PersonInfoController {
     private TableColumn<Person, String> fractionColumn;
 
     @FXML
+    private CheckBox checkBox;
+
+    @FXML
     private Label nicknameFractionLabel;
 
     private int group_1;
@@ -334,6 +337,13 @@ public class PersonInfoController {
         // Слушаем изменения выбора, и при изменении отображаем дополнительную информацию об адресате.
         personTable.getSelectionModel().selectedItemProperty().addListener(
                 (observable, oldValue, newValue) -> showPersonDetails(newValue));
+
+        checkBox.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            Person selectedPerson = personTable.getSelectionModel().getSelectedItem();
+            if (selectedPerson != null) {
+                updareRemainsLabrls(selectedPerson);
+            }
+        });
     }
 
     //
@@ -360,11 +370,11 @@ public class PersonInfoController {
             group_1Label.setText(decimalFormat.format(group_1));
             group_1TradeCoinsLabel.setText(decimalFormat.format(group_1TradeCoins));
             greenMoldLabel.setText(decimalFormat.format(person.getGreenMold()));
-            greenMoldRemainsLabel.setText(decimalFormat.format(greenMoldRemains));
+            //greenMoldRemainsLabel.setText(decimalFormat.format(greenMoldRemains));
             greenMoldTradeCoinsLabel.setText(decimalFormat.format(greenMoldRemains * -1));
             greenMoldRubLabel.setText(decimalFormat.format(person.getGreenMold() * 6));
             swampStoneLabel.setText(decimalFormat.format(person.getSwampStone()));
-            swampStoneRemainsLabel.setText(decimalFormat.format(swampStoneRemains));
+            //swampStoneRemainsLabel.setText(decimalFormat.format(swampStoneRemains));
             swampStoneTradeCoinsLabel.setText(decimalFormat.format(swampStoneRemains * -2));
             swampStoneRubLabel.setText(decimalFormat.format(person.getSwampStone() * 12));
 
@@ -376,15 +386,15 @@ public class PersonInfoController {
             group_2Label.setText(decimalFormat.format(group_2));
             group_2TradeCoinsLabel.setText(decimalFormat.format(group_2TradeCoins));
             stinkyRootLabel.setText(decimalFormat.format(person.getStinkyRoot()));
-            stinkyRootRemainsLabel.setText(decimalFormat.format(stinkyRootRemains));
+            //stinkyRootRemainsLabel.setText(decimalFormat.format(stinkyRootRemains));
             stinkyRootTradeCoinsLabel.setText(decimalFormat.format(stinkyRootRemains * -3));
             stinkyRootRubLabel.setText(decimalFormat.format(person.getStinkyRoot() * 16));
             crappiteLabel.setText(decimalFormat.format(person.getCrappite()));
-            crappiteRemainsLabel.setText(decimalFormat.format(crappiteRemains));
+            //crappiteRemainsLabel.setText(decimalFormat.format(crappiteRemains));
             crappiteTradeCoinsLabel.setText(decimalFormat.format(crappiteRemains * -4));
             crappiteRubLabel.setText(decimalFormat.format(person.getCrappite() * 24));
             piecesOfCopperWireLabel.setText(decimalFormat.format(person.getPiecesOfCopperWire()));
-            piecesOfCopperWireRemainsLabel.setText(decimalFormat.format(piecesOfCopperWireRemains));
+            //piecesOfCopperWireRemainsLabel.setText(decimalFormat.format(piecesOfCopperWireRemains));
             piecesOfCopperWireTradeCoinsLabel.setText(decimalFormat.format(piecesOfCopperWireRemains * -4));
             piecesOfCopperWireRubLabel.setText(decimalFormat.format(person.getPiecesOfCopperWire() * 20));
 
@@ -397,19 +407,19 @@ public class PersonInfoController {
             group_3Label.setText(decimalFormat.format(group_3));
             group_3TradeCoinsLabel.setText(decimalFormat.format(group_3TradeCoins));
             sprigOfChernobylChamomileLabel.setText(decimalFormat.format(person.getSprigOfChernobylChamomile()));
-            sprigOfChernobylChamomileRemainsLabel.setText(decimalFormat.format(sprigOfChernobylChamomileRemains));
+            //sprigOfChernobylChamomileRemainsLabel.setText(decimalFormat.format(sprigOfChernobylChamomileRemains));
             sprigOfChernobylChamomileTradeCoinsLabel.setText(decimalFormat.format(sprigOfChernobylChamomileRemains * -4));
             sprigOfChernobylChamomileRubLabel.setText(decimalFormat.format(person.getSprigOfChernobylChamomile() * 22));
             pickleLabel.setText(decimalFormat.format(person.getPickle()));
-            pickleRemainsLabel.setText(decimalFormat.format(pickleRemains));
+            //pickleRemainsLabel.setText(decimalFormat.format(pickleRemains));
             pickleTradeCoinsLabel.setText(decimalFormat.format(pickleRemains * -6));
             pickleRubLabel.setText(decimalFormat.format(person.getPickle() * 32));
             remainsOfRadioTransmitterLabel.setText(decimalFormat.format(person.getRemainsOfRadioTransmitter()));
-            remainsOfRadioTransmitterRemainsLabel.setText(decimalFormat.format(remainsOfRadioTransmitterRemains));
+            //remainsOfRadioTransmitterRemainsLabel.setText(decimalFormat.format(remainsOfRadioTransmitterRemains));
             remainsOfRadioTransmitterTradeCoinsLabel.setText(decimalFormat.format(remainsOfRadioTransmitterRemains * -4));
             remainsOfRadioTransmitterRubLabel.setText(decimalFormat.format(person.getRemainsOfRadioTransmitter() * 25));
             alphaDataFragmentLabel.setText(decimalFormat.format(person.getAlphaDataFragment()));
-            alphaDataFragmentRemainsLabel.setText(decimalFormat.format(alphaDataFragmentRemains));
+            //alphaDataFragmentRemainsLabel.setText(decimalFormat.format(alphaDataFragmentRemains));
             alphaDataFragmentTradeCoinsLabel.setText(decimalFormat.format(alphaDataFragmentRemains * -21));
             alphaDataFragmentRubLabel.setText(decimalFormat.format(person.getAlphaDataFragment() * 80));
 
@@ -422,19 +432,19 @@ public class PersonInfoController {
             group_4Label.setText(decimalFormat.format(group_4));
             group_4TradeCoinsLabel.setText(decimalFormat.format(group_4TradeCoins));
             northernMossLabel.setText(decimalFormat.format(person.getNorthernMoss()));
-            northernMossRemainsLabel.setText(decimalFormat.format(northernMossRemains));
+            //northernMossRemainsLabel.setText(decimalFormat.format(northernMossRemains));
             northernMossTradeCoinsLabel.setText(decimalFormat.format(northernMossRemains * -5));
             northernMossRubLabel.setText(decimalFormat.format(person.getNorthernMoss() * 32));
             dopeStoneLabel.setText(decimalFormat.format(person.getDopeStone()));
-            dopeStoneRemainsLabel.setText(decimalFormat.format(dopeStoneRemains));
+            //dopeStoneRemainsLabel.setText(decimalFormat.format(dopeStoneRemains));
             dopeStoneTradeCoinsLabel.setText(decimalFormat.format(dopeStoneRemains * -8));
             dopeStoneRubLabel.setText(decimalFormat.format(person.getDopeStone() * 40));
             remainsOfBatteriesLabel.setText(decimalFormat.format(person.getRemainsOfBatteries()));
-            remainsOfBatteriesRemainsLabel.setText(decimalFormat.format(remainsOfBatteriesRemains));
+            //remainsOfBatteriesRemainsLabel.setText(decimalFormat.format(remainsOfBatteriesRemains));
             remainsOfBatteriesTradeCoinsLabel.setText(decimalFormat.format(remainsOfBatteriesRemains * -7));
             remainsOfBatteriesRubLabel.setText(decimalFormat.format(person.getRemainsOfBatteries() * 36));
             betaDataFragmentLabel.setText(decimalFormat.format(person.getBetaDataFragment()));
-            betaDataFragmentRemainsLabel.setText(decimalFormat.format(betaDataFragmentRemains));
+            //betaDataFragmentRemainsLabel.setText(decimalFormat.format(betaDataFragmentRemains));
             betaDataFragmentTradeCoinsLabel.setText(decimalFormat.format(betaDataFragmentRemains * -40));
             betaDataFragmentRubLabel.setText(decimalFormat.format(person.getBetaDataFragment() * 90));
 
@@ -449,27 +459,27 @@ public class PersonInfoController {
             group_5Label.setText(decimalFormat.format(group_5));
             group_5TradeCoinsLabel.setText(decimalFormat.format(group_5TradeCoins));
             redFernLabel.setText(decimalFormat.format(person.getRedFern()));
-            redFernRemainsLabel.setText(decimalFormat.format(redFernRemains));
+            //redFernRemainsLabel.setText(decimalFormat.format(redFernRemains));
             redFernTradeCoinsLabel.setText(decimalFormat.format(redFernRemains * -10));
             redFernRubLabel.setText(decimalFormat.format(person.getRedFern() * 60));
             substance07270Label.setText(decimalFormat.format(person.getSubstance07270()));
-            substance07270RemainsLabel.setText(decimalFormat.format(substance07270Remains));
+            //substance07270RemainsLabel.setText(decimalFormat.format(substance07270Remains));
             substance07270TradeCoinsLabel.setText(decimalFormat.format(substance07270Remains * -8));
             substance07270RubLabel.setText(decimalFormat.format(person.getSubstance07270() * 48));
             remainsOfPsyTrackerLabel.setText(decimalFormat.format(person.getRemainsOfPsyTracker()));
-            remainsOfPsyTrackerRemainsLabel.setText(decimalFormat.format(remainsOfPsyTrackerRemains));
+            //remainsOfPsyTrackerRemainsLabel.setText(decimalFormat.format(remainsOfPsyTrackerRemains));
             remainsOfPsyTrackerTradeCoinsLabel.setText(decimalFormat.format(remainsOfPsyTrackerRemains * -7));
             remainsOfPsyTrackerRubLabel.setText(decimalFormat.format(person.getRemainsOfPsyTracker() * 42));
             gammaDataFragmentLabel.setText(decimalFormat.format(person.getGammaDataFragment()));
-            gammaDataFragmentRemainsLabel.setText(decimalFormat.format(gammaDataFragmentRemains));
+            //gammaDataFragmentRemainsLabel.setText(decimalFormat.format(gammaDataFragmentRemains));
             gammaDataFragmentTradeCoinsLabel.setText(decimalFormat.format(gammaDataFragmentRemains * -66));
             gammaDataFragmentRubLabel.setText(decimalFormat.format(person.getGammaDataFragment() * 100));
             quantumBatteryLabel.setText(decimalFormat.format(person.getQuantumBattery()));
-            quantumBatteryRemainsLabel.setText(decimalFormat.format(quantumBatteryRemains));
+            //quantumBatteryRemainsLabel.setText(decimalFormat.format(quantumBatteryRemains));
             quantumBatteryTradeCoinsLabel.setText(decimalFormat.format(quantumBatteryRemains * -42));
             quantumBatteryRubLabel.setText(decimalFormat.format(person.getQuantumBattery() * 450));
             anomalousSerumLabel.setText(decimalFormat.format(person.getAnomalousSerum()));
-            anomalousSerumRemainsLabel.setText(decimalFormat.format(anomalousSerumRemains));
+            //anomalousSerumRemainsLabel.setText(decimalFormat.format(anomalousSerumRemains));
 
             group_6 = (person.getBitterleaf() * 50) + (person.getLimbo() * 50) + (person.getLambdaDataFragment() * 100) + (person.getAnomalousBattery() * 2000) + (person.getLimboPlasma() * 3000);
             bitterleafRemains = person.getBitterleaf() - person.getBitterleafRemains() < 0 ? person.getBitterleaf() - person.getBitterleafRemains() : 0;
@@ -482,23 +492,23 @@ public class PersonInfoController {
             group_6Label.setText(decimalFormat.format(group_6));
             group_6TradeCoinsLabel.setText(decimalFormat.format(group_6TradeCoins));
             bitterleafLabel.setText(decimalFormat.format(person.getBitterleaf()));
-            bitterleafRemainsLabel.setText(decimalFormat.format(bitterleafRemains));
+            //bitterleafRemainsLabel.setText(decimalFormat.format(bitterleafRemains));
             bitterleafTradeCoinsLabel.setText(decimalFormat.format(bitterleafRemains * -16));
             bitterleafRubLabel.setText(decimalFormat.format(person.getBitterleaf() * 50));
             limboLabel.setText(decimalFormat.format(person.getLimbo()));
-            limboRemainsLabel.setText(decimalFormat.format(limboRemains));
+            //limboRemainsLabel.setText(decimalFormat.format(limboRemains));
             limboTradeCoinsLabel.setText(decimalFormat.format(limboRemains * -20));
             limboRubLabel.setText(decimalFormat.format(person.getLimbo() * 50));
             lambdaDataFragmentLabel.setText(decimalFormat.format(person.getLambdaDataFragment()));
-            lambdaDataFragmentRemainsLabel.setText(decimalFormat.format(lambdaDataFragmentRemains));
+            //lambdaDataFragmentRemainsLabel.setText(decimalFormat.format(lambdaDataFragmentRemains));
             lambdaDataFragmentTradeCoinsLabel.setText(decimalFormat.format(lambdaDataFragmentRemains * -100));
             lambdaDataFragmentRubLabel.setText(decimalFormat.format(person.getLambdaDataFragment() * 100));
             anomalousBatteryLabel.setText(decimalFormat.format(person.getAnomalousBattery()));
-            anomalousBatteryRemainsLabel.setText(decimalFormat.format(anomalousBatteryRemains));
+            //anomalousBatteryRemainsLabel.setText(decimalFormat.format(anomalousBatteryRemains));
             anomalousBatteryTradeCoinsLabel.setText(decimalFormat.format(anomalousBatteryRemains * -500));
             anomalousBatteryRubLabel.setText(decimalFormat.format(person.getAnomalousBattery() * 2000));
             limboPlasmaLabel.setText(decimalFormat.format(person.getLimboPlasma()));
-            limboPlasmaRemainsLabel.setText(decimalFormat.format(limboPlasmaRemains));
+            //limboPlasmaRemainsLabel.setText(decimalFormat.format(limboPlasmaRemains));
             limboPlasmaTradeCoinsLabel.setText(decimalFormat.format(limboPlasmaRemains * -800));
             limboPlasmaRubLabel.setText(decimalFormat.format(person.getLimboPlasma() * 3000));
 
@@ -508,12 +518,15 @@ public class PersonInfoController {
             group_AllTradeCoinsLabel.setText(decimalFormat.format(group_AllTradeCoins));
 
             costLabel.setText(decimalFormat.format(person.getCost()));
-            costRemainsLabel.setText(decimalFormat.format(person.getCostRemains()));
+            costRemainsLabel.setText(decimalFormat.format(person.getCost() - person.getCostRemains() < 0 ? person.getCost() - person.getCostRemains() : 0));
             tradeCoinsLabel.setText(decimalFormat.format(person.getTradeCoins()));
-            tradeCoinsRemainsLabel.setText(decimalFormat.format(person.getTradeCoins() - group_AllTradeCoins));
+            tradeCoinsRemainsLabel.setText(decimalFormat.format(person.getTradeCoins() - group_AllTradeCoins < 0 ? person.getTradeCoins() - group_AllTradeCoins : 0));
             arsenalPointsLabel.setText(decimalFormat.format(person.getArsenalPoints()));
             seasonBoxLabel.setText(decimalFormat.format(person.getSeasonBox()));
             combatPassLevelLabel.setText(decimalFormat.format(person.getCombatPassLevel()));
+
+            updareRemainsLabrls(person);
+
         } else {
             nicknameFractionLabel.setText("");
 
@@ -639,6 +652,70 @@ public class PersonInfoController {
             arsenalPointsLabel.setText("-");
             seasonBoxLabel.setText("-");
             combatPassLevelLabel.setText("-");
+        }
+    }
+
+    private void updareRemainsLabrls(Person person) {
+        if (checkBox.isSelected()) {
+            greenMoldRemainsLabel.setText(decimalFormat.format(person.getGreenMold() - person.getGreenMoldRemains()));
+            swampStoneRemainsLabel.setText(decimalFormat.format(person.getSwampStone() - person.getSwampStoneRemains()));
+
+            stinkyRootRemainsLabel.setText(decimalFormat.format(person.getStinkyRoot() - person.getStinkyRootRemains()));
+            crappiteRemainsLabel.setText(decimalFormat.format(person.getCrappite() - person.getCrappiteRemains()));
+            piecesOfCopperWireRemainsLabel.setText(decimalFormat.format(person.getPiecesOfCopperWire() - person.getPiecesOfCopperWireRemains()));
+
+            sprigOfChernobylChamomileRemainsLabel.setText(decimalFormat.format(person.getSprigOfChernobylChamomile() - person.getSprigOfChernobylChamomileRemains()));
+            pickleRemainsLabel.setText(decimalFormat.format(person.getPickle() - person.getPickleRemains()));
+            remainsOfRadioTransmitterRemainsLabel.setText(decimalFormat.format(person.getRemainsOfRadioTransmitter() - person.getRemainsOfRadioTransmitterRemains()));
+            alphaDataFragmentRemainsLabel.setText(decimalFormat.format(person.getAlphaDataFragment() - person.getAlphaDataFragmentRemains()));
+
+            northernMossRemainsLabel.setText(decimalFormat.format(person.getNorthernMoss() - person.getNorthernMossRemains()));
+            dopeStoneRemainsLabel.setText(decimalFormat.format(person.getDopeStone() - person.getDopeStoneRemains()));
+            remainsOfBatteriesRemainsLabel.setText(decimalFormat.format(person.getRemainsOfBatteries() - person.getRemainsOfBatteriesRemains()));
+            betaDataFragmentRemainsLabel.setText(decimalFormat.format(person.getBetaDataFragment() - person.getBetaDataFragmentRemains()));
+
+            redFernRemainsLabel.setText(decimalFormat.format(person.getRedFern() - person.getRedFernRemains()));
+            substance07270RemainsLabel.setText(decimalFormat.format(person.getSubstance07270() - person.getSubstance07270Remains()));
+            remainsOfPsyTrackerRemainsLabel.setText(decimalFormat.format(person.getRemainsOfPsyTracker() - person.getRemainsOfPsyTrackerRemains()));
+            gammaDataFragmentRemainsLabel.setText(decimalFormat.format(person.getGammaDataFragment() - person.getGammaDataFragmentRemains()));
+            quantumBatteryRemainsLabel.setText(decimalFormat.format(person.getQuantumBattery() - person.getQuantumBatteryRemains()));
+            anomalousSerumRemainsLabel.setText(decimalFormat.format(person.getAnomalousSerum() - person.getAnomalousSerumRemains()));
+
+            bitterleafRemainsLabel.setText(decimalFormat.format(person.getBitterleaf() - person.getBitterleafRemains()));
+            limboRemainsLabel.setText(decimalFormat.format(person.getLimbo() - person.getLimboRemains()));
+            lambdaDataFragmentRemainsLabel.setText(decimalFormat.format(person.getLambdaDataFragment() - person.getLambdaDataFragmentRemains()));
+            anomalousBatteryRemainsLabel.setText(decimalFormat.format(person.getAnomalousBattery() - person.getAnomalousBatteryRemains()));
+            limboPlasmaRemainsLabel.setText(decimalFormat.format(person.getLimboPlasma() - person.getLimboPlasmaRemains()));
+        } else {
+            greenMoldRemainsLabel.setText(decimalFormat.format(greenMoldRemains));
+            swampStoneRemainsLabel.setText(decimalFormat.format(swampStoneRemains));
+
+            stinkyRootRemainsLabel.setText(decimalFormat.format(stinkyRootRemains));
+            crappiteRemainsLabel.setText(decimalFormat.format(crappiteRemains));
+            piecesOfCopperWireRemainsLabel.setText(decimalFormat.format(piecesOfCopperWireRemains));
+
+            sprigOfChernobylChamomileRemainsLabel.setText(decimalFormat.format(sprigOfChernobylChamomileRemains));
+            pickleRemainsLabel.setText(decimalFormat.format(pickleRemains));
+            remainsOfRadioTransmitterRemainsLabel.setText(decimalFormat.format(remainsOfRadioTransmitterRemains));
+            alphaDataFragmentRemainsLabel.setText(decimalFormat.format(alphaDataFragmentRemains));
+
+            northernMossRemainsLabel.setText(decimalFormat.format(northernMossRemains));
+            dopeStoneRemainsLabel.setText(decimalFormat.format(dopeStoneRemains));
+            remainsOfBatteriesRemainsLabel.setText(decimalFormat.format(remainsOfBatteriesRemains));
+            betaDataFragmentRemainsLabel.setText(decimalFormat.format(betaDataFragmentRemains));
+
+            redFernRemainsLabel.setText(decimalFormat.format(redFernRemains));
+            substance07270RemainsLabel.setText(decimalFormat.format(substance07270Remains));
+            remainsOfPsyTrackerRemainsLabel.setText(decimalFormat.format(remainsOfPsyTrackerRemains));
+            gammaDataFragmentRemainsLabel.setText(decimalFormat.format(gammaDataFragmentRemains));
+            quantumBatteryRemainsLabel.setText(decimalFormat.format(quantumBatteryRemains));
+            anomalousSerumRemainsLabel.setText(decimalFormat.format(anomalousSerumRemains));
+
+            bitterleafRemainsLabel.setText(decimalFormat.format(bitterleafRemains));
+            limboRemainsLabel.setText(decimalFormat.format(limboRemains));
+            lambdaDataFragmentRemainsLabel.setText(decimalFormat.format(lambdaDataFragmentRemains));
+            anomalousBatteryRemainsLabel.setText(decimalFormat.format(anomalousBatteryRemains));
+            limboPlasmaRemainsLabel.setText(decimalFormat.format(limboPlasmaRemains));
         }
     }
 
