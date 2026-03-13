@@ -21,22 +21,20 @@ public class MachineGunsController {
     private MenuBarBarterController barterController;
 
     @FXML
-    private Label l1label, l2label, l3label, l4label, l5label;
+    private Label l1label, l2label, l3label, l4label, l5label, l6label;
 
     @FXML
-    private TextField mg1301Field, mg1302Field, mg1303Field, mg1304Field, mg1305Field, mg1306Field;
+    private TextField mg1301Field, mg1302Field, mg1303Field, mg1304Field, mg1305Field, mg1306Field, mg1307Field;
 
     @FXML
     private ScrollPane scrollPane;
     @FXML
     private AnchorPane anchorPane;
 
-    /*
     @FXML
     public void initialize() {
         setupDragHandlers();
     }
-    */
 
     public void setPerson(Person person) {
         this.person = person;
@@ -54,14 +52,17 @@ public class MachineGunsController {
             if (fraction.equals("Рубеж")) {
                 l4label.setText("База «Рубежа» | 4 Уровень");
                 l5label.setText("База «Рубежа» | 6 Уровень");
+                l6label.setText("База «Рубежа» | 7 Уровень");
             }
             if (fraction.equals("Заря")) {
                 l4label.setText("База «Зари» | 4 Уровень");
                 l5label.setText("База «Зари» | 6 Уровень");
+                l6label.setText("База «Зари» | 7 Уровень");
             }
             if (fraction.equals("Сталкеры")) {
                 l4label.setText("Фракции Севера | 4 Уровень");
                 l5label.setText("Фракции Севера | 6 Уровень");
+                l6label.setText("Фракции Севера | 7 Уровень");
             }
         }
 
@@ -72,14 +73,17 @@ public class MachineGunsController {
             if (fraction.equals("Наемники")) {
                 l4label.setText("Лагерь «Наемников» | 4 Уровень");
                 l5label.setText("Лагерь «Наемников» | 6 Уровень");
+                l6label.setText("Лагерь «Наемников» | 7 Уровень");
             }
             if (fraction.equals("Завет")) {
                 l4label.setText("Лагерь «Завета» | 4 Уровень");
                 l5label.setText("Лагерь «Завета» | 6 Уровень");
+                l6label.setText("Лагерь «Завета» | 7 Уровень");
             }
             if (fraction.equals("Бандиты")) {
                 l4label.setText("Фракции Севера | 4 Уровень");
                 l5label.setText("Фракции Севера | 6 Уровень");
+                l6label.setText("Фракции Севера | 7 Уровень");
             }
         }
     }
@@ -93,6 +97,7 @@ public class MachineGunsController {
         mg1304Field.setText(Integer.toString(machineGunsCount.getMg1304()));
         mg1305Field.setText(Integer.toString(machineGunsCount.getMg1305()));
         mg1306Field.setText(Integer.toString(machineGunsCount.getMg1306()));
+        mg1307Field.setText(Integer.toString(machineGunsCount.getMg1307()));
     }
 
     // Вызов окна Автоматы
@@ -101,7 +106,6 @@ public class MachineGunsController {
         barterController.handleAssaultRifles();
     }
 
-    /*
     private void setupDragHandlers() {
         anchorPane.setOnMousePressed(event -> {
             if (event.isPrimaryButtonDown()) {
@@ -154,7 +158,7 @@ public class MachineGunsController {
 
     private void updateScrollOnDrag(double deltaX, double deltaY) {
         // Коэффициент чувствительности скроллинга
-        double scrollSensitivity = 0.001;
+        double scrollSensitivity = 0.003;
 
         // Вычисляем новые значения скролла на основе смещения мыши
         double newHvalue = scrollInitialHvalue - (deltaX * scrollSensitivity);
@@ -168,7 +172,6 @@ public class MachineGunsController {
         scrollPane.setHvalue(newHvalue);
         scrollPane.setVvalue(newVvalue);
     }
-    */
 
     @FXML
     private void handleMg1301Field() throws SQLException {
@@ -233,6 +236,17 @@ public class MachineGunsController {
             mg1306Field.setEditable(false);
         } else {
             mg1306Field.setEditable(true);
+        }
+    }
+
+    @FXML
+    private void handleMg1307Field() throws SQLException {
+        if(mg1307Field.isEditable()){
+            machineGunsCount.setMg1307(Integer.parseInt(mg1307Field.getText()));
+            SciDB.updateMachineGunsCount(person, machineGunsCount);
+            mg1307Field.setEditable(false);
+        } else {
+            mg1307Field.setEditable(true);
         }
     }
 }

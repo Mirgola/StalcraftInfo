@@ -9,16 +9,16 @@ import javafx.beans.property.StringProperty;
 public class MachineGunsCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
-    private final IntegerProperty mg1301, mg1302, mg1303, mg1304, mg1305, mg1306;
+    private final IntegerProperty mg1301, mg1302, mg1303, mg1304, mg1305, mg1306, mg1307;
 
     public MachineGunsCount(Integer idPerson, String nicknamePerson) {
         this(idPerson, nicknamePerson,
-                0,0,0,0,0,0);
+                0,0,0,0,0,0,0);
     }
 
     public MachineGunsCount(Integer idPerson, String nicknamePerson,
                               Integer mg1301, Integer mg1302, Integer mg1303, Integer mg1304, Integer mg1305,
-                              Integer mg1306) {
+                              Integer mg1306, Integer mg1307) {
         this.idPerson = new SimpleIntegerProperty(idPerson);
         this.nicknamePerson = new SimpleStringProperty(nicknamePerson);
         this.mg1301 = new SimpleIntegerProperty(mg1301);
@@ -27,6 +27,7 @@ public class MachineGunsCount implements BarterCount {
         this.mg1304 = new SimpleIntegerProperty(mg1304);
         this.mg1305 = new SimpleIntegerProperty(mg1305);
         this.mg1306 = new SimpleIntegerProperty(mg1306);
+        this.mg1307 = new SimpleIntegerProperty(mg1307);
     }
 
     public int getCountByWeaponId(String id) {
@@ -37,6 +38,7 @@ public class MachineGunsCount implements BarterCount {
             case "mg1304" -> getMg1304();
             case "mg1305" -> getMg1305();
             case "mg1306" -> getMg1306();
+            case "mg1307" -> getMg1307();
             default -> 0;
         };
     }
@@ -107,5 +109,14 @@ public class MachineGunsCount implements BarterCount {
 
     public void setMg1306(int mg1306) {
         this.mg1306.set(mg1306);
+    }
+
+    // DSA RPD - mg1307
+    public int getMg1307() {
+        return mg1307.get();
+    }
+
+    public void setMg1307(int mg1307) {
+        this.mg1307.set(mg1307);
     }
 }

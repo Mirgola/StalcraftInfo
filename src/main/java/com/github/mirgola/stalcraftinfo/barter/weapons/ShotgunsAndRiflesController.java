@@ -27,7 +27,7 @@ public class ShotgunsAndRiflesController {
 
     @FXML
     private TextField sar1501Field, sar1502Field, sar1503Field, sar1504Field, sar1505Field, sar1506Field, sar1507Field, sar1508Field, sar1509Field, sar1510Field,
-                      sar1511Field, sar1512Field, sar1513Field, sar1514Field, sar1515Field;
+                      sar1511Field, sar1512Field, sar1513Field, sar1514Field, sar1515Field, sar1516Field;
 
     @FXML
     public void initialize() {
@@ -114,6 +114,7 @@ public class ShotgunsAndRiflesController {
         sar1513Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1513()));
         sar1514Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1514()));
         sar1515Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1515()));
+        sar1516Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1516()));
     }
 
     private void setupDragHandlers() {
@@ -345,6 +346,17 @@ public class ShotgunsAndRiflesController {
             sar1515Field.setEditable(false);
         } else {
             sar1515Field.setEditable(true);
+        }
+    }
+
+    @FXML
+    private void handleSar1516Field() throws SQLException {
+        if(sar1516Field.isEditable()){
+            shotgunsAndRiflesCount.setSar1516(Integer.parseInt(sar1516Field.getText()));
+            SciDB.updateShotgunsAndRiflesCount(person, shotgunsAndRiflesCount);
+            sar1516Field.setEditable(false);
+        } else {
+            sar1516Field.setEditable(true);
         }
     }
 }

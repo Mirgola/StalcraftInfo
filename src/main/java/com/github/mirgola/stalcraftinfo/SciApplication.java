@@ -204,6 +204,42 @@ public class SciApplication extends Application {
         }
     }
 
+    // инициализация окна Баланс график
+    public void showBalanceChart() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("BalanceChart.fxml"));
+        AnchorPane balanceChart = (AnchorPane) fxmlLoader.load();
+
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.initOwner(primaryStage);
+        Scene scene = new Scene(balanceChart);
+        stage.setScene(scene);
+
+        BalanceChartController controller = fxmlLoader.getController();
+        controller.setStage(stage);
+
+        stage.showAndWait();
+    }
+
+    // Инициализация окна О программе
+    public void showAboutProgram() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(SciApplication.class.getResource("AboutProgram.fxml"));
+        AnchorPane aboutProgram = (AnchorPane) fxmlLoader.load();
+
+        Stage stage = new Stage();
+        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.initOwner(primaryStage);
+        Scene scene = new Scene(aboutProgram);
+        stage.setScene(scene);
+
+        AboutProgramController controller = fxmlLoader.getController();
+        controller.setStage(stage);
+
+        stage.showAndWait();
+    }
+
     // Инициализация окна Редактирование информации персонажа
     public boolean showPersonInfoEdin(Person person) {
         try {

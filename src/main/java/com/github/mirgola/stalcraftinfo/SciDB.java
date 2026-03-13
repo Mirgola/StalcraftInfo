@@ -100,6 +100,8 @@ public class SciDB {
             int limboPlasmaRemains = resultSet.getInt("limboPlasmaRemains");
             int costRemains = resultSet.getInt("costRemains");
 
+            String dateTime = resultSet.getString("dateTime");
+
             sciApplication.getPersonData().add(new Person(idPerson, nickname, fraction, greenMold, swampStone, stinkyRoot, crappite,
                     piecesOfCopperWire, sprigOfChernobylChamomile, pickle, remainsOfRadioTransmitter, alphaDataFragment,
                     northernMoss, dopeStone, remainsOfBatteries, betaDataFragment, redFern, substance07270,
@@ -109,7 +111,7 @@ public class SciDB {
                     pickleRemains, remainsOfRadioTransmitterRemains, alphaDataFragmentRemains, northernMossRemains, dopeStoneRemains,
                     remainsOfBatteriesRemains, betaDataFragmentRemains, redFernRemains, substance07270Remains, remainsOfPsyTrackerRemains,
                     gammaDataFragmentRemains, quantumBatteryRemains, anomalousSerumRemains, bitterleafRemains, limboRemains,
-                    lambdaDataFragmentRemains, anomalousBatteryRemains, limboPlasmaRemains, costRemains));
+                    lambdaDataFragmentRemains, anomalousBatteryRemains, limboPlasmaRemains, costRemains, dateTime));
         }
 
         resultSet.close();
@@ -256,8 +258,9 @@ public class SciDB {
                 int mg1304 = resultSet.getInt("mg1304");
                 int mg1305 = resultSet.getInt("mg1305");
                 int mg1306 = resultSet.getInt("mg1306");
+                int mg1307 = resultSet.getInt("mg1307");
                 sciApplication.getMachineGunsCountData().add(new MachineGunsCount(idPerson, nicknamePerson,
-                        mg1301, mg1302, mg1303, mg1304, mg1305, mg1306));
+                        mg1301, mg1302, mg1303, mg1304, mg1305, mg1306, mg1307));
             }
         }
     }
@@ -320,10 +323,11 @@ public class SciDB {
                 int sar1513 = resultSet.getInt("sar1513");
                 int sar1514 = resultSet.getInt("sar1514");
                 int sar1515 = resultSet.getInt("sar1515");
+                int sar1516 = resultSet.getInt("sar1516");
 
                 sciApplication.getShotgunsAndRiflesCountData().add(new ShotgunsAndRiflesCount(idPerson, nicknamePerson,
                         sar1501, sar1502, sar1503, sar1504, sar1505, sar1506, sar1507, sar1508, sar1509, sar1510,
-                        sar1511, sar1512, sar1513, sar1514, sar1515));
+                        sar1511, sar1512, sar1513, sar1514, sar1515, sar1516));
             }
         }
     }
@@ -917,6 +921,7 @@ public class SciDB {
                 updateIfChanged(person.getId(), "Person", "arsenalPoints", person.getArsenalPoints(), resultSet.getInt("arsenalPoints"));
                 updateIfChanged(person.getId(), "Person", "seasonBox", person.getSeasonBox(), resultSet.getInt("seasonBox"));
                 updateIfChanged(person.getId(), "Person", "combatPassLevel", person.getCombatPassLevel(), resultSet.getInt("combatPassLevel"));
+                updateIfChanged(person.getId(), "Person", "dateTime", person.getDateTime(), resultSet.getString("dateTime"));
             }
         }
     }
@@ -1040,7 +1045,7 @@ public class SciDB {
         }
     }
 
-    // 1.3 Изменение количества крафтов предметов для MeleeWeapons
+    // 1.3 Изменение количества крафтов предметов для MachineGuns
     public static void updateMachineGunsCount(Person person, MachineGunsCount machineGunsCount) throws SQLException {
         String Sql = "SELECT * FROM W_MachineGunsCount WHERE idPerson = ?";
 
@@ -1055,6 +1060,7 @@ public class SciDB {
                 updateIfChanged(person.getId(), "W_MachineGunsCount", "mg1304", machineGunsCount.getMg1304(), resultSet.getInt("mg1304"));
                 updateIfChanged(person.getId(), "W_MachineGunsCount", "mg1305", machineGunsCount.getMg1305(), resultSet.getInt("mg1305"));
                 updateIfChanged(person.getId(), "W_MachineGunsCount", "mg1306", machineGunsCount.getMg1306(), resultSet.getInt("mg1306"));
+                updateIfChanged(person.getId(), "W_MachineGunsCount", "mg1307", machineGunsCount.getMg1307(), resultSet.getInt("mg1307"));
             }
         }
     }
@@ -1117,7 +1123,8 @@ public class SciDB {
                 updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1512", shotgunsAndRiflesCount.getSar1512(), resultSet.getInt("sar1512"));
                 updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1513", shotgunsAndRiflesCount.getSar1513(), resultSet.getInt("sar1513"));
                 updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1514", shotgunsAndRiflesCount.getSar1514(), resultSet.getInt("sar1514"));
-                updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1515", shotgunsAndRiflesCount.getSar1515(), resultSet.getInt("sar1514"));
+                updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1515", shotgunsAndRiflesCount.getSar1515(), resultSet.getInt("sar1515"));
+                updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1516", shotgunsAndRiflesCount.getSar1516(), resultSet.getInt("sar1516"));
             }
         }
     }
@@ -1662,6 +1669,17 @@ public class SciDB {
 
             if (!isOkClicked()) {
                 okClicked = true;
+            }
+        }
+    }
+
+    private static void updateIfChanged(int personId, String tableName, String fieldName, String newValue, String currentValue) throws SQLException {
+        if (!newValue.equals(currentValue)) {
+            String sql = "UPDATE " + tableName + " SET " + fieldName + " = ? WHERE idPerson = ?";
+            try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                preparedStatement.setString(1, newValue);
+                preparedStatement.setInt(2, personId);
+                preparedStatement.executeUpdate();
             }
         }
     }

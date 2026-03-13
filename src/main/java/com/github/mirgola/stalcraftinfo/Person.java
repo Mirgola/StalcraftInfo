@@ -65,6 +65,8 @@ public class Person {
     private final IntegerProperty limboPlasmaRemains;
     private final IntegerProperty costRemains;
 
+    private final StringProperty dateTime;
+
     public Person(String nickname, String fraction) {
         this(0, nickname, fraction, 0, 0, 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0, 0, 0,
@@ -74,7 +76,7 @@ public class Person {
                 0, 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0, 0,
-                0, 0);
+                0, 0, "");
     }
 
     public Person(Integer idUser, String nickname, String fraction, Integer greenMold, Integer swampStone, Integer stinkyRoot ,Integer crappite,
@@ -88,7 +90,8 @@ public class Person {
                   Integer northernMossRemains, Integer dopeStoneRemains, Integer remainsOfBatteriesRemains, Integer betaDataFragmentRemains,
                   Integer redFernRemains, Integer substance07270Remains, Integer remainsOfPsyTrackerRemains, Integer gammaDataFragmentRemains,
                   Integer quantumBatteryRemains, Integer anomalousSerumRemains, Integer bitterleafRemains, Integer limboRemains,
-                  Integer lambdaDataFragmentRemains, Integer anomalousBatteryRemains, Integer limboPlasmaRemains, Integer costRemains) {
+                  Integer lambdaDataFragmentRemains, Integer anomalousBatteryRemains, Integer limboPlasmaRemains, Integer costRemains,
+                  String dateTime) {
         this.idUser = new SimpleIntegerProperty(idUser);
         this.nickname = new SimpleStringProperty(nickname);
         this.fraction = new SimpleStringProperty(fraction);
@@ -147,6 +150,8 @@ public class Person {
         this.anomalousBatteryRemains = new SimpleIntegerProperty(anomalousBatteryRemains);
         this.limboPlasmaRemains = new SimpleIntegerProperty(limboPlasmaRemains);
         this.costRemains = new SimpleIntegerProperty(costRemains);
+
+        this.dateTime = new SimpleStringProperty(dateTime);
     }
 
     // ID пользователя
@@ -622,5 +627,13 @@ public class Person {
     }
     public void setCostRemains(int costRemains) {
         this.costRemains.set(costRemains);
+    }
+
+    // Дата и время
+    public String getDateTime() {
+        return dateTime.get();
+    }
+    public void setDateTime (String dateTime) {
+        this.dateTime.set(dateTime);
     }
 }

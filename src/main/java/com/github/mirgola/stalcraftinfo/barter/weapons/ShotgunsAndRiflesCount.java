@@ -10,18 +10,19 @@ public class ShotgunsAndRiflesCount implements BarterCount {
     private final IntegerProperty idPerson;
     private final StringProperty nicknamePerson;
     private final IntegerProperty sar1501, sar1502, sar1503, sar1504, sar1505, sar1506, sar1507, sar1508, sar1509, sar1510,
-                                  sar1511, sar1512, sar1513, sar1514, sar1515;
+                                  sar1511, sar1512, sar1513, sar1514, sar1515, sar1516;
 
     public ShotgunsAndRiflesCount(Integer idPerson, String nicknamePerson) {
         this(idPerson, nicknamePerson,
                 0,0,0,0,0,0,0,0,0,0,
-                0,0,0,0,0);
+                0,0,0,0,0,0);
     }
 
     public ShotgunsAndRiflesCount(Integer idPerson, String nicknamePerson,
                               Integer sar1501, Integer sar1502, Integer sar1503, Integer sar1504, Integer sar1505,
                               Integer sar1506, Integer sar1507, Integer sar1508, Integer sar1509, Integer sar1510,
-                              Integer sar1511, Integer sar1512, Integer sar1513, Integer sar1514, Integer sar1515) {
+                              Integer sar1511, Integer sar1512, Integer sar1513, Integer sar1514, Integer sar1515,
+                              Integer sar1516) {
         this.idPerson = new SimpleIntegerProperty(idPerson);
         this.nicknamePerson = new SimpleStringProperty(nicknamePerson);
         this.sar1501 = new SimpleIntegerProperty(sar1501);
@@ -39,6 +40,7 @@ public class ShotgunsAndRiflesCount implements BarterCount {
         this.sar1513 = new SimpleIntegerProperty(sar1513);
         this.sar1514 = new SimpleIntegerProperty(sar1514);
         this.sar1515 = new SimpleIntegerProperty(sar1515);
+        this.sar1516 = new SimpleIntegerProperty(sar1516);
     }
 
     public int getCountByWeaponId(String id) {
@@ -58,6 +60,7 @@ public class ShotgunsAndRiflesCount implements BarterCount {
             case "sar1513" -> getSar1513();
             case "sar1514" -> getSar1514();
             case "sar1515" -> getSar1515();
+            case "sar1516" -> getSar1516();
             default -> 0;
         };
     }
@@ -209,5 +212,14 @@ public class ShotgunsAndRiflesCount implements BarterCount {
 
     public void setSar1515(int sar1515) {
         this.sar1515.set(sar1515);
+    }
+
+    // 16.АЕК-965 - sar1516
+    public int getSar1516() {
+        return sar1516.get();
+    }
+
+    public void setSar1516(int sar1516) {
+        this.sar1516.set(sar1516);
     }
 }

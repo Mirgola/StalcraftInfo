@@ -7,6 +7,7 @@ import com.github.mirgola.stalcraftinfo.barter.weapons.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableView;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class MenuBarController {
@@ -82,5 +83,17 @@ public class MenuBarController {
         int selectedIndex = personTable.getSelectionModel().getSelectedIndex();
         personTable.getItems().remove(selectedIndex);
         SciDB.deletePerson(person);
+    }
+
+    // Баланс график
+    @FXML
+    private void handleBalanceChart() throws IOException {
+        sciApplication.showBalanceChart();
+    }
+
+    // О программе
+    @FXML
+    private void handleAboutProgram() throws IOException {
+        sciApplication.showAboutProgram();
     }
 }

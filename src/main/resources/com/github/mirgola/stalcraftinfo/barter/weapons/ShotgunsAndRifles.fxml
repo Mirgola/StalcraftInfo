@@ -295,6 +295,21 @@
                   <TextField fx:id="sar1515Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleSar1515Field" prefHeight="30.0" prefWidth="47.0" visible="false" />
                </children>
             </Pane>
+            <Pane layoutX="1713.0" layoutY="230.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="3785.0" AnchorPane.topAnchor="210.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/weapon/shotgunsAndRifles/7ln2j.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="АЕК-965" />
+                  <TextField fx:id="sar1516Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleSar1516Field" prefHeight="30.0" prefWidth="47.0" visible="false" />
+               </children>
+            </Pane>
          </children>
       </AnchorPane>
    </content>

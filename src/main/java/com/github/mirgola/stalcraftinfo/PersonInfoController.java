@@ -304,6 +304,9 @@ public class PersonInfoController {
     @FXML
     private Label combatPassLevelLabel;
 
+    @FXML
+    private Label dataTimeLabel;
+
     private SciApplication sciApplication;
     private DecimalFormat decimalFormat = new DecimalFormat("###,###");
 
@@ -518,12 +521,14 @@ public class PersonInfoController {
             group_AllTradeCoinsLabel.setText(decimalFormat.format(group_AllTradeCoins));
 
             costLabel.setText(decimalFormat.format(person.getCost()));
-            costRemainsLabel.setText(decimalFormat.format(person.getCost() - person.getCostRemains() < 0 ? person.getCost() - person.getCostRemains() : 0));
+            //costRemainsLabel.setText(decimalFormat.format(person.getCost() - person.getCostRemains() < 0 ? person.getCost() - person.getCostRemains() : 0));
             tradeCoinsLabel.setText(decimalFormat.format(person.getTradeCoins()));
-            tradeCoinsRemainsLabel.setText(decimalFormat.format(person.getTradeCoins() - group_AllTradeCoins < 0 ? person.getTradeCoins() - group_AllTradeCoins : 0));
+            //tradeCoinsRemainsLabel.setText(decimalFormat.format(person.getTradeCoins() - group_AllTradeCoins < 0 ? person.getTradeCoins() - group_AllTradeCoins : 0));
             arsenalPointsLabel.setText(decimalFormat.format(person.getArsenalPoints()));
             seasonBoxLabel.setText(decimalFormat.format(person.getSeasonBox()));
             combatPassLevelLabel.setText(decimalFormat.format(person.getCombatPassLevel()));
+
+            dataTimeLabel.setText("Дата изменения - " + person.getDateTime());
 
             updareRemainsLabrls(person);
 
@@ -652,6 +657,8 @@ public class PersonInfoController {
             arsenalPointsLabel.setText("-");
             seasonBoxLabel.setText("-");
             combatPassLevelLabel.setText("-");
+
+            dataTimeLabel.setText("Дата изменения - ");
         }
     }
 
@@ -686,6 +693,9 @@ public class PersonInfoController {
             lambdaDataFragmentRemainsLabel.setText(decimalFormat.format(person.getLambdaDataFragment() - person.getLambdaDataFragmentRemains()));
             anomalousBatteryRemainsLabel.setText(decimalFormat.format(person.getAnomalousBattery() - person.getAnomalousBatteryRemains()));
             limboPlasmaRemainsLabel.setText(decimalFormat.format(person.getLimboPlasma() - person.getLimboPlasmaRemains()));
+
+            costRemainsLabel.setText(decimalFormat.format(person.getCost() - person.getCostRemains()));
+            tradeCoinsRemainsLabel.setText(decimalFormat.format(person.getTradeCoins() - group_AllTradeCoins));
         } else {
             greenMoldRemainsLabel.setText(decimalFormat.format(greenMoldRemains));
             swampStoneRemainsLabel.setText(decimalFormat.format(swampStoneRemains));
@@ -716,6 +726,9 @@ public class PersonInfoController {
             lambdaDataFragmentRemainsLabel.setText(decimalFormat.format(lambdaDataFragmentRemains));
             anomalousBatteryRemainsLabel.setText(decimalFormat.format(anomalousBatteryRemains));
             limboPlasmaRemainsLabel.setText(decimalFormat.format(limboPlasmaRemains));
+
+            costRemainsLabel.setText(decimalFormat.format(person.getCost() - person.getCostRemains() < 0 ? person.getCost() - person.getCostRemains() : 0));
+            tradeCoinsRemainsLabel.setText(decimalFormat.format(person.getTradeCoins() - group_AllTradeCoins < 0 ? person.getTradeCoins() - group_AllTradeCoins : 0));
         }
     }
 

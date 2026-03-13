@@ -3,7 +3,11 @@ package com.github.mirgola.stalcraftinfo;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class PersonInfoEditController {
     @FXML
@@ -79,7 +83,41 @@ public class PersonInfoEditController {
 
     @FXML
     private void initialize() {
+        setupAutoSelect(greenMoldField);
+        setupAutoSelect(swampStoneField);
 
+        setupAutoSelect(stinkyRootField);
+        setupAutoSelect(crappiteField);
+        setupAutoSelect(piecesOfCopperWireField);
+
+        setupAutoSelect(sprigOfChernobylChamomileField);
+        setupAutoSelect(pickleField);
+        setupAutoSelect(remainsOfRadioTransmitterField);
+        setupAutoSelect(alphaDataFragmentField);
+
+        setupAutoSelect(northernMossField);
+        setupAutoSelect(dopeStoneField);
+        setupAutoSelect(remainsOfBatteriesField);
+        setupAutoSelect(betaDataFragmentField);
+
+        setupAutoSelect(redFernField);
+        setupAutoSelect(substance07270Field);
+        setupAutoSelect(remainsOfPsyTrackerField);
+        setupAutoSelect(gammaDataFragmentField);
+        setupAutoSelect(quantumBatteryField);
+        setupAutoSelect(anomalousSerumField);
+
+        setupAutoSelect(bitterleafField);
+        setupAutoSelect(limboField);
+        setupAutoSelect(lambdaDataFragmentField);
+        setupAutoSelect(anomalousBatteryField);
+        setupAutoSelect(limboPlasmaField);
+
+        setupAutoSelect(costField);
+        setupAutoSelect(tradeCoinsField);
+        setupAutoSelect(arsenalPointsField);
+        setupAutoSelect(seasonBoxField);
+        setupAutoSelect(combatPassLevelField);
     }
 
     public void setStage(Stage stage) {
@@ -170,6 +208,8 @@ public class PersonInfoEditController {
             person.setSeasonBox(Integer.parseInt(seasonBoxField.getText()));
             person.setCombatPassLevel(Integer.parseInt(combatPassLevelField.getText()));
 
+            person.setDateTime(LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm")));
+
             okClicked = true;
             stage.close();
         }
@@ -179,6 +219,18 @@ public class PersonInfoEditController {
     @FXML
     private void handleCancel() {
         stage.close();
+    }
+
+    // Авто выделение содержимого при простом клике лкм
+    private void setupAutoSelect(TextField textField) {
+        if (textField != null) {
+            textField.setOnMouseClicked(event -> {
+                if (event.getButton() == MouseButton.PRIMARY) {
+                    textField.selectAll();
+                }
+            });
+        }
+
     }
 
     private  boolean isInputValid() {
