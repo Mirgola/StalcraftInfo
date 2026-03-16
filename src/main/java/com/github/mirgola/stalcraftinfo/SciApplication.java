@@ -26,6 +26,7 @@ public class SciApplication extends Application {
     private BorderPane stage;
     private BorderPane menuBar;
     private TableView<Person> personTable;
+    private int balance;
 
     private ObservableList<Person> personData = FXCollections.observableArrayList();
     private ObservableList<Barter> bartersData = FXCollections.observableArrayList();
@@ -85,6 +86,8 @@ public class SciApplication extends Application {
         SciDB.readCombatCount(this);
         SciDB.readCombinedCount(this);
         SciDB.readScientistCount(this);
+
+        setBalance();
     }
 
     public ObservableList<Person> getPersonData() {return personData;}
@@ -218,6 +221,7 @@ public class SciApplication extends Application {
 
         BalanceChartController controller = fxmlLoader.getController();
         controller.setStage(stage);
+        controller.setBalanceLabel(getBalance());
 
         stage.showAndWait();
     }
@@ -310,5 +314,16 @@ public class SciApplication extends Application {
 
     public Scene getScene() {
         return scene;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance() {
+        balance = 0;
+        for (Person person : personData) {
+            balance += person.getCost();
+        }
     }
 }

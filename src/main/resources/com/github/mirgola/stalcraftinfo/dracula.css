@@ -3354,7 +3354,7 @@ Text {
   -fx-background-color: -color-chart-1, white;
   -fx-background-insets: 0, 2;
   -fx-background-radius: 5px;
-  -fx-padding: 5px;
+  -fx-padding: 7px;
 }
 
 .chart-series-line {

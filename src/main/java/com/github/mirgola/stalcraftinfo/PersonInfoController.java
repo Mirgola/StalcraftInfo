@@ -740,6 +740,8 @@ public class PersonInfoController {
             if (okCliked) {
                 showPersonDetails(person);
                 SciDB.updatePersonInfo(person);
+                sciApplication.setBalance();
+                SciDB.valueTodayBalanceChart(sciApplication.getBalance());
             }
         }
     }

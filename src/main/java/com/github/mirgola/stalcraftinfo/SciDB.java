@@ -4,7 +4,11 @@ import com.github.mirgola.stalcraftinfo.barter.attachments.*;
 import com.github.mirgola.stalcraftinfo.barter.suits.*;
 import com.github.mirgola.stalcraftinfo.barter.weapons.*;
 import com.github.mirgola.stalcraftinfo.barter.other.*;
+import javafx.scene.chart.XYChart;
+
 import java.sql.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class SciDB {
     private static boolean okClicked = false;
@@ -1681,6 +1685,32 @@ public class SciDB {
                 preparedStatement.setInt(2, personId);
                 preparedStatement.executeUpdate();
             }
+        }
+    }
+
+    // Заполнение списка из таблицы "BalanceChart"
+    public static void BalanceChart(XYChart.Series<String, Number> series) throws SQLException{
+        try (ResultSet resultSet = statement.executeQuery("SELECT * FROM BalanceChart")) {
+            while (resultSet.next()) {
+                int value = resultSet.getInt("value");
+                Timestamp timestamp = resultSet.getTimestamp("created_at");
+                LocalDateTime dateTime = timestamp.toLocalDateTime();
+                String date = dateTime.format(DateTimeFormatter.ofPattern("dd.MM"));
+
+                series.getData().add(new XYChart.Data<>(date, value));
+            }
+        }
+    }
+
+    // Добавление/изменение данных баланса за текущий день
+    public static void valueTodayBalanceChart(int value) throws SQLException{
+        String today = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE);
+        String sql = "INSERT INTO BalanceChart (date, value) VALUES (?, ?) ON CONFLICT(date) DO UPDATE SET value = excluded.value, created_at = CURRENT_TIMESTAMP";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+            preparedStatement.setString(1, today);
+            preparedStatement.setInt(2, value);
+            preparedStatement.executeUpdate();
         }
     }
 
