@@ -23,7 +23,7 @@ public class SightsController {
     private AnchorPane anchorPane;
     
     @FXML
-    private Label l1label, l2label, l3label, l4label, l5label, l6label, l7label, l8label, l9label, l10label, l11label, l12label, l13label;
+    private Label l1label, l2label, l3label, l4label, l5label, l6label, l7label, l8label, l9label, l10label, l11label, l12label, l13label, l14label, l15label;
 
     @FXML
     private TextField s3401Field, s3402Field, s3403Field, s3404Field, s3405Field, s3406Field, s3407Field, s3408Field, s3409Field, s3410Field,
@@ -63,6 +63,8 @@ public class SightsController {
             if (fraction.equals("Сталкеры")) {
                 l13label.setText("Фракции Севера | 7 Уровень");
             }
+            l14label.setText("Бар «Пьяный Гейгер» | 7 Уровень");
+            l15label.setText("Бар «Пьяный Гейгер» | 9 Уровень");
         }
 
         if (fraction.equals("Наемники") || fraction.equals("Завет") || fraction.equals("Бандиты")) {
@@ -87,6 +89,8 @@ public class SightsController {
             if (fraction.equals("Бандиты")) {
                 l13label.setText("Фракции Севера | 7 Уровень");
             }
+            l14label.setText("Бар «Пьяный Гейгер» | 7 Уровень");
+            l15label.setText("Бар «Пьяный Гейгер» | 9 Уровень");
         }
     }
 

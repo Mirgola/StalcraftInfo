@@ -29,7 +29,7 @@ public class MagazinesController {
     private TextField m3201Field, m3202Field, m3203Field, m3204Field, m3205Field, m3206Field, m3207Field, m3208Field, m3209Field, m3210Field,
                       m3211Field, m3212Field, m3213Field, m3214Field, m3215Field, m3216Field, m3217Field, m3218Field, m3219Field, m3220Field,
                       m3221Field, m3222Field, m3223Field, m3224Field, m3225Field, m3226Field, m3227Field, m3228Field, m3229Field, m3230Field,
-                      m3231Field;
+                      m3231Field, m3232Field;
 
     @FXML
     public void initialize() {
@@ -116,6 +116,7 @@ public class MagazinesController {
         m3229Field.setText(Integer.toString(magazinesCount.getM3229()));
         m3230Field.setText(Integer.toString(magazinesCount.getM3230()));
         m3231Field.setText(Integer.toString(magazinesCount.getM3231()));
+        m3232Field.setText(Integer.toString(magazinesCount.getM3232()));
     }
 
     private void setupDragHandlers() {
@@ -523,6 +524,17 @@ public class MagazinesController {
             m3231Field.setEditable(false);
         } else {
             m3231Field.setEditable(true);
+        }
+    }
+
+    @FXML
+    private void handleM3232Field() throws SQLException {
+        if(m3232Field.isEditable()){
+            magazinesCount.setM3232(Integer.parseInt(m3232Field.getText()));
+            SciDB.updateMagazinesCount(person, magazinesCount);
+            m3232Field.setEditable(false);
+        } else {
+            m3232Field.setEditable(true);
         }
     }
 }

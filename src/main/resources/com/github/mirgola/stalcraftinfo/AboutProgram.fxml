@@ -8,7 +8,7 @@
    <children>
       <Label alignment="CENTER" layoutX="239.0" layoutY="36.0" text="О программе" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
       <Label text="Автор :  Mirgola" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="65.0" />
-      <Label layoutX="-2.0" layoutY="61.0" text="Версия : 0.9 Beta" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="45.0" />
+      <Label layoutX="-2.0" layoutY="61.0" text="Версия : 1.0 от 26.03.2026" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="45.0" />
       <Button contentDisplay="CENTER" layoutX="165.0" layoutY="359.0" mnemonicParsing="false" onAction="#closeStage" text="Закрыть" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="160.0" AnchorPane.rightAnchor="160.0" />
    </children>
 </AnchorPane>

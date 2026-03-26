@@ -12,14 +12,14 @@ public class MagazinesCount implements BarterCount {
     private final IntegerProperty m3201, m3202, m3203, m3204, m3205, m3206, m3207, m3208, m3209, m3210,
                                   m3211, m3212, m3213, m3214, m3215, m3216, m3217, m3218, m3219, m3220,
                                   m3221, m3222, m3223, m3224, m3225, m3226, m3227, m3228, m3229, m3230,
-                                  m3231;
+                                  m3231, m3232;
 
     public MagazinesCount(Integer idPerson, String nicknamePerson) {
         this(idPerson, nicknamePerson,
                 0,0,0,0,0,0,0,0,0,0,
                 0,0,0,0,0,0,0,0,0,0,
                 0,0,0,0,0,0,0,0,0,0,
-                0);
+                0, 0);
     }
 
     public MagazinesCount(Integer idPerson, String nicknamePerson,
@@ -29,7 +29,7 @@ public class MagazinesCount implements BarterCount {
                           Integer m3216, Integer m3217, Integer m3218, Integer m3219, Integer m3220,
                           Integer m3221, Integer m3222, Integer m3223, Integer m3224, Integer m3225,
                           Integer m3226, Integer m3227, Integer m3228, Integer m3229, Integer m3230,
-                          Integer m3231) {
+                          Integer m3231, Integer m3232) {
         this.idPerson = new SimpleIntegerProperty(idPerson);
         this.nicknamePerson = new SimpleStringProperty(nicknamePerson);
         this.m3201 = new SimpleIntegerProperty(m3201);
@@ -63,6 +63,7 @@ public class MagazinesCount implements BarterCount {
         this.m3229 = new SimpleIntegerProperty(m3229);
         this.m3230 = new SimpleIntegerProperty(m3230);
         this.m3231 = new SimpleIntegerProperty(m3231);
+        this.m3232 = new SimpleIntegerProperty(m3232);
     }
 
     public int getCountByWeaponId(String id) {
@@ -98,6 +99,7 @@ public class MagazinesCount implements BarterCount {
             case "m3229" -> getM3229();
             case "m3230" -> getM3230();
             case "m3231" -> getM3231();
+            case "m3232" -> getM3232();
             default -> 0;
         };
     }
@@ -393,5 +395,14 @@ public class MagazinesCount implements BarterCount {
 
     public void setM3231(int m3231) {
         this.m3231.set(m3231);
+    }
+
+    // 32.Барабанный магазин Сайга-12 - m3232
+    public int getM3232() {
+        return m3232.get();
+    }
+
+    public void setM3232(int m3232) {
+        this.m3232.set(m3232);
     }
 }

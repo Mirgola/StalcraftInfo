@@ -14,7 +14,7 @@ public class CosmeticsController {
     private CosmeticsCount cosmeticsCount;
 
     @FXML
-    private Label l1label, l2label;
+    private Label l1label, l2label, l3label;
 
     @FXML
     private TextField c2401Field, c2402Field, c2403Field;
@@ -37,6 +37,7 @@ public class CosmeticsController {
                 l1label.setText("Фракции Севера | 5 Уровень");
                 l2label.setText("Фракции Севера | 7 Уровень");
             }
+            l3label.setText("Бар «Пьяный Гейгер» | 8 Уровень");
         }
 
         if (fraction.equals("Наемники") || fraction.equals("Завет") || fraction.equals("Бандиты")) {
@@ -52,6 +53,7 @@ public class CosmeticsController {
                 l1label.setText("Фракции Севера | 5 Уровень");
                 l2label.setText("Фракции Севера | 7 Уровень");
             }
+            l3label.setText("Бар «Пьяный Гейгер» | 8 Уровень");
         }
     }
 

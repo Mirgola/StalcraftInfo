@@ -23,11 +23,12 @@ public class ShotgunsAndRiflesController {
     private AnchorPane anchorPane;
 
     @FXML
-    private Label l1label, l2label, l3label, l4label, l5label, l6label, l7label, l8label, l9label, l10label, l11label, l12label, l13label;
+    private Label l1label, l2label, l3label, l4label, l5label, l6label, l7label, l8label;
 
     @FXML
     private TextField sar1501Field, sar1502Field, sar1503Field, sar1504Field, sar1505Field, sar1506Field, sar1507Field, sar1508Field, sar1509Field, sar1510Field,
-                      sar1511Field, sar1512Field, sar1513Field, sar1514Field, sar1515Field, sar1516Field;
+                      sar1511Field, sar1512Field, sar1513Field, sar1514Field, sar1515Field, sar1516Field, sar1517Field, sar1518Field, sar1519Field, sar1520Field,
+                      sar1521Field, sar1522Field, sar1523Field;
 
     @FXML
     public void initialize() {
@@ -41,57 +42,57 @@ public class ShotgunsAndRiflesController {
     public void setLabel(String fraction) {
         if (fraction.equals("Рубеж") || fraction.equals("Заря") || fraction.equals("Сталкеры")) {
             l1label.setText("Ставка Атамана | 1 Уровень");
-            l2label.setText("Ставка Атамана | 2 Уровень");
-            l3label.setText("Ставка Атамана | 3 Уровень");
-            l4label.setText("Пожарная часть | 1 Уровень");
-            l5label.setText("Пожарная часть | 2 Уровень");
-            l6label.setText("Пожарная часть | 3 Уровень");
-            l7label.setText("Бар | 2 Уровень");
-            l8label.setText("Бар | 5 Уровень");
-            l9label.setText("Бар | 6 Уровень");
-            l10label.setText("Бар | 7 Уровень");
+
+            l2label.setText("Ставка Атамана | 3 Уровень");
+
+            l3label.setText("Пожарная часть | 2 Уровень");
+
+            l4label.setText("Бар | 2 Уровень");
+
+            l5label.setText("Бар | 6 Уровень");
+
             if (fraction.equals("Рубеж")) {
-                l11label.setText("База «Рубежа» | 3 Уровень");
-                l12label.setText("База «Рубежа» | 6 Уровень");
-                l13label.setText("База «Рубежа» | 7 Уровень");
+                l6label.setText("База «Рубежа» | 3 Уровень");
+                l7label.setText("База «Рубежа» | 6 Уровень");
+                l8label.setText("База «Рубежа» | 7 Уровень");
             }
             if (fraction.equals("Заря")) {
-                l11label.setText("База «Зари» | 3 Уровень");
-                l12label.setText("База «Зари» | 6 Уровень");
-                l13label.setText("База «Зари» | 7 Уровень");
+                l6label.setText("База «Зари» | 3 Уровень");
+                l7label.setText("База «Зари» | 6 Уровень");
+                l8label.setText("База «Зари» | 7 Уровень");
             }
             if (fraction.equals("Сталкеры")) {
-                l11label.setText("Фракции Севера | 3 Уровень");
-                l12label.setText("Фракции Севера | 6 Уровень");
-                l13label.setText("Фракции Севера | 7 Уровень");
+                l6label.setText("Фракции Севера | 3 Уровень");
+                l7label.setText("Фракции Севера | 6 Уровень");
+                l8label.setText("Фракции Севера | 7 Уровень");
             }
         }
 
         if (fraction.equals("Наемники") || fraction.equals("Завет") || fraction.equals("Бандиты")) {
             l1label.setText("Лодочная станция | 1 Уровень");
-            l2label.setText("Лодочная станция | 2 Уровень");
-            l3label.setText("Лодочная станция | 3 Уровень");
-            l4label.setText("Сельская школа | 1 Уровень");
-            l5label.setText("Сельская школа | 2 Уровень");
-            l6label.setText("Сельская школа | 3 Уровень");
-            l7label.setText("Бар | 2 Уровень");
-            l8label.setText("Бар | 5 Уровень");
-            l9label.setText("Бар | 6 Уровень");
-            l10label.setText("Бар | 7 Уровень");
+
+            l2label.setText("Лодочная станция | 3 Уровень");
+
+            l3label.setText("Сельская школа | 2 Уровень");
+
+            l4label.setText("Бар | 2 Уровень");
+
+            l5label.setText("Бар | 6 Уровень");
+
             if (fraction.equals("Наемники")) {
-                l11label.setText("Лагерь «Наемников» | 3 Уровень");
-                l12label.setText("Лагерь «Наемников» | 6 Уровень");
-                l13label.setText("Лагерь «Наемников» | 7 Уровень");
+                l6label.setText("Лагерь «Наемников» | 3 Уровень");
+                l7label.setText("Лагерь «Наемников» | 6 Уровень");
+                l8label.setText("Лагерь «Наемников» | 7 Уровень");
             }
             if (fraction.equals("Завет")) {
-                l11label.setText("Лагерь «Завета» | 3 Уровень");
-                l12label.setText("Лагерь «Завета» | 6 Уровень");
-                l13label.setText("Лагерь «Завета» | 7 Уровень");
+                l6label.setText("Лагерь «Завета» | 3 Уровень");
+                l7label.setText("Лагерь «Завета» | 6 Уровень");
+                l8label.setText("Лагерь «Завета» | 7 Уровень");
             }
             if (fraction.equals("Бандиты")) {
-                l11label.setText("Фракции Севера | 3 Уровень");
-                l12label.setText("Фракции Севера | 6 Уровень");
-                l13label.setText("Фракции Севера | 7 Уровень");
+                l6label.setText("Фракции Севера | 3 Уровень");
+                l7label.setText("Фракции Севера | 6 Уровень");
+                l8label.setText("Фракции Севера | 7 Уровень");
             }
         }
     }
@@ -115,6 +116,13 @@ public class ShotgunsAndRiflesController {
         sar1514Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1514()));
         sar1515Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1515()));
         sar1516Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1516()));
+        sar1517Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1517()));
+        sar1518Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1518()));
+        sar1519Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1519()));
+        sar1520Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1520()));
+        sar1521Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1521()));
+        sar1522Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1522()));
+        sar1523Field.setText(Integer.toString(shotgunsAndRiflesCount.getSar1523()));
     }
 
     private void setupDragHandlers() {
@@ -357,6 +365,83 @@ public class ShotgunsAndRiflesController {
             sar1516Field.setEditable(false);
         } else {
             sar1516Field.setEditable(true);
+        }
+    }
+
+    @FXML
+    private void handleSar1517Field() throws SQLException {
+        if(sar1517Field.isEditable()){
+            shotgunsAndRiflesCount.setSar1517(Integer.parseInt(sar1517Field.getText()));
+            SciDB.updateShotgunsAndRiflesCount(person, shotgunsAndRiflesCount);
+            sar1517Field.setEditable(false);
+        } else {
+            sar1517Field.setEditable(true);
+        }
+    }
+
+    @FXML
+    private void handleSar1518Field() throws SQLException {
+        if(sar1518Field.isEditable()){
+            shotgunsAndRiflesCount.setSar1518(Integer.parseInt(sar1518Field.getText()));
+            SciDB.updateShotgunsAndRiflesCount(person, shotgunsAndRiflesCount);
+            sar1518Field.setEditable(false);
+        } else {
+            sar1518Field.setEditable(true);
+        }
+    }
+
+    @FXML
+    private void handleSar1519Field() throws SQLException {
+        if(sar1519Field.isEditable()){
+            shotgunsAndRiflesCount.setSar1519(Integer.parseInt(sar1519Field.getText()));
+            SciDB.updateShotgunsAndRiflesCount(person, shotgunsAndRiflesCount);
+            sar1519Field.setEditable(false);
+        } else {
+            sar1519Field.setEditable(true);
+        }
+    }
+
+    @FXML
+    private void handleSar1520Field() throws SQLException {
+        if(sar1520Field.isEditable()){
+            shotgunsAndRiflesCount.setSar1520(Integer.parseInt(sar1520Field.getText()));
+            SciDB.updateShotgunsAndRiflesCount(person, shotgunsAndRiflesCount);
+            sar1520Field.setEditable(false);
+        } else {
+            sar1520Field.setEditable(true);
+        }
+    }
+
+    @FXML
+    private void handleSar1521Field() throws SQLException {
+        if(sar1521Field.isEditable()){
+            shotgunsAndRiflesCount.setSar1521(Integer.parseInt(sar1521Field.getText()));
+            SciDB.updateShotgunsAndRiflesCount(person, shotgunsAndRiflesCount);
+            sar1521Field.setEditable(false);
+        } else {
+            sar1521Field.setEditable(true);
+        }
+    }
+
+    @FXML
+    private void handleSar1522Field() throws SQLException {
+        if(sar1522Field.isEditable()){
+            shotgunsAndRiflesCount.setSar1522(Integer.parseInt(sar1522Field.getText()));
+            SciDB.updateShotgunsAndRiflesCount(person, shotgunsAndRiflesCount);
+            sar1522Field.setEditable(false);
+        } else {
+            sar1522Field.setEditable(true);
+        }
+    }
+
+    @FXML
+    private void handleSar1523Field() throws SQLException {
+        if(sar1523Field.isEditable()){
+            shotgunsAndRiflesCount.setSar1523(Integer.parseInt(sar1523Field.getText()));
+            SciDB.updateShotgunsAndRiflesCount(person, shotgunsAndRiflesCount);
+            sar1523Field.setEditable(false);
+        } else {
+            sar1523Field.setEditable(true);
         }
     }
 }

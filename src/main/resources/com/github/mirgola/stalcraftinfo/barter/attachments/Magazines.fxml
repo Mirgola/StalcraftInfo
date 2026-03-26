@@ -457,7 +457,7 @@
                   <Polyline fill="WHITE" layoutX="136.0" layoutY="49.0" points="-81.0, -40.0, -100.0, -50.0, -100.0, -27.0, -81.0, -40.0" scaleX="0.5" scaleY="0.5" stroke="WHITE" strokeType="INSIDE" />
                </children>
             </Pane>
-            <Pane layoutX="1713.0" layoutY="230.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1090.0">
+            <Pane layoutX="1713.0" layoutY="230.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" visible="false" AnchorPane.leftAnchor="635.0" AnchorPane.topAnchor="1090.0">
                <children>
                   <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
                      <children>
@@ -651,6 +651,21 @@
                   </Pane>
                   <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #d064bc;" text="Магазин 5.56 NATO STANAG" />
                   <TextField fx:id="m3226Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3226Field" prefHeight="30.0" prefWidth="47.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="1683.0" layoutY="200.0" prefHeight="85.0" prefWidth="265.0" style="-fx-border-color: #FFFFFF;" AnchorPane.leftAnchor="1895.0" AnchorPane.topAnchor="100.0">
+               <children>
+                  <Pane layoutX="2.5" layoutY="2.5" prefHeight="80.0" prefWidth="80.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #3C3F52;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/attachments/magazines/zz92m.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label layoutX="90.0" prefHeight="20.0" prefWidth="175.0" style="-fx-text-fill: #fa5665;" text="Барабанный магазин Сайга-12" />
+                  <TextField fx:id="m3232Field" alignment="CENTER" editable="false" layoutX="90.0" layoutY="45.0" onAction="#handleM3232Field" prefHeight="30.0" prefWidth="47.0" />
                </children>
             </Pane>
          </children>

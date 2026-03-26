@@ -13,10 +13,10 @@ public class HanguardsAndBracketsController {
     private HanguardsAndBracketsCount hanguardsAndBracketsCount;
     
     @FXML
-    private Label l1label, l2label, l3label, l4label, l5label;
+    private Label l1label, l2label, l3label, l4label;
 
     @FXML
-    private TextField hab3301Field, hab3302Field, hab3303Field, hab3304Field, hab3305Field, hab3306Field;
+    private TextField hab3301Field, hab3302Field, hab3303Field, hab3304Field, hab3305Field;
 
     public void setPerson(Person person) {
         this.person = person;
@@ -28,7 +28,6 @@ public class HanguardsAndBracketsController {
             l2label.setText("Пожарная часть | 1 Уровень");
             l3label.setText("Пожарная часть | 3 Уровень");
             l4label.setText("Бар | 1 Уровень");
-            l5label.setText("Бар | 7 Уровень");
         }
 
         if (fraction.equals("Наемники") || fraction.equals("Завет") || fraction.equals("Бандиты")) {
@@ -36,7 +35,6 @@ public class HanguardsAndBracketsController {
             l2label.setText("Сельская школа | 1 Уровень");
             l3label.setText("Сельская школа | 3 Уровень");
             l4label.setText("Бар | 1 Уровень");
-            l5label.setText("Бар | 7 Уровень");
         }
     }
 
@@ -48,7 +46,6 @@ public class HanguardsAndBracketsController {
         hab3303Field.setText(Integer.toString(hanguardsAndBracketsCount.getHab3303()));
         hab3304Field.setText(Integer.toString(hanguardsAndBracketsCount.getHab3304()));
         hab3305Field.setText(Integer.toString(hanguardsAndBracketsCount.getHab3305()));
-        hab3306Field.setText(Integer.toString(hanguardsAndBracketsCount.getHab3306()));
     }
 
     @FXML
@@ -103,17 +100,6 @@ public class HanguardsAndBracketsController {
             hab3305Field.setEditable(false);
         } else {
             hab3305Field.setEditable(true);
-        }
-    }
-
-    @FXML
-    private void handleHab3306Field() throws SQLException {
-        if(hab3306Field.isEditable()){
-            hanguardsAndBracketsCount.setHab3306(Integer.parseInt(hab3306Field.getText()));
-            SciDB.updateHanguardsAndBracketsCount(person, hanguardsAndBracketsCount);
-            hab3306Field.setEditable(false);
-        } else {
-            hab3306Field.setEditable(true);
         }
     }
 }

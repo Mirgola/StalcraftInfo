@@ -328,10 +328,18 @@ public class SciDB {
                 int sar1514 = resultSet.getInt("sar1514");
                 int sar1515 = resultSet.getInt("sar1515");
                 int sar1516 = resultSet.getInt("sar1516");
+                int sar1517 = resultSet.getInt("sar1517");
+                int sar1518 = resultSet.getInt("sar1518");
+                int sar1519 = resultSet.getInt("sar1519");
+                int sar1520 = resultSet.getInt("sar1520");
+                int sar1521 = resultSet.getInt("sar1521");
+                int sar1522 = resultSet.getInt("sar1522");
+                int sar1523 = resultSet.getInt("sar1523");
 
                 sciApplication.getShotgunsAndRiflesCountData().add(new ShotgunsAndRiflesCount(idPerson, nicknamePerson,
                         sar1501, sar1502, sar1503, sar1504, sar1505, sar1506, sar1507, sar1508, sar1509, sar1510,
-                        sar1511, sar1512, sar1513, sar1514, sar1515, sar1516));
+                        sar1511, sar1512, sar1513, sar1514, sar1515, sar1516, sar1517, sar1518, sar1519, sar1520,
+                        sar1521, sar1522, sar1523));
             }
         }
     }
@@ -648,12 +656,13 @@ public class SciDB {
                 int m3229 = resultSet.getInt("m3229");
                 int m3230 = resultSet.getInt("m3230");
                 int m3231 = resultSet.getInt("m3231");
+                int m3232 = resultSet.getInt("m3232");
 
                 sciApplication.getMagazinesCountData().add(new MagazinesCount(idPerson, nicknamePerson,
                         m3201, m3202, m3203, m3204, m3205, m3206, m3207, m3208, m3209, m3210,
                         m3211, m3212, m3213, m3214, m3215, m3216, m3217, m3218, m3219, m3220,
                         m3221, m3222, m3223, m3224, m3225, m3226, m3227, m3228, m3229, m3230,
-                        m3231));
+                        m3231, m3232));
             }
         }
     }
@@ -669,10 +678,9 @@ public class SciDB {
                 int hab3303 = resultSet.getInt("hab3303");
                 int hab3304 = resultSet.getInt("hab3304");
                 int hab3305 = resultSet.getInt("hab3305");
-                int hab3306 = resultSet.getInt("hab3306");
 
                 sciApplication.getHanguardsAndBracketsCountData().add(new HanguardsAndBracketsCount(idPerson, nicknamePerson,
-                        hab3301, hab3302, hab3303, hab3304, hab3305, hab3306));
+                        hab3301, hab3302, hab3303, hab3304, hab3305));
             }
         }
     }
@@ -1129,6 +1137,13 @@ public class SciDB {
                 updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1514", shotgunsAndRiflesCount.getSar1514(), resultSet.getInt("sar1514"));
                 updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1515", shotgunsAndRiflesCount.getSar1515(), resultSet.getInt("sar1515"));
                 updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1516", shotgunsAndRiflesCount.getSar1516(), resultSet.getInt("sar1516"));
+                updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1517", shotgunsAndRiflesCount.getSar1517(), resultSet.getInt("sar1517"));
+                updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1518", shotgunsAndRiflesCount.getSar1518(), resultSet.getInt("sar1518"));
+                updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1519", shotgunsAndRiflesCount.getSar1519(), resultSet.getInt("sar1519"));
+                updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1520", shotgunsAndRiflesCount.getSar1520(), resultSet.getInt("sar1520"));
+                updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1521", shotgunsAndRiflesCount.getSar1521(), resultSet.getInt("sar1521"));
+                updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1522", shotgunsAndRiflesCount.getSar1522(), resultSet.getInt("sar1522"));
+                updateIfChanged(person.getId(), "W_ShotgunsAndRiflesCount", "sar1523", shotgunsAndRiflesCount.getSar1523(), resultSet.getInt("sar1523"));
             }
         }
     }
@@ -1438,6 +1453,7 @@ public class SciDB {
                 updateIfChanged(person.getId(), "A_MagazinesCount", "m3229", magazinesCount.getM3229(), resultSet.getInt("m3229"));
                 updateIfChanged(person.getId(), "A_MagazinesCount", "m3230", magazinesCount.getM3230(), resultSet.getInt("m3230"));
                 updateIfChanged(person.getId(), "A_MagazinesCount", "m3231", magazinesCount.getM3231(), resultSet.getInt("m3231"));
+                updateIfChanged(person.getId(), "A_MagazinesCount", "m3232", magazinesCount.getM3232(), resultSet.getInt("m3232"));
             }
         }
     }
@@ -1456,7 +1472,6 @@ public class SciDB {
                 updateIfChanged(person.getId(), "A_HanguardsAndBracketsCount", "hab3303", hanguardsAndBracketsCount.getHab3303(), resultSet.getInt("hab3303"));
                 updateIfChanged(person.getId(), "A_HanguardsAndBracketsCount", "hab3304", hanguardsAndBracketsCount.getHab3304(), resultSet.getInt("hab3304"));
                 updateIfChanged(person.getId(), "A_HanguardsAndBracketsCount", "hab3305", hanguardsAndBracketsCount.getHab3305(), resultSet.getInt("hab3305"));
-                updateIfChanged(person.getId(), "A_HanguardsAndBracketsCount", "hab3306", hanguardsAndBracketsCount.getHab3306(), resultSet.getInt("hab3306"));
             }
         }
     }
@@ -1692,10 +1707,8 @@ public class SciDB {
     public static void BalanceChart(XYChart.Series<String, Number> series) throws SQLException{
         try (ResultSet resultSet = statement.executeQuery("SELECT * FROM BalanceChart")) {
             while (resultSet.next()) {
+                String date = resultSet.getString("date");
                 int value = resultSet.getInt("value");
-                Timestamp timestamp = resultSet.getTimestamp("created_at");
-                LocalDateTime dateTime = timestamp.toLocalDateTime();
-                String date = dateTime.format(DateTimeFormatter.ofPattern("dd.MM"));
 
                 series.getData().add(new XYChart.Data<>(date, value));
             }
@@ -1704,12 +1717,14 @@ public class SciDB {
 
     // Добавление/изменение данных баланса за текущий день
     public static void valueTodayBalanceChart(int value) throws SQLException{
-        String today = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE);
-        String sql = "INSERT INTO BalanceChart (date, value) VALUES (?, ?) ON CONFLICT(date) DO UPDATE SET value = excluded.value, created_at = CURRENT_TIMESTAMP";
+        String today = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM"));
+        String created_at = LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss"));
+        String sql = "INSERT INTO BalanceChart (date, value, created_at) VALUES (?, ?, ?) ON CONFLICT(date) DO UPDATE SET value = excluded.value, created_at = excluded.created_at";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
             preparedStatement.setString(1, today);
             preparedStatement.setInt(2, value);
+            preparedStatement.setString(3, created_at);
             preparedStatement.executeUpdate();
         }
     }
